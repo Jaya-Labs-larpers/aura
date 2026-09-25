@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Must match the Worker name in the Cloudflare dashboard.
+  "name": "aura",
+  "compatibility_date": "2026-09-25",
+  "assets": {
+    // Static export produced by `npm run build` (next.config.ts, output: "export").
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}

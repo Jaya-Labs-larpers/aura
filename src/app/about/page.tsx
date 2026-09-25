@@ -51,11 +51,13 @@ export default function AboutPage() {
             className="lg:col-span-6 relative w-full transition-all duration-1000 ease-out transform will-change-[opacity,transform] delay-200"
           >
             <div className="rounded-3xl overflow-hidden shadow-xl border border-[#D92B78]/30 bg-white">
-              <img
-                src="/images/about/where-it-all-began.jpg"
-                alt="Where it all began"
-                className="w-full h-[350px] md:h-[420px] object-cover transform hover:scale-105 transition duration-500"
-              />
+              <div
+                role="img"
+                aria-label="Where it all began"
+                className="w-full h-[350px] md:h-[420px] flex items-center justify-center bg-[#0D4F3B]/10 text-[#0D4F3B]/40"
+              >
+                <i className="fa-regular fa-image text-4xl"></i>
+              </div>
             </div>
           </Reveal>
         </div>
@@ -69,11 +71,13 @@ export default function AboutPage() {
             className="lg:col-span-6 relative w-full order-2 lg:order-1 transition-all duration-1000 ease-out transform will-change-[opacity,transform]"
           >
             <div className="rounded-3xl overflow-hidden shadow-xl border border-[#D92B78]/30 bg-white">
-              <img
-                src="/images/about/our-philosophy.jpg"
-                alt="Our Philosophy"
-                className="w-full h-[350px] md:h-[420px] object-cover transform hover:scale-105 transition duration-500"
-              />
+              <div
+                role="img"
+                aria-label="Our Philosophy"
+                className="w-full h-[350px] md:h-[420px] flex items-center justify-center bg-[#0D4F3B]/10 text-[#0D4F3B]/40"
+              >
+                <i className="fa-regular fa-image text-4xl"></i>
+              </div>
             </div>
           </Reveal>
 

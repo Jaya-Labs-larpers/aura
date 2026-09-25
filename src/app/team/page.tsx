@@ -31,11 +31,13 @@ export default function TeamPage() {
               from="left"
               className="lg:col-span-6 rounded-3xl overflow-hidden shadow-xl bg-gray-300 transition-all duration-1000 ease-out transform will-change-[opacity,transform]"
             >
-              <img
-                src="/images/team/heart-of-the-house.jpg"
-                alt="Heart of the House - Culinary Team"
-                className="w-full h-[350px] md:h-[420px] object-cover"
-              />
+              <div
+                role="img"
+                aria-label="Heart of the House - Culinary Team"
+                className="w-full h-[350px] md:h-[420px] flex items-center justify-center bg-[#0D4F3B]/10 text-[#0D4F3B]/40"
+              >
+                <i className="fa-regular fa-image text-4xl"></i>
+              </div>
             </RevealItem>
 
             <RevealItem
@@ -90,11 +92,13 @@ export default function TeamPage() {
               from="right"
               className="lg:col-span-6 rounded-3xl overflow-hidden shadow-xl bg-gray-300 order-1 lg:order-2 transition-all duration-1000 ease-out transform will-change-[opacity,transform]"
             >
-              <img
-                src="/images/team/front-of-house.jpg"
-                alt="Front of House - Service Team"
-                className="w-full h-[350px] md:h-[420px] object-cover"
-              />
+              <div
+                role="img"
+                aria-label="Front of House - Service Team"
+                className="w-full h-[350px] md:h-[420px] flex items-center justify-center bg-[#0D4F3B]/10 text-[#0D4F3B]/40"
+              >
+                <i className="fa-regular fa-image text-4xl"></i>
+              </div>
             </RevealItem>
           </RevealGroup>
         </div>

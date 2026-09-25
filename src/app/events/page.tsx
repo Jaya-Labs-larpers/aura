@@ -27,11 +27,13 @@ export default function EventsPage() {
         <RevealGroup className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <RevealItem from="left" className="relative w-full transition-all duration-1000 ease-out transform will-change-[opacity,transform]">
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-black/10 bg-[#F2FFF7]/50">
-              <img
-                src="/images/events/private-dining.jpg"
-                alt="Private Dining"
-                className="w-full h-[350px] md:h-[420px] object-cover transform hover:scale-105 transition duration-500"
-              />
+              <div
+                role="img"
+                aria-label="Private Dining"
+                className="w-full h-[350px] md:h-[420px] flex items-center justify-center bg-[#0D4F3B]/10 text-[#0D4F3B]/40"
+              >
+                <i className="fa-regular fa-image text-4xl"></i>
+              </div>
             </div>
           </RevealItem>
 
@@ -90,11 +92,13 @@ export default function EventsPage() {
             className="relative w-full order-1 lg:order-2 transition-all duration-1000 ease-out transform will-change-[opacity,transform]"
           >
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-black/10 bg-[#F2FFF7]/50">
-              <img
-                src="/images/events/event-catering.jpg"
-                alt="Event Catering"
-                className="w-full h-[350px] md:h-[420px] object-cover transform hover:scale-105 transition duration-500"
-              />
+              <div
+                role="img"
+                aria-label="Event Catering"
+                className="w-full h-[350px] md:h-[420px] flex items-center justify-center bg-[#0D4F3B]/10 text-[#0D4F3B]/40"
+              >
+                <i className="fa-regular fa-image text-4xl"></i>
+              </div>
             </div>
           </RevealItem>
         </RevealGroup>

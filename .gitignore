@@ -50,3 +50,6 @@ temp/
 
 # Wrangler local state
 .wrangler/
+
+# Original/source photos (unused by the app, not needed for deploy)
+assets-original/

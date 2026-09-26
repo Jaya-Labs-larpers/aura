@@ -1,0 +1,164 @@
+{
+  "events/14-meeting-and-event.jpg": {
+    "src": "/images/photos/events/14-meeting-and-event",
+    "width": 4672,
+    "height": 5695,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "events/32-meeting-and-event.jpg": {
+    "src": "/images/photos/events/32-meeting-and-event",
+    "width": 6665,
+    "height": 4443,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "menu/main-course/seafood-tower.jpg": {
+    "src": "/images/photos/menu/main-course/seafood-tower",
+    "width": 4542,
+    "height": 6051,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "menu/signature-cocktail/aura-sling.jpg": {
+    "src": "/images/photos/menu/signature-cocktail/aura-sling",
+    "width": 4503,
+    "height": 6754,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "site/hero-slide-1.jpg": {
+    "src": "/images/photos/site/hero-slide-1",
+    "width": 1600,
+    "height": 1066,
+    "widths": [
+      640,
+      1280,
+      1600
+    ]
+  },
+  "site/hero-slide-3.jpg": {
+    "src": "/images/photos/site/hero-slide-3",
+    "width": 3307,
+    "height": 2205,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "site/tripadvisor-travelers-choice.png": {
+    "src": "/images/photos/site/tripadvisor-travelers-choice",
+    "width": 543,
+    "height": 459,
+    "widths": [
+      543
+    ]
+  },
+  "site/welcome-experience-1.webp": {
+    "src": "/images/photos/site/welcome-experience-1",
+    "width": 5251,
+    "height": 3938,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "site/welcome-experience-2.webp": {
+    "src": "/images/photos/site/welcome-experience-2",
+    "width": 4399,
+    "height": 4360,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "venue/01-venue-image.jpg": {
+    "src": "/images/photos/venue/01-venue-image",
+    "width": 6720,
+    "height": 4480,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "venue/03-venue-image.jpg": {
+    "src": "/images/photos/venue/03-venue-image",
+    "width": 6720,
+    "height": 4480,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "venue/05-venue-image.jpg": {
+    "src": "/images/photos/venue/05-venue-image",
+    "width": 3402,
+    "height": 2268,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "venue/14-venue-image.jpg": {
+    "src": "/images/photos/venue/14-venue-image",
+    "width": 6224,
+    "height": 4672,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "venue/18-venue-image.jpg": {
+    "src": "/images/photos/venue/18-venue-image",
+    "width": 6224,
+    "height": 4672,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  }
+}

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import type { Slot } from "@/content/types";
-import { Placeholder } from "@/components/ui/Placeholder";
+import { Photo } from "@/components/ui/Photo";
 import { Reveal } from "@/components/ui/Reveal";
 import { prefersReducedMotion } from "@/lib/scroll";
 
@@ -109,8 +109,9 @@ export function PhotoStrip({ slots, speed = 0.45 }: PhotoStripProps) {
               aria-hidden={i >= slots.length || undefined}
               className="group aspect-[5/4] w-[72vw] shrink-0 overflow-hidden bg-moss sm:w-[44vw] lg:w-[34vw] lg:max-w-[560px]"
             >
-              <Placeholder
+              <Photo
                 slot={slot}
+                sizes="(min-width: 1024px) min(34vw, 560px), (min-width: 640px) 44vw, 72vw"
                 className="h-full w-full transition-transform duration-1000 ease-out-expo group-hover:scale-105"
               />
             </div>

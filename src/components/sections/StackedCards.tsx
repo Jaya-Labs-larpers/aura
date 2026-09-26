@@ -3,12 +3,13 @@
 import { useEffect, useRef } from "react";
 import type { Card } from "@/content/types";
 import { TextLink } from "@/components/ui/Buttons";
-import { CORNER, Placeholder, SlotCaption } from "@/components/ui/Placeholder";
+import { Photo, hasPhoto } from "@/components/ui/Photo";
+import { CORNER, SlotCaption } from "@/components/ui/Placeholder";
 import { Reveal, RevealText } from "@/components/ui/Reveal";
 import { cn } from "@/lib/cn";
 import { clamp, prefersReducedMotion, subscribeScroll } from "@/lib/scroll";
 
-// Distinct greens so the stacking reads clearly while the cards are wireframes.
+// Distinct greens behind each card while its photo loads, or while it is still a wireframe.
 const TONES = ["bg-moss", "bg-leaf", "bg-forest", "bg-moss"];
 
 /**
@@ -66,10 +67,11 @@ export function StackedCards({ cards }: { cards: Card[] }) {
               }}
               className="absolute inset-0 scale-[1.18] will-change-transform"
             >
-              <Placeholder slot={card.slot} bare className="h-full w-full" />
+              {/* The layer is scaled 1.18; on a portrait screen a landscape photo covers the height, so it renders far wider than the viewport. */}
+              <Photo slot={card.slot} sizes="(orientation: portrait) 180vh, 118vw" bare className="h-full w-full" />
             </div>
-            <SlotCaption slot={card.slot} className={CORNER} />
-            <div className="absolute inset-0 bg-linear-to-t from-jungle/85 via-jungle/10 to-transparent" />
+            {!hasPhoto(card.slot) && <SlotCaption slot={card.slot} className={CORNER} />}
+            <div className="absolute inset-0 bg-linear-to-t from-jungle/90 via-jungle/35 to-transparent" />
 
             <div className="relative flex h-full flex-col items-center justify-end px-6 pb-16 text-center md:pb-24">
               <RevealText text={card.title} className="font-display text-4xl leading-[1.05] md:text-6xl lg:text-7xl" />

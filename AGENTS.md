@@ -12,7 +12,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 Redesign of the AURA Phnom Penh restaurant site, inspired by the editorial, motion-led layout of Amazónico. Next.js 16 + Tailwind v4, exported as static files and hosted on Cloudflare Workers static assets. See README.md.
 
-- **Stage: wireframe + motion.** Every image/video position renders `<Placeholder>`. Do not put photos on pages yet. Each slot's planned photo is recorded in its `photo` field, a path inside `assets/photos/`.
+- **Stage: photos going in, page by page.** The home page shows photos (except the hero, still a video wireframe); other pages are still wireframes. Each slot's photo is its `photo` field, a path inside `assets/photos/`. `<Photo>` renders it once `npm run photos` has published it (WebP in `public/images/photos/`, listed in `src/content/photos.json`), otherwise a `<Placeholder>`. Only publish photos for pages the user has asked for.
 - **Frontend only.** No server code, API routes or Worker script. Forms show a local confirmation (`fakeSubmit` in `components/features/forms/Field.tsx`).
 - **Content lives in `src/content/`.** Pages read from it; components never hard-code copy, links or contact details.
 - **Design tokens live in `src/app/globals.css` (`@theme`).** Use the token names (`bg-jungle`, `text-cream`, `font-display`, `ease-out-expo`), not raw hex values.

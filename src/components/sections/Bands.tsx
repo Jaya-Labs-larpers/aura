@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import type { Slot } from "@/content/types";
 import { RESERVE } from "@/content/site";
 import { Pill } from "@/components/ui/Buttons";
-import { Placeholder } from "@/components/ui/Placeholder";
+import { Photo } from "@/components/ui/Photo";
 import { Reveal, RevealText } from "@/components/ui/Reveal";
 import { cn } from "@/lib/cn";
 
@@ -32,7 +32,7 @@ export function AwardBand({ title, text, slot }: { title: string; text: string; 
   return (
     <section className="bg-ivory px-5 py-14 text-ink md:px-8">
       <Reveal className="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center md:flex-row md:text-left">
-        <Placeholder slot={slot} bare className="h-20 w-20 shrink-0 rounded-full" />
+        <Photo slot={slot} sizes="80px" fit="contain" bare className="h-20 w-20 shrink-0 rounded-full" />
         <div>
           <p className="font-display text-2xl md:text-3xl">{title}</p>
           <p className="mt-1 text-sm opacity-70">{text}</p>

@@ -1,0 +1,926 @@
+[
+  {
+    "category": "venue",
+    "photo": "venue/01-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "venue",
+    "photo": "venue/02-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "venue",
+    "photo": "venue/03-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "venue",
+    "photo": "venue/04-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "venue",
+    "photo": "venue/05-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "venue",
+    "photo": "venue/06-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2400,
+    "height": 1714
+  },
+  {
+    "category": "venue",
+    "photo": "venue/07-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "venue",
+    "photo": "venue/08-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 1280,
+    "height": 853
+  },
+  {
+    "category": "venue",
+    "photo": "venue/09-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 1280,
+    "height": 854
+  },
+  {
+    "category": "venue",
+    "photo": "venue/10-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 1920,
+    "height": 2400
+  },
+  {
+    "category": "venue",
+    "photo": "venue/11-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 1920,
+    "height": 2400
+  },
+  {
+    "category": "venue",
+    "photo": "venue/12-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2000,
+    "height": 1600
+  },
+  {
+    "category": "venue",
+    "photo": "venue/13-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 1802,
+    "height": 2400
+  },
+  {
+    "category": "venue",
+    "photo": "venue/14-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2400,
+    "height": 1802
+  },
+  {
+    "category": "venue",
+    "photo": "venue/15-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 1802,
+    "height": 2400
+  },
+  {
+    "category": "venue",
+    "photo": "venue/16-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2400,
+    "height": 1802
+  },
+  {
+    "category": "venue",
+    "photo": "venue/17-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2400,
+    "height": 1802
+  },
+  {
+    "category": "venue",
+    "photo": "venue/18-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2400,
+    "height": 1802
+  },
+  {
+    "category": "venue",
+    "photo": "venue/19-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2400,
+    "height": 1802
+  },
+  {
+    "category": "venue",
+    "photo": "venue/20-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2400,
+    "height": 1802
+  },
+  {
+    "category": "venue",
+    "photo": "venue/21-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2400,
+    "height": 1802
+  },
+  {
+    "category": "venue",
+    "photo": "venue/22-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2400,
+    "height": 1802
+  },
+  {
+    "category": "venue",
+    "photo": "venue/23-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2400,
+    "height": 1802
+  },
+  {
+    "category": "venue",
+    "photo": "venue/24-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2400,
+    "height": 1802
+  },
+  {
+    "category": "venue",
+    "photo": "venue/25-venue-image.jpg",
+    "alt": "Venue Image",
+    "width": 2400,
+    "height": 1802
+  },
+  {
+    "category": "events",
+    "photo": "events/01-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "events",
+    "photo": "events/02-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "events",
+    "photo": "events/03-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1801
+  },
+  {
+    "category": "events",
+    "photo": "events/04-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "events",
+    "photo": "events/05-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "events",
+    "photo": "events/06-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "events",
+    "photo": "events/07-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "events",
+    "photo": "events/08-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "events",
+    "photo": "events/09-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "events",
+    "photo": "events/10-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "events",
+    "photo": "events/11-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "events",
+    "photo": "events/12-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "events",
+    "photo": "events/13-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "events",
+    "photo": "events/14-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 1969,
+    "height": 2400
+  },
+  {
+    "category": "events",
+    "photo": "events/15-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "events",
+    "photo": "events/16-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "events",
+    "photo": "events/17-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "events",
+    "photo": "events/18-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "events",
+    "photo": "events/19-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "events",
+    "photo": "events/20-meeting-and-event.webp",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1800
+  },
+  {
+    "category": "events",
+    "photo": "events/21-meeting-and-event.webp",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1615
+  },
+  {
+    "category": "events",
+    "photo": "events/22-meeting-and-event.webp",
+    "alt": "Meeting & Event",
+    "width": 1800,
+    "height": 2400
+  },
+  {
+    "category": "events",
+    "photo": "events/23-meeting-and-event.webp",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1615
+  },
+  {
+    "category": "events",
+    "photo": "events/24-meeting-and-event.webp",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1615
+  },
+  {
+    "category": "events",
+    "photo": "events/25-meeting-and-event.webp",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1615
+  },
+  {
+    "category": "events",
+    "photo": "events/26-meeting-and-event.webp",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1615
+  },
+  {
+    "category": "events",
+    "photo": "events/27-meeting-and-event.webp",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1615
+  },
+  {
+    "category": "events",
+    "photo": "events/28-meeting-and-event.webp",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1603
+  },
+  {
+    "category": "events",
+    "photo": "events/29-meeting-and-event.webp",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1603
+  },
+  {
+    "category": "events",
+    "photo": "events/30-meeting-and-event.webp",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1603
+  },
+  {
+    "category": "events",
+    "photo": "events/31-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "events",
+    "photo": "events/32-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "events",
+    "photo": "events/33-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "events",
+    "photo": "events/34-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "events",
+    "photo": "events/35-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "events",
+    "photo": "events/36-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "events",
+    "photo": "events/37-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "events",
+    "photo": "events/38-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "events",
+    "photo": "events/39-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "events",
+    "photo": "events/40-meeting-and-event.jpg",
+    "alt": "Meeting & Event",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/signature/aura-combo.jpg",
+    "alt": "Aura Combo",
+    "width": 2400,
+    "height": 2379
+  },
+  {
+    "category": "menu",
+    "photo": "menu/signature/pork-knuckle-and-bbq-ribs.jpg",
+    "alt": "Pork Knuckle & BBQ Ribs",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/signature/charcoal-grilled-khmer-wagyu-rib-eye-200g.jpg",
+    "alt": "Charcoal-Grilled Khmer Wagyu Rib-Eye (200g)",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/signature/charcoal-grilled-khmer-wagyu-tomahawk-1kg.jpg",
+    "alt": "Charcoal-Grilled Khmer Wagyu Tomahawk (1kg)",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/fresh-oysters.jpg",
+    "alt": "Fresh Oysters",
+    "width": 2400,
+    "height": 1800
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/aura-healthy-salad.jpg",
+    "alt": "Aura Healthy Salad",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/chicken-popcorn.jpg",
+    "alt": "Chicken Popcorn",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/vegetable-spring-roll.jpg",
+    "alt": "Vegetable Spring Roll",
+    "width": 2400,
+    "height": 1802
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/trio-carpaccio.jpg",
+    "alt": "Trio Carpaccio",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/cheese-and-charcuterie-platter.jpg",
+    "alt": "Cheese and Charcuterie Platter",
+    "width": 683,
+    "height": 1024
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/mixed-salad.jpg",
+    "alt": "Mixed Salad",
+    "width": 2400,
+    "height": 1800
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/salmon-ebi.jpg",
+    "alt": "Salmon Ebi",
+    "width": 1802,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/beef-carpaccio.jpg",
+    "alt": "Beef Carpaccio",
+    "width": 2400,
+    "height": 1600
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/lomo-tataki.jpg",
+    "alt": "Lomo Tataki",
+    "width": 2400,
+    "height": 1800
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/salmon-in-spicy-kikkoman.png",
+    "alt": "Salmon In Spicy Kikkoman",
+    "width": 2400,
+    "height": 1800
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/avocados-prawn-cocktail.png",
+    "alt": "Avocados Prawn Cocktail",
+    "width": 2400,
+    "height": 1800
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/grilled-chicken-caesar-salad.jpg",
+    "alt": "Grilled Chicken Caesar Salad",
+    "width": 1800,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/grilled-chicken-lollipops.jpg",
+    "alt": "Grilled Chicken Lollipops",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/spicy-prawn-garlic-chili.png",
+    "alt": "Spicy Prawn Garlic Chili",
+    "width": 2400,
+    "height": 1800
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/oven-baked-oysters-and-mussels.jpg",
+    "alt": "Oven Baked Oysters & Mussels",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/fruitti-di-calamari.jpg",
+    "alt": "Fruitti Di Calamari",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/honey-mustard-chicken-wings.png",
+    "alt": "Honey Mustard Chicken Wings",
+    "width": 2400,
+    "height": 1800
+  },
+  {
+    "category": "menu",
+    "photo": "menu/appetizers/xl-smoked-duck-and-shrimp-spring-rolls.jpg",
+    "alt": "XL Smoked Duck & Shrimp Spring Rolls",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/soup/wild-mushroom-cream-soup.jpg",
+    "alt": "Wild Mushroom Cream Soup",
+    "width": 2400,
+    "height": 1800
+  },
+  {
+    "category": "menu",
+    "photo": "menu/soup/beetroot-soup-borscht.png",
+    "alt": "Beetroot Soup Borscht",
+    "width": 1086,
+    "height": 1448
+  },
+  {
+    "category": "menu",
+    "photo": "menu/soup/aura-green-spinach-soup.jpg",
+    "alt": "Aura Green Spinach Soup",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/main-course/authentic-beef-saraman.jpg",
+    "alt": "Authentic Beef Saraman",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/main-course/fish-amok.jpg",
+    "alt": "Fish Amok",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/main-course/assorted-meat-skewers.jpg",
+    "alt": "Assorted Meat Skewers",
+    "width": 2400,
+    "height": 1800
+  },
+  {
+    "category": "menu",
+    "photo": "menu/main-course/mchou-krouerng-khmer-wagyu-beef-striploin.jpg",
+    "alt": "Mchou Krouerng Khmer Wagyu Beef Striploin",
+    "width": 1920,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/main-course/cobe-fish-fillet-180g.jpg",
+    "alt": "Cobe Fish Fillet 180g",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/main-course/seafood-tower.jpg",
+    "alt": "Seafood Tower",
+    "width": 1801,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/main-course/seared-salmon-steak.jpg",
+    "alt": "Seared Salmon Steak",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/main-course/charcoal-grilled-local-khmer-wagyu-striploin-250g.jpg",
+    "alt": "Charcoal-Grilled Local Khmer Wagyu Striploin (250g)",
+    "width": 1280,
+    "height": 960
+  },
+  {
+    "category": "menu",
+    "photo": "menu/main-course/charcoal-grilled-local-khmer-wagyu-rib-eye-tek-bror-hok.jpg",
+    "alt": "Charcoal-Grilled Local Khmer Wagyu Rib-Eye Tek Bror Hok",
+    "width": 2400,
+    "height": 1800
+  },
+  {
+    "category": "menu",
+    "photo": "menu/main-course/lamb-rack-carre-dagneau-300g.jpg",
+    "alt": "Lamb Rack (Carre Dagneau) 300g",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/main-course/spaghetti-tomato-sauce.jpg",
+    "alt": "Spaghetti Tomato Sauce",
+    "width": 2400,
+    "height": 1800
+  },
+  {
+    "category": "menu",
+    "photo": "menu/main-course/spaghetti-seafood-tomato-sauce.jpg",
+    "alt": "Spaghetti Seafood Tomato Sauce",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/main-course/spaghetti-carbonara.jpg",
+    "alt": "Spaghetti Carbonara",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/main-course/spaghetti-bolognese.jpg",
+    "alt": "Spaghetti Bolognese",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/main-course/wagyu-beef-burger-slider.jpg",
+    "alt": "Wagyu Beef Burger Slider",
+    "width": 1802,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/sharing-platters/oven-baked-rosemary-chicken-half.jpg",
+    "alt": "Oven-baked Rosemary Chicken Half",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/sharing-platters/duck-a-l-orange-4-people.jpg",
+    "alt": "Duck a L'orange (4 people)",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/sharing-platters/khmer-platters-4-people.png",
+    "alt": "Khmer Platters (4 People)",
+    "width": 1153,
+    "height": 866
+  },
+  {
+    "category": "menu",
+    "photo": "menu/sharing-platters/aura-chef-s-platters-4-people.jpg",
+    "alt": "Aura Chef's Platters (4 People)",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/dessert/fresh-fruits-platter.jpg",
+    "alt": "Fresh Fruits Platter",
+    "width": 2400,
+    "height": 1800
+  },
+  {
+    "category": "menu",
+    "photo": "menu/dessert/chocolate-brownie.jpg",
+    "alt": "Chocolate Brownie",
+    "width": 2400,
+    "height": 1800
+  },
+  {
+    "category": "menu",
+    "photo": "menu/dessert/chocolate-fondant.jpg",
+    "alt": "Chocolate Fondant",
+    "width": 2400,
+    "height": 1800
+  },
+  {
+    "category": "menu",
+    "photo": "menu/dessert/kompot-pepper-cream-brulee.jpg",
+    "alt": "Kompot Pepper Cream Brulee",
+    "width": 1801,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/dessert/mango-cheese-cake.jpg",
+    "alt": "Mango Cheese Cake",
+    "width": 2400,
+    "height": 1800
+  },
+  {
+    "category": "menu",
+    "photo": "menu/dessert/coconut-ice-cream.jpg",
+    "alt": "Coconut Ice Cream",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/dessert/kompot-pepper-ice-cream.jpg",
+    "alt": "Kompot Pepper Ice Cream",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/soft-drink-juice/coconut-juice.jpg",
+    "alt": "Coconut Juice",
+    "width": 440,
+    "height": 400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/soft-drink-juice/orange-juice.jpg",
+    "alt": "Orange Juice",
+    "width": 554,
+    "height": 554
+  },
+  {
+    "category": "menu",
+    "photo": "menu/signature-cocktail/aura-delight.jpg",
+    "alt": "Aura Delight",
+    "width": 2400,
+    "height": 1920
+  },
+  {
+    "category": "menu",
+    "photo": "menu/signature-cocktail/aura-sling.jpg",
+    "alt": "Aura Sling",
+    "width": 1600,
+    "height": 2400
+  },
+  {
+    "category": "menu",
+    "photo": "menu/signature-cocktail/kiss-goodbyeaura.jpg",
+    "alt": "Kiss Goodbyeaura",
+    "width": 2400,
+    "height": 1920
+  },
+  {
+    "category": "menu",
+    "photo": "menu/signature-cocktail/screwy-lady-specialaura.jpg",
+    "alt": "Screwy Lady Specialaura",
+    "width": 2000,
+    "height": 1600
+  },
+  {
+    "category": "menu",
+    "photo": "menu/non-alcohol-cocktail/aura-paradiseaura.jpg",
+    "alt": "Aura Paradiseaura",
+    "width": 2400,
+    "height": 1919
+  },
+  {
+    "category": "menu",
+    "photo": "menu/non-alcohol-cocktail/mango-coladaaura.jpg",
+    "alt": "Mango Coladaaura",
+    "width": 2400,
+    "height": 1920
+  },
+  {
+    "category": "menu",
+    "photo": "menu/beer/angkor-beer.png",
+    "alt": "Angkor Beer",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "category": "menu",
+    "photo": "menu/beer/heineken-beer.jpg",
+    "alt": "Heineken Beer",
+    "width": 554,
+    "height": 554
+  },
+  {
+    "category": "menu",
+    "photo": "menu/beer/kingdom-ipa.jpg",
+    "alt": "Kingdom IPA",
+    "width": 853,
+    "height": 1280
+  },
+  {
+    "category": "menu",
+    "photo": "menu/beer/tiger-beer.jpg",
+    "alt": "Tiger Beer",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "category": "menu",
+    "photo": "menu/signature-cocktail/aura-paradise.jpg",
+    "alt": "Aura Paradise",
+    "width": 853,
+    "height": 1280
+  },
+  {
+    "category": "menu",
+    "photo": "menu/signature-cocktail/mango-colada.jpg",
+    "alt": "Mango Colada",
+    "width": 853,
+    "height": 1280
+  },
+  {
+    "category": "menu",
+    "photo": "menu/non-alcohol-cocktail/mock-tial.jpg",
+    "alt": "Mock Tial",
+    "width": 853,
+    "height": 1280
+  }
+]

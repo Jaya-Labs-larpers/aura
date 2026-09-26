@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
-import { GalleryGrid } from "@/components/gallery/GalleryGrid";
-import galleryData from "@/data/gallery.json";
-import type { GalleryItem } from "@/types/site";
+import { GalleryGrid } from "@/components/features/gallery/GalleryGrid";
+import { PageHero } from "@/components/sections/PageHero";
+import gallery from "@/content/gallery.json";
+import { GALLERY_PAGE } from "@/content/pages";
+import type { GalleryItem } from "@/content/types";
 
-export const metadata: Metadata = {
-  title: "Gallery - AURA",
-};
+export const metadata: Metadata = { title: "Gallery" };
 
 export default function GalleryPage() {
-  return <GalleryGrid items={galleryData as GalleryItem[]} />;
+  return (
+    <>
+      <PageHero {...GALLERY_PAGE.hero} />
+      <GalleryGrid items={gallery as GalleryItem[]} />
+    </>
+  );
 }

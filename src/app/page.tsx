@@ -1,22 +1,18 @@
-import type { Metadata } from "next";
-import { HeroCarousel } from "@/components/home/HeroCarousel";
-import { WelcomeSection } from "@/components/home/WelcomeSection";
-import { VenuesSection } from "@/components/home/VenuesSection";
-import { ChefsSection } from "@/components/home/ChefsSection";
-import { GallerySection } from "@/components/home/GallerySection";
-
-export const metadata: Metadata = {
-  title: "Home - AURA",
-};
+import { AwardBand } from "@/components/sections/Bands";
+import { HeroFilm } from "@/components/sections/HeroFilm";
+import { IntroBlock } from "@/components/sections/IntroBlock";
+import { PhotoStrip } from "@/components/sections/PhotoStrip";
+import { StackedCards } from "@/components/sections/StackedCards";
+import { HOME } from "@/content/home";
 
 export default function HomePage() {
   return (
-    <div className="w-full overflow-x-hidden bg-[#17352F] text-[#FCFAF6]">
-      <HeroCarousel />
-      <WelcomeSection />
-      <VenuesSection />
-      <ChefsSection />
-      <GallerySection />
-    </div>
+    <>
+      <HeroFilm {...HOME.hero} />
+      <IntroBlock {...HOME.intro} />
+      <PhotoStrip slots={HOME.strip} />
+      <StackedCards cards={HOME.cards} />
+      <AwardBand {...HOME.award} />
+    </>
   );
 }

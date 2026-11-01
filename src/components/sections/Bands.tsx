@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
-import type { Slot } from "@/content/types";
+import type { Link, Slot } from "@/content/types";
 import { RESERVE } from "@/content/site";
-import { Pill } from "@/components/ui/Buttons";
+import { Pill, TextLink } from "@/components/ui/Buttons";
 import { Photo } from "@/components/ui/Photo";
 import { Reveal, RevealText } from "@/components/ui/Reveal";
 import { cn } from "@/lib/cn";
@@ -45,7 +45,7 @@ export function AwardBand({ title, text, slot }: { title: string; text: string; 
 /** Closing call to action, repeated at the end of inner pages. */
 export function CtaBand({
   title = "Reserve your table",
-  text = "Lunch, dinner or late-night drinks above Bassac Lane.",
+  text,
   cta = RESERVE,
 }: {
   title?: string;
@@ -56,13 +56,32 @@ export function CtaBand({
     <Section tone="forest" className="text-center">
       <div className="mx-auto flex max-w-2xl flex-col items-center">
         <RevealText text={title} className="font-display text-4xl leading-[1.1] md:text-6xl" />
-        <Reveal delay={200}>
-          <p className="mt-5 text-[15px] opacity-80">{text}</p>
-        </Reveal>
+        {text && (
+          <Reveal delay={200}>
+            <p className="mt-5 text-[15px] opacity-80">{text}</p>
+          </Reveal>
+        )}
         <Reveal delay={350} className="mt-9">
           <Pill href={cta.href}>{cta.label}</Pill>
         </Reveal>
       </div>
+    </Section>
+  );
+}
+
+/**
+ * One-line band linking to the Getting here details. Renders nothing until a
+ * link is supplied — see HOME.gettingHere in content/home.ts.
+ */
+export function GettingHereBand({ link }: { link?: Link }) {
+  if (!link) return null;
+  return (
+    <Section tone="ivory" className="py-10 text-center md:py-10">
+      <Reveal>
+        <TextLink href={link.href} className="text-base">
+          {link.label}
+        </TextLink>
+      </Reveal>
     </Section>
   );
 }

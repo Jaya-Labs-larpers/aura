@@ -17,7 +17,7 @@ const TONES = ["bg-moss", "bg-leaf", "bg-forest", "bg-moss"];
  * drifts inside its frame; when the next card slides over, the one beneath
  * shrinks slightly and darkens.
  */
-export function StackedCards({ cards }: { cards: Card[] }) {
+export function StackedCards({ heading, cards }: { heading?: string; cards: Card[] }) {
   const wrappers = useRef<(HTMLDivElement | null)[]>([]);
   const articles = useRef<(HTMLElement | null)[]>([]);
   const media = useRef<(HTMLDivElement | null)[]>([]);
@@ -43,7 +43,14 @@ export function StackedCards({ cards }: { cards: Card[] }) {
   }, []);
 
   return (
-    <section className="relative bg-jungle px-3 pb-3 text-cream md:px-6 md:pb-6">
+    <section className="relative bg-jungle px-3 pt-24 pb-3 text-cream md:px-6 md:pt-36 md:pb-6">
+      {heading && (
+        <RevealText
+          as="h2"
+          text={heading}
+          className="mb-10 text-center font-display text-4xl leading-[1.1] md:mb-14 md:text-5xl"
+        />
+      )}
       {cards.map((card, i) => (
         <div
           key={card.title}
@@ -75,9 +82,11 @@ export function StackedCards({ cards }: { cards: Card[] }) {
 
             <div className="relative flex h-full flex-col items-center justify-end px-6 pb-16 text-center md:pb-24">
               <RevealText text={card.title} className="font-display text-4xl leading-[1.05] md:text-6xl lg:text-7xl" />
-              <Reveal delay={200}>
-                <p className="mt-5 max-w-lg text-sm opacity-85 md:text-base">{card.text}</p>
-              </Reveal>
+              {card.text && (
+                <Reveal delay={200}>
+                  <p className="mt-5 max-w-lg text-sm opacity-85 md:text-base">{card.text}</p>
+                </Reveal>
+              )}
               <Reveal delay={350} className="mt-7">
                 <TextLink href={card.cta.href}>{card.cta.label}</TextLink>
               </Reveal>

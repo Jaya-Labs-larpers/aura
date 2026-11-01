@@ -23,7 +23,7 @@ export interface Feature {
 
 export interface Card {
   title: string;
-  text: string;
+  text?: string;
   slot: Slot;
   cta: Link;
 }

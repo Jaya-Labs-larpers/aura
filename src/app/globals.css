@@ -1,4 +1,12 @@
-@import "tailwindcss";
+/* source(none): the (classic) route group has its own stylesheet (classic.css) with
+   the old clone's hex colors. Scanning only the new design's own files keeps the two
+   bundles from bleeding into each other. */
+@import "tailwindcss" source(none);
+@source "./(home)";
+@source "./global-not-found.tsx";
+@source "../components/layout";
+@source "../components/sections";
+@source "../components/ui";
 @import "lenis/dist/lenis.css";
 
 /* ------------------------------------------------------------------

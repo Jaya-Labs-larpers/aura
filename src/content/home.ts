@@ -1,65 +1,80 @@
-import type { Card, Link, Slot } from "./types";
+import type { Card, Feature, Link, Slot } from "./types";
 
 export const HOME = {
-  hero: {
-    eyebrow: "Phnom Penh",
-    title: "Welcome to AURA",
-    text: "Rooftop garden dining above Bassac Lane",
-    // Replace with the hero film once it is shot: loop, 16:9, muted, ≤ 8 MB MP4 + poster.
-    slot: { label: "Hero film · 16:9 muted loop", photo: "site/hero-slide-3.jpg" } satisfies Slot,
+  meta: {
+    title: "AURA | Rooftop restaurant and bar on Bassac Lane, Phnom Penh",
+    description: "Charcoal-grilled Wagyu, Khmer classics and cocktails, from lunch until late.",
   },
 
-  intro: {
-    eyebrow: "Step inside",
-    title: "A garden in the sky, a table for every moment",
-    text: "Exceptional culinary artistry, skyline views and crafted cocktails in an unforgettable atmosphere. Refined Khmer heritage and international cuisine, charcoal-grilled and served from lunch to late-night lounge — connecting families and friends so you can celebrate life's moments.",
+  hero: {
+    title: "Rooftop restaurant and bar on Bassac Lane",
+    text: "Charcoal-grilled Wagyu, Khmer classics and cocktails, from lunch until late.",
+    // Cross-fades slide 1 → slide 2, slow Ken Burns on each.
+    slides: [
+      { label: "AURA's rooftop restaurant and bar lit up at night, Bassac Lane", photo: "site/hero-slide-2.jpg" },
+      { label: "Aerial view of AURA's rooftop restaurant and bar at night, Bassac Lane", photo: "site/hero-slide-3.jpg" },
+    ] satisfies [Slot, Slot],
     ctas: [
-      { label: "View Menu", href: "/menu" },
-      { label: "Book a Table", href: "/reservation" },
+      { label: "Book a table", href: "/reservation" },
+      { label: "View menu", href: "/menu" },
     ] satisfies Link[],
   },
 
-  strip: [
-    { label: "Glasshouse greenery", photo: "venue/03-venue-image.jpg" },
-    { label: "Sashimi platter", photo: "site/welcome-experience-2.webp" },
-    { label: "Friends toasting with tiki cocktails", photo: "events/14-meeting-and-event.jpg" },
-    { label: "Garden bar at night", photo: "venue/01-venue-image.jpg" },
-    { label: "Seafood tower", photo: "menu/main-course/seafood-tower.jpg" },
-    { label: "Candlelit garden table", photo: "venue/14-venue-image.jpg" },
-    { label: "AURA Sling cocktail", photo: "menu/signature-cocktail/aura-sling.jpg" },
-    { label: "Birthday celebration", photo: "events/32-meeting-and-event.jpg" },
-  ] satisfies Slot[],
+  rooftop: {
+    title: "The rooftop",
+    body: ["On Bassac Lane: an open-air lounge among the plants, and indoor seating by the bar."],
+    slot: { label: "AURA rooftop at night from above, Bassac Lane", photo: "venue/05-venue-image.jpg" },
+  } satisfies Feature,
 
+  cardsHeading: "From lunch to late",
   cards: [
     {
-      title: "Our Menu",
-      text: "Khmer heritage, charcoal-grilled Wagyu and sharing platters, with signature cocktails from the bar.",
-      slot: { label: "Khmer sharing platter on green marble", photo: "site/welcome-experience-1.webp" },
-      cta: { label: "Discover", href: "/menu" },
+      title: "Lunch in the open-air lounge",
+      slot: { label: "AURA's open-air terrace by day", photo: "venue-highlights/02.jpg" },
+      cta: { label: "Book a table", href: "/reservation" },
     },
     {
-      title: "Events",
-      text: "Birthdays, business lunches and weddings — exclusive use for up to 120 guests.",
-      slot: { label: "Long table dressed for a birthday dinner", photo: "venue/18-venue-image.jpg" },
-      cta: { label: "See more", href: "/events" },
+      title: "Dinner from the charcoal grill · Wagyu, Fish Amok, Saraman",
+      // R2 source for this photo (Wagyu on stone) is offline; stays a placeholder until it's back.
+      slot: { label: "Charcoal-grilled Wagyu on stone" },
+      cta: { label: "View menu", href: "/menu" },
     },
     {
-      title: "The Venue",
-      text: "A multi-level rooftop garden overlooking the Phnom Penh skyline, open-air lounge and indoor dining.",
-      slot: { label: "AURA rooftop garden from above at night", photo: "venue/05-venue-image.jpg" },
-      cta: { label: "See more", href: "/gallery" },
-    },
-    {
-      title: "Meet Chef Dun Sophol",
-      text: "Khmer and Western kitchens in balance, with locally sourced steak prepared to a high standard.",
-      slot: { label: "Chef carving at the table", photo: "site/hero-slide-1.jpg" },
-      cta: { label: "See more", href: "/team" },
+      title: "Late drinks at the bar",
+      slot: { label: "AURA's bar lit up at night", photo: "venue-highlights/03.jpg" },
+      cta: { label: "View menu", href: "/menu" },
     },
   ] satisfies Card[],
+
+  chefAndTeam: {
+    title: "Chef and team",
+    body: [
+      "Our kitchen is built around the charcoal grill: Kampong Chhnang Wagyu, plus Khmer classics like Fish Amok and Saraman.",
+    ],
+    // R2 source for this photo (staff serving) is offline; stays a placeholder until it's back.
+    slot: { label: "AURA staff serving at the table" },
+  } satisfies Feature,
+
+  // Hidden until F1–F4 (opening hours facts) are confirmed; see website-audit handover.
+  gettingHere: undefined as Link | undefined,
+
+  strip: [
+    { label: "Aerial view of AURA's rooftop restaurant and bar at night, Bassac Lane", photo: "site/hero-slide-3.jpg" },
+    { label: "AURA's lounge among the plants by day", photo: "venue-highlights/01.jpg" },
+    // R2 source for this photo (drink pouring) is offline; stays a placeholder until it's back.
+    { label: "Cocktail being poured at AURA's bar" },
+    { label: "Khmer sharing platter on green marble", photo: "site/welcome-experience-1.webp" },
+    // R2 source for this photo (event table) is offline; stays a placeholder until it's back.
+    { label: "Table set for a private event at AURA" },
+  ] satisfies Slot[],
 
   award: {
     title: "Tripadvisor Travelers' Choice",
     text: "Recognised by guests among the top experiences in Phnom Penh.",
     slot: { label: "Award badge", photo: "site/tripadvisor-travelers-choice.png" } satisfies Slot,
+  },
+
+  booking: {
+    title: "Lunch, dinner or late drinks: book your table.",
   },
 };

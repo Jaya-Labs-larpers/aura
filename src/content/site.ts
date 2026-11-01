@@ -10,6 +10,15 @@ export const SITE = {
   logo: "/images/brand/aura-logo.png",
   favicon: "/images/brand/aura-logo-favicon.jpg",
   footerLine: "An unforgettable experience, second to none.",
+  // TODO before push: re-check the live score/review count on AURA's Google profile.
+  // Figure below is Glenn's audit number, not independently verified this round.
+  // The strip only renders once these are filled in.
+  rating: {
+    score: "4.7",
+    reviews: "998",
+    source: "Google",
+    href: "https://maps.app.goo.gl/AzTXNeWvV8ETcJpg6",
+  },
 } as const;
 
 export const NAV: Link[] = [
@@ -21,7 +30,7 @@ export const NAV: Link[] = [
   { href: "/contact", label: "Contact" },
 ];
 
-export const RESERVE: Link = { href: "/reservation", label: "Reservations" };
+export const RESERVE: Link = { href: "/reservation", label: "Book a table" };
 
 export const CONTACT = {
   addressLines: ["14 St 308, Tonle Bassac", "Chamkar Mon, Phnom Penh 120101"],

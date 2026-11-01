@@ -1,30 +1,33 @@
 "use client";
 
-import { useCallback, useRef, useState } from "react";
-import type { Slot } from "@/content/types";
-import { Eyebrow } from "@/components/ui/Buttons";
-import { CORNER, Placeholder, SlotCaption } from "@/components/ui/Placeholder";
-import { Reveal, RevealText } from "@/components/ui/Reveal";
+import { useCallback, useEffect, useRef, useState } from "react";
+import type { Link, Slot } from "@/content/types";
+import { SITE } from "@/content/site";
+import { Pill } from "@/components/ui/Buttons";
+import { CORNER, SlotCaption } from "@/components/ui/Placeholder";
+import { Photo, hasPhoto } from "@/components/ui/Photo";
 import { cn } from "@/lib/cn";
-import { clamp, useScrollProgress } from "@/lib/scroll";
+import { clamp, prefersReducedMotion, useScrollProgress } from "@/lib/scroll";
 
 interface HeroFilmProps {
-  eyebrow?: string;
   title: string;
   text?: string;
-  slot: Slot;
+  slides: [Slot, Slot];
+  ctas: Link[];
 }
 
 /**
- * Full-screen opening shot. The media layer is the future hero film; until it
- * exists it is a wireframe with a slow Ken Burns drift. Scrolling lifts and fades
- * the title while the media moves at half speed.
+ * Full-screen opening shot: two photos cross-fade with a slow Ken Burns drift.
+ * The H1, subline, CTAs and rating strip are one static layer, visible on the
+ * first frame — no entrance reveal. Scrolling lifts and fades this layer while
+ * the media moves at half speed.
  */
-export function HeroFilm({ eyebrow, title, text, slot }: HeroFilmProps) {
+export function HeroFilm({ title, text, slides, ctas }: HeroFilmProps) {
   const section = useRef<HTMLElement>(null);
   const media = useRef<HTMLDivElement>(null);
   const content = useRef<HTMLDivElement>(null);
   const [playing, setPlaying] = useState(true);
+  const [second, setSecond] = useState(false);
 
   const onFrame = useCallback((_: number, rect: DOMRect) => {
     const out = clamp(-rect.top / rect.height);
@@ -36,27 +39,57 @@ export function HeroFilm({ eyebrow, title, text, slot }: HeroFilmProps) {
   }, []);
   useScrollProgress(section, onFrame);
 
+  useEffect(() => {
+    if (!playing || prefersReducedMotion()) return;
+    const id = window.setInterval(() => setSecond((value) => !value), 9000);
+    return () => window.clearInterval(id);
+  }, [playing]);
+
+  const rating = SITE.rating;
+
   return (
     <section ref={section} className="relative h-svh min-h-[560px] overflow-hidden bg-jungle text-cream">
       <div ref={media} className="absolute inset-0 will-change-transform">
-        <div className={cn("absolute inset-0 animate-kenburns", !playing && "[animation-play-state:paused]")}>
-          <Placeholder slot={slot} kind="video" bare className="h-full w-full" />
-        </div>
-        <div className="absolute inset-0 bg-linear-to-b from-jungle/70 via-jungle/10 to-jungle" />
+        {slides.map((slot, i) => (
+          <div
+            key={i}
+            className={cn(
+              "absolute inset-0 animate-kenburns transition-opacity duration-[2000ms] ease-in-out",
+              !playing && "[animation-play-state:paused]",
+              (i === 1) === second ? "opacity-100" : "opacity-0",
+            )}
+          >
+            <Photo slot={slot} sizes="100vw" bare className="h-full w-full" />
+            {!hasPhoto(slot) && <SlotCaption slot={slot} kind="video" className={cn(CORNER, "z-10")} />}
+          </div>
+        ))}
+        <div className="absolute inset-0 bg-radial from-jungle/75 via-jungle/55 to-jungle/30" />
       </div>
-      <SlotCaption slot={slot} kind="video" className={CORNER} />
 
-      <div ref={content} className="relative flex h-full flex-col items-center justify-center px-5 text-center will-change-transform">
-        {eyebrow && (
-          <Reveal variant="fade" delay={200}>
-            <Eyebrow>{eyebrow}</Eyebrow>
-          </Reveal>
+      <div
+        ref={content}
+        className="relative flex h-full flex-col items-center justify-center px-5 text-center will-change-transform"
+      >
+        <h1 className="font-display text-5xl leading-[1.05] md:text-7xl lg:text-8xl">{title}</h1>
+        {text && <p className="mt-6 max-w-md text-sm opacity-80 md:text-base">{text}</p>}
+        {ctas.length > 0 && (
+          <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
+            {ctas.map((cta, i) => (
+              <Pill key={cta.href} href={cta.href} tone={i === 0 ? "solid" : "outline"}>
+                {cta.label}
+              </Pill>
+            ))}
+          </div>
         )}
-        <RevealText as="h1" text={title} delay={350} className="mt-5 font-display text-5xl leading-[1.05] md:text-7xl lg:text-8xl" />
-        {text && (
-          <Reveal variant="blur" delay={1000}>
-            <p className="mt-6 max-w-md text-sm opacity-80 md:text-base">{text}</p>
-          </Reveal>
+        {rating.score && rating.reviews && (
+          <a
+            href={rating.href}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-7 text-xs tracking-wide opacity-80 underline-offset-4 hover:underline"
+          >
+            {rating.score} from {rating.reviews} {rating.source} reviews
+          </a>
         )}
       </div>
 

@@ -1,7 +1,7 @@
 import type { Feature } from "@/content/types";
 import { Eyebrow, Pill } from "@/components/ui/Buttons";
 import { Parallax } from "@/components/ui/Parallax";
-import { Placeholder } from "@/components/ui/Placeholder";
+import { Photo } from "@/components/ui/Photo";
 import { Reveal, RevealText } from "@/components/ui/Reveal";
 import { cn } from "@/lib/cn";
 
@@ -17,7 +17,11 @@ export function SplitFeature({ feature, reverse }: SplitFeatureProps) {
     <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-12 md:gap-16">
       <Reveal variant="clip" className={cn("md:col-span-7", reverse && "md:order-2")}>
         <Parallax className="aspect-[4/5] md:aspect-[6/5]">
-          <Placeholder slot={feature.slot} className="h-full w-full" />
+          <Photo
+            slot={feature.slot}
+            sizes="(min-width: 768px) 58vw, 100vw"
+            className="h-full w-full"
+          />
         </Parallax>
       </Reveal>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import type { MenuData } from "@/types/site";
 
@@ -43,9 +44,19 @@ export function MenuTabs({ data }: { data: MenuData }) {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {category.items.map((item) => (
                 <div
-                  key={item.name}
+                  key={item.image}
                   className="menu-card flex flex-col bg-white/5 border border-white/10 rounded-2xl p-4 shadow-xl hover:border-[#D92B78]/40 transition-colors duration-200"
                 >
+                  <div className="rounded-xl overflow-hidden shadow-inner mb-4 bg-gray-900/50 h-56 w-full relative">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      sizes="(min-width: 1024px) 260px, (min-width: 640px) 50vw, 100vw"
+                      className="w-full h-full object-cover transform-gpu hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
                   <div className="flex justify-between items-baseline mb-2">
                     <h3 className="text-base font-bold text-[#F2FFF7]">{item.name}</h3>
                     <span className="font-bold text-sm text-[#FF0577]">{item.price}</span>

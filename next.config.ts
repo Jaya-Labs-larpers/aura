@@ -1,15 +1,13 @@
 import type { NextConfig } from "next";
 
-// Default: static export to `out/` for Cloudflare Workers static assets.
-// The Dockerfile sets NEXT_OUTPUT=standalone to build the Node server instead.
-const standalone = process.env.NEXT_OUTPUT === "standalone";
-
-const nextConfig: NextConfig = standalone
-  ? { output: "standalone" }
-  : {
-      output: "export",
-      // next/image's default optimizer needs a server; serve images as-is.
-      images: { unoptimized: true },
-    };
+// Static export to `out/`, served by Cloudflare Workers static assets (see wrangler.jsonc).
+const nextConfig: NextConfig = {
+  output: "export",
+  // next/image's default optimizer needs a server; files are served as-is.
+  images: { unoptimized: true },
+  // Two root layouts ((home) and (classic)) mean there's no single layout to
+  // compose a 404 from, so the global 404 is its own standalone page.
+  experimental: { globalNotFound: true },
+};
 
 export default nextConfig;

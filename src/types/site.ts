@@ -2,6 +2,9 @@ export interface MenuItem {
   name: string;
   price: string;
   description: string;
+  image: string;
+  width: number;
+  height: number;
 }
 
 export interface MenuCategory {

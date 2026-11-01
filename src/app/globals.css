@@ -1,117 +1,154 @@
-@import "tailwindcss";
-/* Font Awesome 6.4.0 (same version as the live site). Layered so Tailwind utilities
-   such as text-2xl override its line-height, as they did with the Tailwind CDN. */
-@import "@fortawesome/fontawesome-free/css/all.min.css" layer(base);
-@import "./fonts.css";
+/* source(none): the (classic) route group has its own stylesheet (classic.css) with
+   the old clone's hex colors. Scanning only the new design's own files keeps the two
+   bundles from bleeding into each other. */
+@import "tailwindcss" source(none);
+@source "./(home)";
+@source "./global-not-found.tsx";
+@source "../components/layout";
+@source "../components/sections";
+@source "../components/ui";
+@import "lenis/dist/lenis.css";
 
-/*
- * auracambodia.asia is built on the Tailwind v3 CDN. Tailwind v4 renamed a few
- * utilities and moved the palette to oklch, so the values below pin the exact
- * v3 hex colors, shadows and fonts the live site renders with.
- */
+/* ------------------------------------------------------------------
+   Design tokens. Change the palette or fonts here; components only
+   reference these names.
+   ------------------------------------------------------------------ */
 @theme {
-  --font-sans: "Miranda Sans", "Kantumruy Pro", sans-serif;
-  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --color-jungle: #04201a; /* deepest background */
+  --color-forest: #083b2c; /* primary green */
+  --color-moss: #17352f;
+  --color-leaf: #0d4f3b;
+  --color-cream: #f2fff7; /* text on dark */
+  --color-ivory: #fcfaf6;
+  --color-sand: #e6dcc3; /* footer */
+  --color-ink: #10231e; /* text on light */
+  --color-bloom: #d92b78; /* accent, use sparingly */
 
-  --color-white: #ffffff;
-  --color-black: #000000;
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-serif), Georgia, "Times New Roman", serif;
+  --font-khmer: var(--font-kh), sans-serif;
 
-  --color-gray-100: #f3f4f6;
-  --color-gray-200: #e5e7eb;
-  --color-gray-300: #d1d5db;
-  --color-gray-400: #9ca3af;
-  --color-gray-500: #6b7280;
-  --color-gray-700: #374151;
-  --color-gray-900: #111827;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
 
-  --color-pink-500: #ec4899;
+  --animate-kenburns: kenburns 18s var(--ease-in-out-quart) infinite alternate;
+  --animate-cue: cue 2.4s var(--ease-in-out-quart) infinite;
 
-  --color-emerald-100: #d1fae5;
-  --color-emerald-200: #a7f3d0;
-  --color-emerald-800: #065f46;
-
-  --color-red-100: #fee2e2;
-  --color-red-300: #fca5a5;
-  --color-red-400: #f87171;
-  --color-red-500: #ef4444;
-
-  --color-green-100: #dcfce7;
-  --color-green-400: #4ade80;
-  --color-green-500: #22c55e;
-
-  --color-yellow-100: #fef9c3;
-  --color-yellow-400: #facc15;
-  --color-yellow-500: #eab308;
-
-}
-
-/* Utilities that existed in Tailwind v3 but not in v4 */
-@utility drop-shadow-v3 {
-  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
-}
-
-@utility drop-shadow-v3-md {
-  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
-}
-
-@utility drop-shadow-v3-xl {
-  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
-}
-
-@utility shadow-inner {
-  box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  @keyframes kenburns {
+    from { transform: scale(1.02) translate3d(0, 0, 0); }
+    to { transform: scale(1.14) translate3d(-1.5%, -1%, 0); }
+  }
+  @keyframes cue {
+    0% { transform: scaleY(0); transform-origin: top; }
+    45% { transform: scaleY(1); transform-origin: top; }
+    55% { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+  }
 }
 
 @layer base {
   html {
-    font-family: "Miranda Sans", "Kantumruy Pro", sans-serif;
+    background: var(--color-jungle);
+    color: var(--color-cream);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-
   body {
-    font-family: "Miranda Sans", "Kantumruy Pro", sans-serif;
+    font-family: var(--font-sans);
+    background: var(--color-jungle);
   }
-
-  /* Tailwind v4 preflight trims native date-input padding; v3 left the browser default */
-  ::-webkit-date-and-time-value {
-    min-height: revert;
-    text-align: revert;
+  ::selection {
+    background: var(--color-bloom);
+    color: white;
   }
-  ::-webkit-datetime-edit {
-    display: revert;
-  }
-  ::-webkit-datetime-edit-fields-wrapper {
-    padding: revert;
-  }
-  ::-webkit-datetime-edit,
-  ::-webkit-datetime-edit-year-field,
-  ::-webkit-datetime-edit-month-field,
-  ::-webkit-datetime-edit-day-field,
-  ::-webkit-datetime-edit-hour-field,
-  ::-webkit-datetime-edit-minute-field,
-  ::-webkit-datetime-edit-second-field,
-  ::-webkit-datetime-edit-millisecond-field,
-  ::-webkit-datetime-edit-meridiem-field {
-    padding-block: revert;
-  }
-
-  /* Tailwind v3 preflight gave buttons a pointer cursor; v4 does not */
-  button:not(:disabled),
-  [role="button"]:not(:disabled) {
-    cursor: pointer;
+  :focus-visible {
+    outline: 2px solid var(--color-bloom);
+    outline-offset: 3px;
   }
 }
 
-/* Menu page speed-optimization styles copied from the original */
-.menu-card {
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  will-change: transform;
+/* ------------------------------------------------------------------
+   Reveal-on-scroll. <Reveal> sets data-shown once the element enters
+   the viewport; the variant picks the entrance.
+   ------------------------------------------------------------------ */
+[data-reveal] {
+  transition:
+    opacity 1s var(--ease-out-expo),
+    transform 1.2s var(--ease-out-expo),
+    clip-path 1.4s var(--ease-out-expo),
+    filter 1s var(--ease-out-expo);
+  transition-delay: var(--delay, 0ms);
+}
+[data-reveal="up"]:not([data-shown]) {
+  opacity: 0;
+  transform: translate3d(0, 48px, 0);
+}
+[data-reveal="fade"]:not([data-shown]) {
+  opacity: 0;
+}
+[data-reveal="blur"]:not([data-shown]) {
+  opacity: 0;
+  filter: blur(12px);
+  transform: scale(1.04);
+}
+/* The wipe clips the child: an observed element that is itself fully clipped
+   never reports as intersecting. */
+[data-reveal="clip"] > * {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 1.4s var(--ease-out-expo), transform 1.8s var(--ease-out-expo);
+  transition-delay: var(--delay, 0ms);
+}
+[data-reveal="clip"]:not([data-shown]) > * {
+  clip-path: inset(100% 0 0 0);
+  transform: scale(1.06);
 }
 
-.font-khmer {
-  font-family: "Kantumruy Pro", sans-serif;
+/* Word-by-word headline rise (<RevealText>). */
+.word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+.word > span {
+  display: inline-block;
+  transform: translate3d(0, 105%, 0);
+  transition: transform 1.1s var(--ease-out-expo);
+  transition-delay: calc(var(--delay, 0ms) + var(--i) * 55ms);
+}
+[data-shown] .word > span {
+  transform: none;
 }
 
-.font-english {
-  font-family: "Miranda Sans", sans-serif;
+@keyframes lightbox-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0) scale(0.97);
+  }
+}
+
+/* ------------------------------------------------------------------
+   Wireframe placeholders (<Placeholder>).
+   ------------------------------------------------------------------ */
+.wireframe {
+  --wf-line: color-mix(in srgb, currentColor 16%, transparent);
+  background-color: color-mix(in srgb, currentColor 5%, transparent);
+  background-image:
+    linear-gradient(var(--wf-line), var(--wf-line)),
+    linear-gradient(var(--wf-line), var(--wf-line));
+  background-size: 100% 1px, 1px 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
 }

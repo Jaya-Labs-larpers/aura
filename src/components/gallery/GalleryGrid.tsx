@@ -1,7 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { Lightbox } from "@/components/site/Lightbox";
 import { useIntersectOnce } from "@/components/site/Reveal";
 import type { GalleryCategory, GalleryItem } from "@/types/site";
 
@@ -24,6 +26,8 @@ export function GalleryGrid({ items }: { items: GalleryItem[] }) {
   // from the previous filter fade out and leave the layout after 300ms.
   const [previous, setPrevious] = useState<Filter>("all");
   const [visible, setVisible] = useState(false);
+  const [activeImage, setActiveImage] = useState<string | null>(null);
+  const close = useCallback(() => setActiveImage(null), []);
 
   useEffect(() => {
     const fadeIn = setTimeout(() => setVisible(true), 50);
@@ -90,24 +94,29 @@ export function GalleryGrid({ items }: { items: GalleryItem[] }) {
           {items.map((item) => (
             <div
               key={item.image}
+              onClick={() => setActiveImage(item.image)}
               className={cn(
-                "break-inside-avoid rounded-2xl overflow-hidden shadow-md border border-black/10 transition-all duration-500 ease-in-out relative bg-[#0D4F3B]/10 w-full",
+                "break-inside-avoid rounded-2xl overflow-hidden shadow-md border border-black/10 transition-all duration-500 ease-in-out cursor-pointer group relative bg-white/50 w-full",
                 isDisplayed(item) ? "inline-block" : "hidden",
                 isVisible(item) ? "opacity-100 scale-100" : "opacity-0 scale-95",
               )}
             >
-              {/* Photo placeholder: keeps the tile's aspect ratio without loading the image. */}
-              <div
-                role="img"
-                aria-label={item.alt}
-                style={{ aspectRatio: `${item.width} / ${item.height}` }}
-                className="w-full flex items-center justify-center text-[#0D4F3B]/40"
-              >
-                <i className="fa-regular fa-image text-3xl"></i>
+              <Image
+                src={item.image}
+                alt={item.alt}
+                width={item.width}
+                height={item.height}
+                sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
+                className="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500"
+              />
+              <div className="absolute inset-0 bg-[#0C1D19]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <i className="fa-solid fa-magnifying-glass-plus text-[#D92B78] text-xl opacity-90"></i>
               </div>
             </div>
           ))}
         </div>
+
+        <Lightbox image={activeImage} onClose={close} closeClassName="text-[#FCFAF6]/85" />
       </div>
     </>
   );

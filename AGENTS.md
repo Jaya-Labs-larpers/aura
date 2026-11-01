@@ -8,12 +8,13 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-# AURA clone
+# AURA website
 
-Next.js 16 + Tailwind v4 rebuild of auracambodia.asia (originally Tailwind v3 CDN + Alpine.js). See README.md.
+Redesign of the AURA Phnom Penh restaurant site, inspired by the editorial, motion-led layout of Amazónico. Next.js 16 + Tailwind v4, exported as static files and hosted on Cloudflare Workers static assets. See README.md.
 
-- Match the live site 1:1; `src/app/globals.css` pins Tailwind v3 behavior. Keep those shims.
-- After adding classes with a base `leading-*` plus responsive `text-*`, run `node scripts/v3-leading-fix.mjs`.
-- Use `[&>:not([hidden])~:not([hidden])]:mt-*` instead of `space-y-*` (v3 margin semantics).
-- Content lives in `src/data/*.json`; photos in `public/images/` (originals in `assets-original/`).
-- `npm run check` = lint + typecheck + build.
+- **Stage: photos going in, page by page.** The home page shows photos (except the hero, still a video wireframe); other pages are still wireframes. Each slot's photo is its `photo` field, a path inside `assets/photos/`. `<Photo>` renders it once `npm run photos` has published it (WebP in `public/images/photos/`, listed in `src/content/photos.json`), otherwise a `<Placeholder>`. Only publish photos for pages the user has asked for.
+- **Frontend only.** No server code, API routes or Worker script. Forms show a local confirmation (`fakeSubmit` in `components/features/forms/Field.tsx`).
+- **Content lives in `src/content/`.** Pages read from it; components never hard-code copy, links or contact details.
+- **Design tokens live in `src/app/globals.css` (`@theme`).** Use the token names (`bg-jungle`, `text-cream`, `font-display`, `ease-out-expo`), not raw hex values.
+- **Motion:** scroll effects subscribe to the shared loop in `src/lib/scroll.ts` and write styles directly (no React state per frame). Entrances use `<Reveal>` / `<RevealText>`. Everything must respect `prefers-reduced-motion`.
+- `npm run check` = lint + typecheck + build. `npm run preview` serves the export through Wrangler locally.

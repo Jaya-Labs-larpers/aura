@@ -49,22 +49,34 @@
         {
           "name": "Aura Combo",
           "price": "$39.00",
-          "description": "Chef's selection of five sashimi, three nigiri, spicy prawn maki, and tuna tataki."
+          "description": "Chef's selection of five sashimi, three nigiri, spicy prawn maki, and tuna tataki.",
+          "image": "/images/menu/signature/aura-combo.jpg",
+          "width": 2400,
+          "height": 2379
         },
         {
           "name": "Pork Knuckle & BBQ Ribs",
           "price": "$48.00",
-          "description": "German pork knuckle and Texas BBQ pork rib, dipping with 4 kinds of chef created sauce."
+          "description": "German pork knuckle and Texas BBQ pork rib, dipping with 4 kinds of chef created sauce.",
+          "image": "/images/menu/signature/pork-knuckle-and-bbq-ribs.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Charcoal-Grilled Khmer Wagyu Rib-Eye (200g)",
           "price": "$22.00",
-          "description": "Premium Kampong Chhnang grass-fed Khmer Wagyu rib-eye, masterfully charcoal-grilled and paired with grilled prawn skewers, roasted baby potatoes, fresh market vegetables, and your choice of signature sauce."
+          "description": "Premium Kampong Chhnang grass-fed Khmer Wagyu rib-eye, masterfully charcoal-grilled and paired with grilled prawn skewers, roasted baby potatoes, fresh market vegetables, and your choice of signature sauce.",
+          "image": "/images/menu/signature/charcoal-grilled-khmer-wagyu-rib-eye-200g.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Charcoal-Grilled Khmer Wagyu Tomahawk (1kg)",
           "price": "$96.00",
-          "description": "Showstopping 1kg Kampong Chhnang grass-fed Khmer Wagyu Tomahawk steak, expertly charcoal-grilled and served with grilled prawn skewers, seared scallops, roasted baby potatoes, and Kampot green peppercorn sauce."
+          "description": "Showstopping 1kg Kampong Chhnang grass-fed Khmer Wagyu Tomahawk steak, expertly charcoal-grilled and served with grilled prawn skewers, seared scallops, roasted baby potatoes, and Kampot green peppercorn sauce.",
+          "image": "/images/menu/signature/charcoal-grilled-khmer-wagyu-tomahawk-1kg.jpg",
+          "width": 1600,
+          "height": 2400
         }
       ]
     },
@@ -75,97 +87,154 @@
         {
           "name": "Fresh Oysters",
           "price": "$36.00",
-          "description": "Served with shallot red wine vinegar Koh Kong dip, crispy shallot, lemon tabasco, and sea grape."
+          "description": "Served with shallot red wine vinegar Koh Kong dip, crispy shallot, lemon tabasco, and sea grape.",
+          "image": "/images/menu/appetizers/fresh-oysters.jpg",
+          "width": 2400,
+          "height": 1800
         },
         {
           "name": "Aura Healthy Salad",
           "price": "$8.50",
-          "description": "Mixed greens, smoked salmon, avocado, asparagus, cherry tomato, bell pepper, quail egg, cashew nuts, and aged balsamic dressing."
+          "description": "Mixed greens, smoked salmon, avocado, asparagus, cherry tomato, bell pepper, quail egg, cashew nuts, and aged balsamic dressing.",
+          "image": "/images/menu/appetizers/aura-healthy-salad.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Chicken Popcorn",
           "price": "$7.00",
-          "description": "Tender chicken marinated with secret spices and fried to a crispy texture, served with Tabasco garlic mayo."
+          "description": "Tender chicken marinated with secret spices and fried to a crispy texture, served with Tabasco garlic mayo.",
+          "image": "/images/menu/appetizers/chicken-popcorn.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Vegetable Spring Roll",
           "price": "$8.00",
-          "description": "Vegetable spring roll with crispy carrot and sweet chili sauce."
+          "description": "Vegetable spring roll with crispy carrot and sweet chili sauce.",
+          "image": "/images/menu/appetizers/vegetable-spring-roll.jpg",
+          "width": 2400,
+          "height": 1802
         },
         {
           "name": "Trio Carpaccio",
           "price": "$16.00",
-          "description": "The combination of tuna, salmon, and prime beef sprinkled with special dressing, capers, Parmesan cheese, extra virgin olive oil, and shrimp roe."
+          "description": "The combination of tuna, salmon, and prime beef sprinkled with special dressing, capers, Parmesan cheese, extra virgin olive oil, and shrimp roe.",
+          "image": "/images/menu/appetizers/trio-carpaccio.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Cheese and Charcuterie Platter",
           "price": "$16.00",
-          "description": "Assorted cheese and sliced ham paired with grapes, nuts, crackers, and bread."
+          "description": "Assorted cheese and sliced ham paired with grapes, nuts, crackers, and bread.",
+          "image": "/images/menu/appetizers/cheese-and-charcuterie-platter.jpg",
+          "width": 683,
+          "height": 1024
         },
         {
           "name": "Mixed Salad",
           "price": "$8.00",
-          "description": "Mixed lettuce, asparagus, cherry tomato, radish, bell pepper, olive, cashew nuts, and aged balsamic dressing."
+          "description": "Mixed lettuce, asparagus, cherry tomato, radish, bell pepper, olive, cashew nuts, and aged balsamic dressing.",
+          "image": "/images/menu/appetizers/mixed-salad.jpg",
+          "width": 2400,
+          "height": 1800
         },
         {
           "name": "Salmon Ebi",
           "price": "$14.00",
-          "description": "Deep-fried shrimp, salmon, avocado, cucumber, and chili bean sauce."
+          "description": "Deep-fried shrimp, salmon, avocado, cucumber, and chili bean sauce.",
+          "image": "/images/menu/appetizers/salmon-ebi.jpg",
+          "width": 1802,
+          "height": 2400
         },
         {
           "name": "Beef Carpaccio",
           "price": "$12.50",
-          "description": "Beef tenderloin with truffle oil, parmesan cheese, salmon salsa, shrimp roe, lemon wedge, corn kernel, capers, rocket salad, and sour Kikkoman."
+          "description": "Beef tenderloin with truffle oil, parmesan cheese, salmon salsa, shrimp roe, lemon wedge, corn kernel, capers, rocket salad, and sour Kikkoman.",
+          "image": "/images/menu/appetizers/beef-carpaccio.jpg",
+          "width": 2400,
+          "height": 1600
         },
         {
           "name": "Lomo Tataki",
           "price": "$15.00",
-          "description": "Beef tenderloin with jalapeño tapenade, sour carrot purée, sour Kikkoman, wasabi mayo, and balsamic reduction."
+          "description": "Beef tenderloin with jalapeño tapenade, sour carrot purée, sour Kikkoman, wasabi mayo, and balsamic reduction.",
+          "image": "/images/menu/appetizers/lomo-tataki.jpg",
+          "width": 2400,
+          "height": 1800
         },
         {
           "name": "Salmon In Spicy Kikkoman",
           "price": "$10.00",
-          "description": "Fresh salmon with rocket salad, carrot, turnip, sesame seeds, and spicy Kikkoman sauce."
+          "description": "Fresh salmon with rocket salad, carrot, turnip, sesame seeds, and spicy Kikkoman sauce.",
+          "image": "/images/menu/appetizers/salmon-in-spicy-kikkoman.png",
+          "width": 2400,
+          "height": 1800
         },
         {
           "name": "Avocados Prawn Cocktail",
           "price": "$12.00",
-          "description": "Prawns, avocado, mixed greens, and cocktail sauce."
+          "description": "Prawns, avocado, mixed greens, and cocktail sauce.",
+          "image": "/images/menu/appetizers/avocados-prawn-cocktail.png",
+          "width": 2400,
+          "height": 1800
         },
         {
           "name": "Grilled Chicken Caesar Salad",
           "price": "$8.50",
-          "description": "Romaine lettuce, grilled chicken, garlic croutons, crispy bacon, parmesan cheese, anchovies, and creamy Caesar dressing."
+          "description": "Romaine lettuce, grilled chicken, garlic croutons, crispy bacon, parmesan cheese, anchovies, and creamy Caesar dressing.",
+          "image": "/images/menu/appetizers/grilled-chicken-caesar-salad.jpg",
+          "width": 1800,
+          "height": 2400
         },
         {
           "name": "Grilled Chicken Lollipops",
           "price": "$11.50",
-          "description": "Chicken drumsticks wrapped with bacon, BBQ rub, and honey sauce. Served with mashed potatoes, sesame seeds, kro saing teab, and lemon wedge."
+          "description": "Chicken drumsticks wrapped with bacon, BBQ rub, and honey sauce. Served with mashed potatoes, sesame seeds, kro saing teab, and lemon wedge.",
+          "image": "/images/menu/appetizers/grilled-chicken-lollipops.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Spicy Prawn Garlic Chili",
           "price": "$13.00",
-          "description": "Fried prawns with garlic and chili sauce served with kror saing teab."
+          "description": "Fried prawns with garlic and chili sauce served with kror saing teab.",
+          "image": "/images/menu/appetizers/spicy-prawn-garlic-chili.png",
+          "width": 2400,
+          "height": 1800
         },
         {
           "name": "Oven Baked Oysters & Mussels",
           "price": "$16.50",
-          "description": "Creamy baked oysters and mussels with cheese and chopped crispy bacon."
+          "description": "Creamy baked oysters and mussels with cheese and chopped crispy bacon.",
+          "image": "/images/menu/appetizers/oven-baked-oysters-and-mussels.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Fruitti Di Calamari",
           "price": "$8.00",
-          "description": "Breaded squid rings with onion, zucchini, and Aura tabasco mayo."
+          "description": "Breaded squid rings with onion, zucchini, and Aura tabasco mayo.",
+          "image": "/images/menu/appetizers/fruitti-di-calamari.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Honey Mustard Chicken Wings",
           "price": "$6.50",
-          "description": "Chicken wings coated in honey mustard sauce and sesame seeds."
+          "description": "Chicken wings coated in honey mustard sauce and sesame seeds.",
+          "image": "/images/menu/appetizers/honey-mustard-chicken-wings.png",
+          "width": 2400,
+          "height": 1800
         },
         {
           "name": "XL Smoked Duck & Shrimp Spring Rolls",
           "price": "$14.00",
-          "description": "Smoked duck, shrimp, yam bean, taro, carrot, sweet potato, and sweet chili sauce wrapped in Aura rice pancake."
+          "description": "Smoked duck, shrimp, yam bean, taro, carrot, sweet potato, and sweet chili sauce wrapped in Aura rice pancake.",
+          "image": "/images/menu/appetizers/xl-smoked-duck-and-shrimp-spring-rolls.jpg",
+          "width": 1600,
+          "height": 2400
         }
       ]
     },
@@ -176,17 +245,26 @@
         {
           "name": "Wild Mushroom Cream Soup",
           "price": "$7.00",
-          "description": "Cepe and button mushrooms, chicken broth, cooking cream, truffle oil, scallops, and apple."
+          "description": "Cepe and button mushrooms, chicken broth, cooking cream, truffle oil, scallops, and apple.",
+          "image": "/images/menu/soup/wild-mushroom-cream-soup.jpg",
+          "width": 2400,
+          "height": 1800
         },
         {
           "name": "Beetroot Soup Borscht",
           "price": "$7.00",
-          "description": "A classic of Eastern Europe. The deep ruby color of this borscht is both healthy and nutritious."
+          "description": "A classic of Eastern Europe. The deep ruby color of this borscht is both healthy and nutritious.",
+          "image": "/images/menu/soup/beetroot-soup-borscht.png",
+          "width": 1086,
+          "height": 1448
         },
         {
           "name": "Aura Green Spinach Soup",
           "price": "$7.00",
-          "description": "Aura's signature spinach broth, slowly simmered and enriched with shredded egg, served with sweet Kampot flower crab meat and a garnish of prawn roe."
+          "description": "Aura's signature spinach broth, slowly simmered and enriched with shredded egg, served with sweet Kampot flower crab meat and a garnish of prawn roe.",
+          "image": "/images/menu/soup/aura-green-spinach-soup.jpg",
+          "width": 1600,
+          "height": 2400
         }
       ]
     },
@@ -197,77 +275,122 @@
         {
           "name": "Authentic Beef Saraman",
           "price": "$12.00",
-          "description": "Slow-braised beef shank in red curry paste, coconut and tamarind jus, topped with peanuts, garlic bread, crispy sticky rice, and kror saing teab."
+          "description": "Slow-braised beef shank in red curry paste, coconut and tamarind jus, topped with peanuts, garlic bread, crispy sticky rice, and kror saing teab.",
+          "image": "/images/menu/main-course/authentic-beef-saraman.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Fish Amok",
           "price": "$10.00",
-          "description": "Traditional fish amok with coconut milk, kaffir lime leaves, chili finger, served with garlic bread, crispy sticky rice, and kror saing teab."
+          "description": "Traditional fish amok with coconut milk, kaffir lime leaves, chili finger, served with garlic bread, crispy sticky rice, and kror saing teab.",
+          "image": "/images/menu/main-course/fish-amok.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Assorted Meat Skewers",
           "price": "$8.00",
-          "description": "Chicken skewer, beef skewer, and mushroom skewers with banana blossom and beef. Served with kror saing teab, peanuts, salt, pepper, lime sauce, and tofu essence."
+          "description": "Chicken skewer, beef skewer, and mushroom skewers with banana blossom and beef. Served with kror saing teab, peanuts, salt, pepper, lime sauce, and tofu essence.",
+          "image": "/images/menu/main-course/assorted-meat-skewers.jpg",
+          "width": 2400,
+          "height": 1800
         },
         {
           "name": "Mchou Krouerng Khmer Wagyu Beef Striploin",
           "price": "$19.00",
-          "description": "Premium Kampong Chhnang grass-fed Khmer Wagyu striploin, masterfully charcoal-grilled and served over a rich, aromatic Mchou Krouerng sauce with carrot, zucchini, and fresh local herbs."
+          "description": "Premium Kampong Chhnang grass-fed Khmer Wagyu striploin, masterfully charcoal-grilled and served over a rich, aromatic Mchou Krouerng sauce with carrot, zucchini, and fresh local herbs.",
+          "image": "/images/menu/main-course/mchou-krouerng-khmer-wagyu-beef-striploin.jpg",
+          "width": 1920,
+          "height": 2400
         },
         {
           "name": "Cobe Fish Fillet 180g",
           "price": "$16.00",
-          "description": "Seafood chowder, mashed potato, baby carrot, asparagus, oyster bacon roll, lemon wedge, and olive oil."
+          "description": "Seafood chowder, mashed potato, baby carrot, asparagus, oyster bacon roll, lemon wedge, and olive oil.",
+          "image": "/images/menu/main-course/cobe-fish-fillet-180g.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Seafood Tower",
           "price": "$39.00",
-          "description": "Poached prawn, squid, mussels, scallops, hamachi, salmon, tuna, and nisin yellow roe. Served with condiments and sauce."
+          "description": "Poached prawn, squid, mussels, scallops, hamachi, salmon, tuna, and nisin yellow roe. Served with condiments and sauce.",
+          "image": "/images/menu/main-course/seafood-tower.jpg",
+          "width": 1801,
+          "height": 2400
         },
         {
           "name": "Seared Salmon Steak",
           "price": "$18.00",
-          "description": "Seared salmon escallops with sautéed vegetables, baby potatoes, oyster bacon roll, lemon wedge, and porcini mushroom sauce."
+          "description": "Seared salmon escallops with sautéed vegetables, baby potatoes, oyster bacon roll, lemon wedge, and porcini mushroom sauce.",
+          "image": "/images/menu/main-course/seared-salmon-steak.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Charcoal-Grilled Local Khmer Wagyu Striploin (250g)",
           "price": "$38.00",
-          "description": "Premium Kampong Chhnang grass-fed Khmer Wagyu striploin, masterfully charcoal-grilled and served with seared scallops, grilled prawn skewers, roasted baby potatoes, farm-fresh vegetables, and your choice of signature sauce."
+          "description": "Premium Kampong Chhnang grass-fed Khmer Wagyu striploin, masterfully charcoal-grilled and served with seared scallops, grilled prawn skewers, roasted baby potatoes, farm-fresh vegetables, and your choice of signature sauce.",
+          "image": "/images/menu/main-course/charcoal-grilled-local-khmer-wagyu-striploin-250g.jpg",
+          "width": 1280,
+          "height": 960
         },
         {
           "name": "Charcoal-Grilled Local Khmer Wagyu Rib-Eye Tek Bror Hok",
           "price": "$28.00",
-          "description": "Premium Kampong Chhnang grass-fed Khmer Wagyu rib-eye, masterfully charcoal-grilled and served with a traditional Tek Bror Hok dipping sauce, fresh raw vegetables, and crisp banana blossom."
+          "description": "Premium Kampong Chhnang grass-fed Khmer Wagyu rib-eye, masterfully charcoal-grilled and served with a traditional Tek Bror Hok dipping sauce, fresh raw vegetables, and crisp banana blossom.",
+          "image": "/images/menu/main-course/charcoal-grilled-local-khmer-wagyu-rib-eye-tek-bror-hok.jpg",
+          "width": 2400,
+          "height": 1800
         },
         {
           "name": "Lamb Rack (Carre Dagneau) 300g",
           "price": "$32.00",
-          "description": "Lamb rack with baby potatoes, baby carrot, asparagus, broccoli, and choice of sauce."
+          "description": "Lamb rack with baby potatoes, baby carrot, asparagus, broccoli, and choice of sauce.",
+          "image": "/images/menu/main-course/lamb-rack-carre-dagneau-300g.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Spaghetti Tomato Sauce",
           "price": "$8.00",
-          "description": "Spaghetti with tomato sauce, basil, parsley, parmesan cheese, and garlic bread."
+          "description": "Spaghetti with tomato sauce, basil, parsley, parmesan cheese, and garlic bread.",
+          "image": "/images/menu/main-course/spaghetti-tomato-sauce.jpg",
+          "width": 2400,
+          "height": 1800
         },
         {
           "name": "Spaghetti Seafood Tomato Sauce",
           "price": "$8.00",
-          "description": "Al dente spaghetti with mixed seafood in a rich, savory tomato sauce."
+          "description": "Al dente spaghetti with mixed seafood in a rich, savory tomato sauce.",
+          "image": "/images/menu/main-course/spaghetti-seafood-tomato-sauce.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Spaghetti Carbonara",
           "price": "$8.00",
-          "description": "Classic spaghetti in a rich, creamy carbonara sauce with crispy bacon and Parmesan cheese."
+          "description": "Classic spaghetti in a rich, creamy carbonara sauce with crispy bacon and Parmesan cheese.",
+          "image": "/images/menu/main-course/spaghetti-carbonara.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Spaghetti Bolognese",
           "price": "$8.00",
-          "description": "Al dente pasta in a rich, slow-simmered beef and tomato herb sauce."
+          "description": "Al dente pasta in a rich, slow-simmered beef and tomato herb sauce.",
+          "image": "/images/menu/main-course/spaghetti-bolognese.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Wagyu Beef Burger Slider",
           "price": "$18.00",
-          "description": "Wagyu beef striploin slider with cheese, coleslaw, rocket salad, French fries, and tomato ketchup."
+          "description": "Wagyu beef striploin slider with cheese, coleslaw, rocket salad, French fries, and tomato ketchup.",
+          "image": "/images/menu/main-course/wagyu-beef-burger-slider.jpg",
+          "width": 1802,
+          "height": 2400
         }
       ]
     },
@@ -278,22 +401,34 @@
         {
           "name": "Oven-baked Rosemary Chicken Half",
           "price": "$18.00",
-          "description": "Oven-baked chicken with rosemary, potatoes, vegetables, prawn and avocado cocktail salad, and choice of sauces."
+          "description": "Oven-baked chicken with rosemary, potatoes, vegetables, prawn and avocado cocktail salad, and choice of sauces.",
+          "image": "/images/menu/sharing-platters/oven-baked-rosemary-chicken-half.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Duck a L'orange (4 people)",
           "price": "$35.00",
-          "description": "Roasted Beijing duck with honey, roasted potatoes, vegetables, orange sauce, and prawn avocado cocktail salad."
+          "description": "Roasted Beijing duck with honey, roasted potatoes, vegetables, orange sauce, and prawn avocado cocktail salad.",
+          "image": "/images/menu/sharing-platters/duck-a-l-orange-4-people.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Khmer Platters (4 People)",
           "price": "$34.00",
-          "description": "Beef saraman, fish hor mok, assorted skewers, Khmer beef salad, crispy coconut sticky rice, hard rolls, garlic bread, krorsaing teab, and tofu sauce."
+          "description": "Beef saraman, fish hor mok, assorted skewers, Khmer beef salad, crispy coconut sticky rice, hard rolls, garlic bread, krorsaing teab, and tofu sauce.",
+          "image": "/images/menu/sharing-platters/khmer-platters-4-people.png",
+          "width": 1153,
+          "height": 866
         },
         {
           "name": "Aura Chef's Platters (4 People)",
           "price": "$49.00",
-          "description": "BBQ pork rib, US beef rib, Australian beef rib-eye, honey mustard chicken wings, Koh Kong prawn skewer, green salad, Aura potatoes, sautéed vegetables, grilled corn, and selection of sauces."
+          "description": "BBQ pork rib, US beef rib, Australian beef rib-eye, honey mustard chicken wings, Koh Kong prawn skewer, green salad, Aura potatoes, sautéed vegetables, grilled corn, and selection of sauces.",
+          "image": "/images/menu/sharing-platters/aura-chef-s-platters-4-people.jpg",
+          "width": 1600,
+          "height": 2400
         }
       ]
     },
@@ -304,37 +439,58 @@
         {
           "name": "Fresh Fruits Platter",
           "price": "$7.00",
-          "description": "Seasonal Fresh Fruit with lime and fresh mint."
+          "description": "Seasonal Fresh Fruit with lime and fresh mint.",
+          "image": "/images/menu/dessert/fresh-fruits-platter.jpg",
+          "width": 2400,
+          "height": 1800
         },
         {
           "name": "Chocolate Brownie",
           "price": "$7.00",
-          "description": "Chocolate brownies with icing sugar, fruits, and your choice of strawberry or mango sauce."
+          "description": "Chocolate brownies with icing sugar, fruits, and your choice of strawberry or mango sauce.",
+          "image": "/images/menu/dessert/chocolate-brownie.jpg",
+          "width": 2400,
+          "height": 1800
         },
         {
           "name": "Chocolate Fondant",
           "price": "$7.00",
-          "description": "Oven-baked chocolate cake with tropical fresh fruit and icing sugar."
+          "description": "Oven-baked chocolate cake with tropical fresh fruit and icing sugar.",
+          "image": "/images/menu/dessert/chocolate-fondant.jpg",
+          "width": 2400,
+          "height": 1800
         },
         {
           "name": "Kompot Pepper Cream Brulee",
           "price": "$7.00",
-          "description": "Topped with caramelized brown sugar, seasonal fresh fruit, and fresh mint."
+          "description": "Topped with caramelized brown sugar, seasonal fresh fruit, and fresh mint.",
+          "image": "/images/menu/dessert/kompot-pepper-cream-brulee.jpg",
+          "width": 1801,
+          "height": 2400
         },
         {
           "name": "Mango Cheese Cake",
           "price": "$7.00",
-          "description": "Mango cheesecake topped with fresh mango chunks, fruits, and fresh mint."
+          "description": "Mango cheesecake topped with fresh mango chunks, fruits, and fresh mint.",
+          "image": "/images/menu/dessert/mango-cheese-cake.jpg",
+          "width": 2400,
+          "height": 1800
         },
         {
           "name": "Coconut Ice Cream",
           "price": "$5.00",
-          "description": "This is the best EVER coconut ice cream, creamy coconut milk and sweetened naturally, it is rich and absolutely delicious."
+          "description": "This is the best EVER coconut ice cream, creamy coconut milk and sweetened naturally, it is rich and absolutely delicious.",
+          "image": "/images/menu/dessert/coconut-ice-cream.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Kompot Pepper Ice Cream",
           "price": "$5.00",
-          "description": "This Kompot Pepper Ice Cream balances velvety sweetness with a subtle, peppery kick that pairs especially well with fruit desserts."
+          "description": "This Kompot Pepper Ice Cream balances velvety sweetness with a subtle, peppery kick that pairs especially well with fruit desserts.",
+          "image": "/images/menu/dessert/kompot-pepper-ice-cream.jpg",
+          "width": 1600,
+          "height": 2400
         }
       ]
     },
@@ -345,12 +501,18 @@
         {
           "name": "Coconut Juice",
           "price": "$0.00",
-          "description": ""
+          "description": "",
+          "image": "/images/menu/soft-drink-juice/coconut-juice.jpg",
+          "width": 440,
+          "height": 400
         },
         {
           "name": "Orange Juice",
           "price": "$0.00",
-          "description": ""
+          "description": "",
+          "image": "/images/menu/soft-drink-juice/orange-juice.jpg",
+          "width": 554,
+          "height": 554
         }
       ]
     },
@@ -361,32 +523,50 @@
         {
           "name": "Aura Delight",
           "price": "$8.00",
-          "description": ""
+          "description": "",
+          "image": "/images/menu/signature-cocktail/aura-delight.jpg",
+          "width": 2400,
+          "height": 1920
         },
         {
           "name": "Aura Sling",
           "price": "$8.00",
-          "description": ""
+          "description": "",
+          "image": "/images/menu/signature-cocktail/aura-sling.jpg",
+          "width": 1600,
+          "height": 2400
         },
         {
           "name": "Kiss Goodbyeaura",
           "price": "$8.00",
-          "description": ""
+          "description": "",
+          "image": "/images/menu/signature-cocktail/kiss-goodbyeaura.jpg",
+          "width": 2400,
+          "height": 1920
         },
         {
           "name": "Screwy Lady Specialaura",
           "price": "$8.00",
-          "description": ""
+          "description": "",
+          "image": "/images/menu/signature-cocktail/screwy-lady-specialaura.jpg",
+          "width": 2000,
+          "height": 1600
         },
         {
           "name": "Aura Paradise",
           "price": "$8.00",
-          "description": ""
+          "description": "",
+          "image": "/images/menu/signature-cocktail/aura-paradise.jpg",
+          "width": 853,
+          "height": 1280
         },
         {
           "name": "Mango Colada",
           "price": "$8.00",
-          "description": ""
+          "description": "",
+          "image": "/images/menu/signature-cocktail/mango-colada.jpg",
+          "width": 853,
+          "height": 1280
         }
       ]
     },
@@ -397,17 +577,26 @@
         {
           "name": "Aura Paradiseaura",
           "price": "$7.00",
-          "description": ""
+          "description": "",
+          "image": "/images/menu/non-alcohol-cocktail/aura-paradiseaura.jpg",
+          "width": 2400,
+          "height": 1919
         },
         {
           "name": "Mango Coladaaura",
           "price": "$7.00",
-          "description": ""
+          "description": "",
+          "image": "/images/menu/non-alcohol-cocktail/mango-coladaaura.jpg",
+          "width": 2400,
+          "height": 1920
         },
         {
           "name": "Mock Tial",
           "price": "$7.00",
-          "description": ""
+          "description": "",
+          "image": "/images/menu/non-alcohol-cocktail/mock-tial.jpg",
+          "width": 853,
+          "height": 1280
         }
       ]
     },
@@ -418,22 +607,34 @@
         {
           "name": "Angkor Beer",
           "price": "$0.00",
-          "description": ""
+          "description": "",
+          "image": "/images/menu/beer/angkor-beer.png",
+          "width": 512,
+          "height": 512
         },
         {
           "name": "Heineken Beer",
           "price": "$0.00",
-          "description": ""
+          "description": "",
+          "image": "/images/menu/beer/heineken-beer.jpg",
+          "width": 554,
+          "height": 554
         },
         {
           "name": "Kingdom IPA",
           "price": "$0.00",
-          "description": ""
+          "description": "",
+          "image": "/images/menu/beer/kingdom-ipa.jpg",
+          "width": 853,
+          "height": 1280
         },
         {
           "name": "Tiger Beer",
           "price": "$0.00",
-          "description": ""
+          "description": "",
+          "image": "/images/menu/beer/tiger-beer.jpg",
+          "width": 512,
+          "height": 512
         }
       ]
     }

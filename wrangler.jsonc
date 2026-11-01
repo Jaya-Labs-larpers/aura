@@ -7,5 +7,7 @@
     // Static export produced by `npm run build` (next.config.ts, output: "export").
     "directory": "./out",
     "not_found_handling": "404-page"
-  }
+  },
+  // Required by `wrangler preview`, the dashboard's preview command for non-production branches.
+  "previews": {}
 }

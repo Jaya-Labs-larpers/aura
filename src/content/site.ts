@@ -17,7 +17,7 @@ export const SITE = {
     score: "4.7",
     reviews: "998",
     source: "Google",
-    href: "https://maps.app.goo.gl/AzTXNeWvV8ETcJpg6",
+    href: "https://maps.app.goo.gl/NYRN24Ri7BGRSwZ6A",
   },
 } as const;
 
@@ -45,7 +45,7 @@ export const CONTACT = {
   phoneAlt: "+855 98 663 389",
   phoneHref: "tel:+85592663389",
   email: "sales@auracambodia.asia",
-  googleMaps: "https://maps.app.goo.gl/AzTXNeWvV8ETcJpg6",
+  googleMaps: "https://maps.app.goo.gl/NYRN24Ri7BGRSwZ6A",
 } as const;
 
 export const HOURS = [

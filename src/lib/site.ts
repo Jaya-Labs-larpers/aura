@@ -25,7 +25,7 @@ export const CONTACT = {
   email: "sales@auracambodia.asia",
   hoursDays: "Monday – Sunday",
   hoursTime: "11:30AM – 01:00AM",
-  googleMaps: "https://maps.app.goo.gl/AzTXNeWvV8ETcJpg6",
+  googleMaps: "https://maps.app.goo.gl/NYRN24Ri7BGRSwZ6A",
 } as const;
 
 export const LOGO = "/images/brand/aura-logo.png";

@@ -49,6 +49,7 @@ export function Photo({ slot, sizes, className, fit = "cover", bare }: PhotoProp
       loading="lazy"
       decoding="async"
       draggable={false}
+      style={slot.position ? { objectPosition: slot.position } : undefined}
       className={cn(fit === "cover" ? "object-cover" : "object-contain", className)}
     />
   );

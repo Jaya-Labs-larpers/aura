@@ -6,6 +6,8 @@
 export interface Slot {
   label: string;
   photo?: string;
+  /** CSS `object-position`, for a published photo whose default crop cuts off the subject. */
+  position?: string;
 }
 
 export interface Link {

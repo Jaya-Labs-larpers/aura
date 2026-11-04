@@ -2,18 +2,20 @@ import Link from "next/link";
 import { CONTACT, HOURS, NAV, RESERVE, SITE, SOCIALS } from "@/content/site";
 import { Pill } from "@/components/ui/Buttons";
 import { SocialIcon } from "@/components/ui/Icons";
-import { PlateLeaf } from "@/components/ui/LeafMotif";
+import { LeafTone, PlateLeaf } from "@/components/ui/LeafMotif";
 import { Reveal } from "@/components/ui/Reveal";
 
 /**
- * Footer sits on the same glaze ground as "Why AURA" (Story), with a leaf
- * watermark centered behind the four columns. Sits above Location (sticky)
- * in z-order so it slides up over that photo as the page reaches bottom.
+ * Footer sits on the same glaze ground as "Why AURA" (Story), with tonal
+ * leaves at the edges and a leaf watermark centered behind the four columns.
+ * Sits above Location (sticky) in z-order so it slides up over that photo as
+ * the page reaches bottom.
  */
 export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="relative z-10 overflow-hidden bg-glaze text-ink">
+      <LeafTone clear="radial-gradient(ellipse 52% 62% at 50% 46%, transparent 35%, #000 92%)" />
       <PlateLeaf
         sizes="42vmin"
         className="absolute top-1/2 left-1/2 h-[42vmin] w-[42vmin] -translate-x-1/2 -translate-y-1/2 opacity-45 mix-blend-multiply"

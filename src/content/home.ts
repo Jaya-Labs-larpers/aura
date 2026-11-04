@@ -13,21 +13,22 @@ export const HOME = {
     title: "AURA Phnom Penh",
     text: "Mekong Modern Rooftop Dining",
     chips: ["Lunch", "Dinner", "Late drinks"],
-    // Cross-fades slide 1 → slide 2, slow Ken Burns on each.
+    // Cross-fades through the slides in order, one slow Ken Burns zoom on each.
     slides: [
       { label: "AURA's rooftop restaurant and bar lit up at night, Bassac Lane", photo: "site/hero-slide-2.jpg" },
       { label: "Aerial view of AURA's rooftop restaurant and bar at night, Bassac Lane", photo: "site/hero-slide-3.jpg" },
-    ] satisfies [Slot, Slot],
+      { label: "AURA's rooftop bar among the plants by day", photo: "site/rooftop-bar-day.jpg" },
+      { label: "AURA's rooftop garden from above by day, Bassac Lane", photo: "venue-highlights/04.jpg" },
+    ] satisfies Slot[],
     ctas: [
-      { label: "View menu", href: "/menu" },
+      { label: "View Menus", href: "/menu" },
       { label: "Reservation", href: "/reservation" },
     ] satisfies Link[],
   },
 
   // Draft copy from the AURA identity slide — needs AURA sign-off before launch.
   identity: {
-    lead: "Discover the world of",
-    accent: "AURA",
+    title: ["Discover the world of Mekong Modern dining.", "Khmer-rooted, world-open."] as [string, string],
     body: [
       "Made for discerning explorers, AURA is where Cambodia's culinary heritage meets a modern twist. Khmer classics, signature steaks from the charcoal grill and craft cocktails with a local touch, served by a charming team in a warm, contemporary rooftop lounge in the heart of Phnom Penh.",
       // Also the meta description (search snippet).
@@ -46,21 +47,23 @@ export const HOME = {
     {
       title: ["Dinner from", "the grill"],
       slot: { label: "Charcoal-grilled Khmer Wagyu rib-eye", photo: "menu/signature/charcoal-grilled-khmer-wagyu-rib-eye-200g.jpg" },
-      cta: { label: "View menu", href: "/menu" },
+      cta: { label: "View Menus", href: "/menu" },
     },
     {
       title: ["Late drinks", "at the bar"],
       slot: { label: "AURA's bar lit up at night", photo: "venue-highlights/03.jpg" },
-      cta: { label: "View menu", href: "/menu" },
+      cta: { label: "View Menus", href: "/menu" },
     },
   ] satisfies Card[],
 
+  // Outdoor and indoor shots in turn; the two staff shots kept apart.
   strip: [
-    { label: "AURA's jungle-green bar among the plants by day", photo: "site/rooftop-bar-day.jpg" },
     { label: "View down AURA's rooftop stairway over Phnom Penh", photo: "site/rooftop-stairway-view.jpg" },
+    { label: "AURA's kitchen team in their aprons at the open kitchen", photo: "site/heart-of-the-house.jpg" },
     { label: "AURA's bar lit up after dark", photo: "site/rooftop-bar-night.jpg" },
+    { label: "AURA's service team bringing drinks to a guest's table", photo: "events/38-meeting-and-event.jpg", position: "center 40%" },
     { label: "Guests toasting at a private event at AURA", photo: "events/guest-toast.jpg" },
-    { label: "AURA chef carving a roast at the table", photo: "menu/chef-carving.jpg" },
+    { label: "AURA chef carving a roast chicken at the table", photo: "site/front-of-house.jpg", position: "center 75%" },
   ] satisfies Slot[],
 
   // Placeholder copy and photos — AURA hasn't confirmed real offer content yet
@@ -71,7 +74,7 @@ export const HOME = {
       title: "Return for happy hour on the lane.",
       body: ["Seasonal pours and chef's specials, Bassac Lane style. Check back for what's on."],
       slot: { label: "Mango colada, AURA signature cocktail", photo: "menu/signature-cocktail/mango-colada.jpg" },
-      cta: { label: "View menu", href: "/menu" },
+      cta: { label: "View Menus", href: "/menu" },
     },
     {
       eyebrow: "Private Events",
@@ -100,7 +103,10 @@ export const HOME = {
     eyebrow: "Why AURA",
     lead: "Rooftop garden dining above Bassac Lane.",
     body: "An open-air lounge among the plants, built around the charcoal grill: Kampong Chhnang Wagyu, Fish Amok and Saraman.",
-    award: "Tripadvisor Travelers' Choice",
+    award: {
+      label: "Tripadvisor Travelers' Choice",
+      href: "https://www.tripadvisor.com/Restaurant_Review-g293940-d27106416-Reviews-AURA_Phnom_Penh-Phnom_Penh.html",
+    } satisfies Link,
   },
 
   location: {

@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { cn } from "@/lib/cn";
 
 /**
@@ -39,6 +40,15 @@ export function LeafPattern({ id, className }: { id: string; className?: string 
       <rect width="100%" height="100%" fill={`url(#${id})`} />
     </svg>
   );
+}
+
+/**
+ * Tonal leaves: the body's leaf tile in reverse, one darker tone on the glaze
+ * grounds (`.leaf-tone` in globals.css). `clear` is a CSS mask image, opaque
+ * where the leaves show, transparent over the copy so text stays pattern-free.
+ */
+export function LeafTone({ clear }: { clear: string }) {
+  return <div aria-hidden="true" className="leaf-tone" style={{ "--leaf-clear": clear } as CSSProperties} />;
 }
 
 /**

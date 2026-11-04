@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLenis } from "lenis/react";
-import { useEffect, useState, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { NAV, RESERVE, SITE, SOCIALS } from "@/content/site";
 import { CloseIcon, SocialIcon } from "@/components/ui/Icons";
 import { cn } from "@/lib/cn";
@@ -17,6 +17,7 @@ import { subscribeScroll } from "@/lib/scroll";
 export function Header() {
   const pathname = usePathname();
   const lenis = useLenis();
+  const headerRef = useRef<HTMLElement>(null);
   const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
   const [openedAt, setOpenedAt] = useState(pathname);
@@ -24,7 +25,21 @@ export function Header() {
   // Close the menu after navigating.
   if (open && openedAt !== pathname) setOpen(false);
 
-  useEffect(() => subscribeScroll(() => setSolid(window.scrollY > 40)), []);
+  const isHome = pathname === "/";
+
+  useEffect(
+    () =>
+      subscribeScroll(() => {
+        if (!isHome) {
+          setSolid(window.scrollY > 40);
+          return;
+        }
+        const identity = document.getElementById("identity");
+        const headerBottom = headerRef.current?.getBoundingClientRect().bottom ?? 0;
+        setSolid(identity ? identity.getBoundingClientRect().top <= headerBottom : window.scrollY > 40);
+      }),
+    [isHome],
+  );
 
   useEffect(() => {
     if (open) lenis?.stop();
@@ -47,6 +62,7 @@ export function Header() {
   return (
     <>
       <header
+        ref={headerRef}
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-[background-color,backdrop-filter,padding] duration-500 ease-out-expo",
           solid && !open ? "bg-jungle/85 py-3 backdrop-blur-md" : "py-5",

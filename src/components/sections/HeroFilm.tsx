@@ -13,21 +13,25 @@ interface HeroFilmProps {
   title: string;
   text?: string;
   chips?: string[];
-  slides: [Slot, Slot];
+  slides: Slot[];
   ctas: Link[];
 }
 
+/** How long each slide shows; the `kenburns` zoom in globals.css spans this plus the 2s fade. */
+const SLIDE_MS = 12000;
+
 /**
- * Full-bleed opening shot: the two still photos cross-fade with a slow Ken
- * Burns drift. The brand title and tagline sit centered on a dark fade, with
- * the menu/booking CTAs beneath. Scrolling lifts and fades this layer while
- * the media moves at half speed.
+ * Full-bleed opening shot: the still photos cross-fade in turn, each with one
+ * slow Ken Burns zoom. The brand title and tagline sit centered on a soft dark
+ * glow, with the menu/booking CTAs beneath. Scrolling lifts and fades this
+ * layer while the media moves at half speed.
  */
 export function HeroFilm({ title, text, slides, ctas }: HeroFilmProps) {
   const section = useRef<HTMLElement>(null);
   const media = useRef<HTMLDivElement>(null);
   const content = useRef<HTMLDivElement>(null);
-  const [second, setSecond] = useState(false);
+  // The outgoing slide keeps its zoom while it fades out; the rest drop it, so it restarts on their next turn.
+  const [{ active, prev }, setTurn] = useState({ active: 0, prev: -1 });
 
   const onFrame = useCallback((_: number, rect: DOMRect) => {
     const out = clamp(-rect.top / rect.height);
@@ -40,10 +44,13 @@ export function HeroFilm({ title, text, slides, ctas }: HeroFilmProps) {
   useScrollProgress(section, onFrame);
 
   useEffect(() => {
-    if (prefersReducedMotion()) return;
-    const id = window.setInterval(() => setSecond((value) => !value), 9000);
+    if (prefersReducedMotion() || slides.length < 2) return;
+    const id = window.setInterval(
+      () => setTurn(({ active }) => ({ active: (active + 1) % slides.length, prev: active })),
+      SLIDE_MS,
+    );
     return () => window.clearInterval(id);
-  }, []);
+  }, [slides.length]);
 
   return (
     <section ref={section} className="relative h-svh min-h-[560px] overflow-hidden bg-jungle text-cream">
@@ -52,8 +59,9 @@ export function HeroFilm({ title, text, slides, ctas }: HeroFilmProps) {
           <div
             key={i}
             className={cn(
-              "absolute inset-0 animate-kenburns transition-opacity duration-[2000ms] ease-in-out",
-              (i === 1) === second ? "opacity-100" : "opacity-0",
+              "absolute inset-0 transition-opacity duration-[2000ms] ease-in-out motion-reduce:animate-none",
+              i === active ? "opacity-100" : "opacity-0",
+              (i === active || i === prev) && "animate-kenburns",
             )}
           >
             <Photo slot={slot} sizes="100vw" bare className="h-full w-full" />
@@ -65,10 +73,19 @@ export function HeroFilm({ title, text, slides, ctas }: HeroFilmProps) {
 
       <div
         ref={content}
-        className="relative flex h-full flex-col items-center justify-center px-5 text-center will-change-transform md:px-12"
+        className="relative isolate flex h-full flex-col items-center justify-center px-5 text-center will-change-transform md:px-12"
       >
-        <h1 className="max-w-3xl font-display text-5xl leading-[1.05] md:text-7xl">{title}</h1>
-        {text && <p className="mt-4 max-w-md text-lg text-cream/80 md:text-xl">{text}</p>}
+        {/* Soft dark glow behind the title only, so bright photos keep their light. */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 -z-10 bg-radial-[ellipse_75%_32%_at_50%_50%] from-jungle/55 to-transparent md:bg-radial-[ellipse_42%_36%_at_50%_50%]"
+        />
+        <h1 className="max-w-3xl font-display text-5xl leading-[1.05] text-shadow-lg text-shadow-jungle/50 md:text-7xl">
+          {title}
+        </h1>
+        {text && (
+          <p className="mt-4 max-w-md text-lg text-cream/80 text-shadow-md text-shadow-jungle/60 md:text-xl">{text}</p>
+        )}
         {ctas.length > 0 && (
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             {ctas.map((cta, i) => (

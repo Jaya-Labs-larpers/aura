@@ -32,7 +32,7 @@ export default function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\u003c") }} />
       <HeroFilm {...HOME.hero} />
-      <Identity {...HOME.identity} logo={{ src: SITE.logo, alt: SITE.name }} />
+      <Identity {...HOME.identity} />
       <PhotoStrip slots={HOME.strip} />
       <StackedCards heading={HOME.cardsHeading} cards={HOME.cards} />
       <Offers offers={HOME.offers} />

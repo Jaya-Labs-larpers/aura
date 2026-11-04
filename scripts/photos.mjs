@@ -64,6 +64,7 @@ for (const photo of [...photos].sort()) {
     await sharp(input)
       .rotate()
       .resize({ width: w })
+      .sharpen({ sigma: 1, m1: 0.5, m2: 0.6 })
       .webp({ quality: QUALITY, smartSubsample: true })
       .toFile(path.join(OUTPUT, `${name}-${w}.webp`));
   }

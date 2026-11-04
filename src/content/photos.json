@@ -23,12 +23,26 @@
       3200
     ]
   },
+  "events/38-meeting-and-event.jpg": {
+    "src": "/images/photos/events/38-meeting-and-event",
+    "width": 4409,
+    "height": 6613,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
   "events/guest-toast.jpg": {
     "src": "/images/photos/events/guest-toast",
-    "width": 554,
-    "height": 443,
+    "width": 1662,
+    "height": 1329,
     "widths": [
-      554
+      640,
+      1280,
+      1662
     ]
   },
   "menu/chef-carving.jpg": {
@@ -65,11 +79,24 @@
   },
   "menu/signature-cocktail/mango-colada.jpg": {
     "src": "/images/photos/menu/signature-cocktail/mango-colada",
-    "width": 853,
-    "height": 1280,
+    "width": 1706,
+    "height": 2560,
     "widths": [
       640,
-      853
+      1280,
+      1706
+    ]
+  },
+  "menu/signature/aura-combo.jpg": {
+    "src": "/images/photos/menu/signature/aura-combo",
+    "width": 4399,
+    "height": 4360,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
     ]
   },
   "menu/signature/charcoal-grilled-khmer-wagyu-rib-eye-200g.jpg": {
@@ -86,12 +113,37 @@
   },
   "site/event-catering.jpg": {
     "src": "/images/photos/site/event-catering",
-    "width": 1282,
-    "height": 864,
+    "width": 2564,
+    "height": 1728,
     "widths": [
       640,
       1280,
-      1282
+      1920,
+      2560,
+      2564
+    ]
+  },
+  "site/front-of-house.jpg": {
+    "src": "/images/photos/site/front-of-house",
+    "width": 3200,
+    "height": 2132,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "site/heart-of-the-house.jpg": {
+    "src": "/images/photos/site/heart-of-the-house",
+    "width": 1992,
+    "height": 1320,
+    "widths": [
+      640,
+      1280,
+      1920,
+      1992
     ]
   },
   "site/hero-slide-1.jpg": {
@@ -106,12 +158,14 @@
   },
   "site/hero-slide-2.jpg": {
     "src": "/images/photos/site/hero-slide-2",
-    "width": 1600,
-    "height": 1097,
+    "width": 3200,
+    "height": 2194,
     "widths": [
       640,
       1280,
-      1600
+      1920,
+      2560,
+      3200
     ]
   },
   "site/hero-slide-3.jpg": {
@@ -128,28 +182,34 @@
   },
   "site/rooftop-bar-day.jpg": {
     "src": "/images/photos/site/rooftop-bar-day",
-    "width": 1000,
-    "height": 800,
+    "width": 2000,
+    "height": 1600,
     "widths": [
       640,
-      1000
+      1280,
+      1920,
+      2000
     ]
   },
   "site/rooftop-bar-night.jpg": {
     "src": "/images/photos/site/rooftop-bar-night",
-    "width": 572,
-    "height": 458,
+    "width": 1716,
+    "height": 1374,
     "widths": [
-      572
+      640,
+      1280,
+      1716
     ]
   },
   "site/rooftop-stairway-view.jpg": {
     "src": "/images/photos/site/rooftop-stairway-view",
-    "width": 1000,
-    "height": 800,
+    "width": 2000,
+    "height": 1600,
     "widths": [
       640,
-      1000
+      1280,
+      1920,
+      2000
     ]
   },
   "site/tripadvisor-travelers-choice.png": {
@@ -212,6 +272,18 @@
     "src": "/images/photos/venue-highlights/03",
     "width": 6720,
     "height": 4480,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "venue-highlights/04.jpg": {
+    "src": "/images/photos/venue-highlights/04",
+    "width": 3259,
+    "height": 2212,
     "widths": [
       640,
       1280,

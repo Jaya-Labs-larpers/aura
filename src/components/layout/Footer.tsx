@@ -1,23 +1,47 @@
 import Link from "next/link";
 import { CONTACT, HOURS, NAV, RESERVE, SITE, SOCIALS } from "@/content/site";
+import { Pill } from "@/components/ui/Buttons";
 import { SocialIcon } from "@/components/ui/Icons";
-import { Reveal, RevealText } from "@/components/ui/Reveal";
+import { PlateLeaf } from "@/components/ui/LeafMotif";
+import { Reveal } from "@/components/ui/Reveal";
 
-/** Sand footer with a faint leaf pattern, echoing AURA's leaf-print plates. */
+/**
+ * Footer sits on the same glaze ground as "Why AURA" (Story), with a leaf
+ * watermark centered behind the four columns. Sits above Location (sticky)
+ * in z-order so it slides up over that photo as the page reaches bottom.
+ */
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="relative overflow-hidden bg-sand text-ink">
-      <LeafPattern />
-      <div className="relative mx-auto max-w-[1600px] px-5 pt-24 pb-10 md:px-8">
-        <RevealText
-          as="p"
-          text={SITE.footerLine}
-          className="mx-auto max-w-3xl text-center font-display text-3xl leading-tight md:text-5xl"
-        />
-
-        <div className="mt-20 grid gap-12 border-t border-ink/15 pt-12 text-sm sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="relative z-10 overflow-hidden bg-glaze text-ink">
+      <PlateLeaf
+        sizes="42vmin"
+        className="absolute top-1/2 left-1/2 h-[42vmin] w-[42vmin] -translate-x-1/2 -translate-y-1/2 opacity-45 mix-blend-multiply"
+      />
+      <div className="relative mx-auto max-w-[1600px] px-5 pt-20 pb-10 md:px-8 md:pt-24">
+        <div className="grid justify-items-center gap-14 text-center md:grid-cols-[1.1fr_1fr_1fr_1.1fr] md:justify-items-start md:gap-10 md:text-left">
           <Reveal>
+            <p className="max-w-[26ch] font-display text-lg text-rim italic">{SITE.footerLine}</p>
+            <Pill href={RESERVE.href} tone="dark" className="mt-7">
+              {RESERVE.label}
+            </Pill>
+          </Reveal>
+
+          <Reveal delay={80} className="text-sm">
+            <FooterHeading>Visit</FooterHeading>
+            <address className="not-italic">
+              {CONTACT.addressLines.map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
+            </address>
+            <a href={CONTACT.googleMaps} target="_blank" rel="noreferrer" className="mt-3 inline-block underline underline-offset-4">
+              Directions
+            </a>
+          </Reveal>
+
+          <Reveal delay={160} className="text-sm">
             <FooterHeading>Hours</FooterHeading>
             <dl className="space-y-2">
               {HOURS.map((row) => (
@@ -29,38 +53,18 @@ export function Footer() {
             </dl>
           </Reveal>
 
-          <Reveal delay={80}>
-            <FooterHeading>Find Us</FooterHeading>
-            <address className="not-italic">
-              {CONTACT.addressLines.map((line) => (
-                <span key={line} className="block">
-                  {line}
-                </span>
-              ))}
-            </address>
-            <a href={CONTACT.googleMaps} target="_blank" rel="noreferrer" className="mt-3 inline-block underline underline-offset-4">
-              Google Maps
-            </a>
-          </Reveal>
-
-          <Reveal delay={160}>
+          <Reveal delay={240} className="text-sm">
             <FooterHeading>Contact</FooterHeading>
-            <ul className="space-y-2">
-              <li>
-                <a href={CONTACT.phoneHref}>{CONTACT.phone}</a>
-              </li>
-              <li>{CONTACT.phoneAlt}</li>
-              <li>
-                <a href={`mailto:${CONTACT.email}`} className="break-all">
-                  {CONTACT.email}
-                </a>
-              </li>
-            </ul>
-          </Reveal>
-
-          <Reveal delay={240}>
-            <FooterHeading>Follow</FooterHeading>
-            <ul className="flex flex-wrap gap-3">
+            <p>
+              <a href={`mailto:${CONTACT.email}`} className="break-all">
+                {CONTACT.email}
+              </a>
+            </p>
+            <p>
+              <a href={CONTACT.phoneHref}>{CONTACT.phone}</a>
+            </p>
+            <p>{CONTACT.phoneAlt}</p>
+            <ul className="mt-5 flex flex-wrap justify-center gap-3 md:justify-start">
               {SOCIALS.map((social) => (
                 <li key={social.href}>
                   <a
@@ -68,7 +72,7 @@ export function Footer() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={social.label}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/20 transition-colors hover:bg-ink hover:text-sand"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/20 transition-colors hover:bg-ink hover:text-glaze"
                   >
                     <SocialIcon name={social.icon} />
                   </a>
@@ -78,10 +82,13 @@ export function Footer() {
           </Reveal>
         </div>
 
-        <div className="mt-16 flex flex-col gap-4 border-t border-ink/15 pt-6 text-xs opacity-70 md:flex-row md:items-center md:justify-between">
+        <div className="mt-16 flex flex-col gap-4 border-t border-ink/15 pt-6 text-xs opacity-60 md:flex-row md:items-center md:justify-between">
+          <p>
+            © {year} {SITE.name}, {SITE.location}
+          </p>
           <nav aria-label="Footer">
             <ul className="flex flex-wrap gap-x-5 gap-y-2">
-              {[...NAV, RESERVE].map((item) => (
+              {NAV.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="hover:underline">
                     {item.label}
@@ -90,9 +97,6 @@ export function Footer() {
               ))}
             </ul>
           </nav>
-          <p>
-            © {year} {SITE.name} {SITE.location}
-          </p>
         </div>
       </div>
     </footer>
@@ -100,23 +104,5 @@ export function Footer() {
 }
 
 function FooterHeading({ children }: { children: React.ReactNode }) {
-  return <h2 className="mb-4 text-[11px] font-semibold tracking-[0.28em] uppercase">{children}</h2>;
-}
-
-function LeafPattern() {
-  return (
-    <svg className="pointer-events-none absolute inset-0 h-full w-full text-ink/[0.05]" aria-hidden="true">
-      <defs>
-        <pattern id="leaf" width="140" height="140" patternUnits="userSpaceOnUse" patternTransform="rotate(-18)">
-          <path
-            d="M70 12c26 18 34 46 0 116C36 58 44 30 70 12Zm0 0v116M70 44l-18-12M70 44l18-12M70 70l-24-14M70 70l24-14M70 96l-20-12M70 96l20-12"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-          />
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#leaf)" />
-    </svg>
-  );
+  return <h2 className="mb-4 text-[11px] font-semibold tracking-[0.28em] uppercase opacity-70">{children}</h2>;
 }

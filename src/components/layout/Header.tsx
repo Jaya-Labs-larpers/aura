@@ -58,7 +58,7 @@ export function Header() {
           </Link>
 
           <nav aria-label="Main" className="hidden flex-1 justify-center lg:flex">
-            <ul className="flex max-w-xl flex-wrap justify-center gap-x-6 gap-y-1 text-[13px] tracking-wide">
+            <ul className="flex max-w-xl flex-wrap justify-center gap-x-6 gap-y-1 text-[15px] tracking-wide">
               {NAV.map((item) => (
                 <li key={item.href}>
                   <Link
@@ -88,7 +88,7 @@ export function Header() {
               aria-expanded={open}
               aria-controls="mobile-menu"
               aria-label={open ? "Close menu" : "Open menu"}
-              className="flex h-10 w-10 items-center justify-center lg:hidden"
+              className="flex h-10 w-10 items-center justify-center drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)] lg:hidden"
             >
               {open ? (
                 <CloseIcon className="h-6 w-6" />

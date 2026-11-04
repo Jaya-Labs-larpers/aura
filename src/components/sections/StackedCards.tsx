@@ -5,7 +5,7 @@ import type { Card } from "@/content/types";
 import { TextLink } from "@/components/ui/Buttons";
 import { Photo, hasPhoto } from "@/components/ui/Photo";
 import { CORNER, SlotCaption } from "@/components/ui/Placeholder";
-import { Reveal, RevealText } from "@/components/ui/Reveal";
+import { RevealText } from "@/components/ui/Reveal";
 import { cn } from "@/lib/cn";
 import { clamp, prefersReducedMotion, subscribeScroll } from "@/lib/scroll";
 
@@ -43,7 +43,7 @@ export function StackedCards({ heading, cards }: { heading?: string; cards: Card
   }, []);
 
   return (
-    <section className="relative bg-jungle px-3 pt-24 pb-3 text-cream md:px-6 md:pt-36 md:pb-6">
+    <section className="relative px-3 pt-24 pb-3 text-cream md:px-6 md:pt-36 md:pb-6">
       {heading && (
         <RevealText
           as="h2"
@@ -53,7 +53,7 @@ export function StackedCards({ heading, cards }: { heading?: string; cards: Card
       )}
       {cards.map((card, i) => (
         <div
-          key={card.title}
+          key={card.title.join(" ")}
           ref={(el) => {
             wrappers.current[i] = el;
           }}
@@ -80,16 +80,17 @@ export function StackedCards({ heading, cards }: { heading?: string; cards: Card
             {!hasPhoto(card.slot) && <SlotCaption slot={card.slot} className={CORNER} />}
             <div className="absolute inset-0 bg-linear-to-t from-jungle/90 via-jungle/35 to-transparent" />
 
-            <div className="relative flex h-full flex-col items-center justify-end px-6 pb-16 text-center md:pb-24">
-              <RevealText text={card.title} className="font-display text-4xl leading-[1.05] md:text-6xl lg:text-7xl" />
-              {card.text && (
-                <Reveal delay={200}>
-                  <p className="mt-5 max-w-lg text-sm opacity-85 md:text-base">{card.text}</p>
-                </Reveal>
-              )}
-              <Reveal delay={350} className="mt-7">
-                <TextLink href={card.cta.href}>{card.cta.label}</TextLink>
-              </Reveal>
+            <div className="relative flex h-full flex-col items-center justify-end px-6 text-center">
+              <div className="sticky bottom-16 max-w-lg md:bottom-24">
+                <h3 className="font-display text-4xl leading-[1.05] md:text-6xl lg:text-7xl">
+                  <span className="block">{card.title[0]}</span>
+                  <span className="block">{card.title[1]}</span>
+                </h3>
+                {card.text && <p className="mt-5 text-sm opacity-85 md:text-base">{card.text}</p>}
+                <div className="mt-7">
+                  <TextLink href={card.cta.href}>{card.cta.label}</TextLink>
+                </div>
+              </div>
             </div>
 
             <div className="pointer-events-none absolute inset-0 bg-jungle opacity-(--dim,0)" />

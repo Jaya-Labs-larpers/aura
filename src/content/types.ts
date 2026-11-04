@@ -22,7 +22,8 @@ export interface Feature {
 }
 
 export interface Card {
-  title: string;
+  /** Exactly two lines, rendered one per line so the title is always two lines. */
+  title: [string, string];
   text?: string;
   slot: Slot;
   cta: Link;

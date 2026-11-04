@@ -97,7 +97,7 @@ export function PhotoStrip({ slots, speed = 0.45 }: PhotoStripProps) {
   }, [speed]);
 
   return (
-    <Reveal as="section" variant="fade" className="overflow-hidden bg-jungle py-4 text-cream">
+    <Reveal as="section" variant="fade" className="overflow-hidden py-4 text-cream">
       <div
         ref={viewport}
         className="cursor-grab touch-pan-y select-none data-dragging:cursor-grabbing"

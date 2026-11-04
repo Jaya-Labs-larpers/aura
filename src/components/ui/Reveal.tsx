@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type CSSProperties, type ElementType, type ReactNode } from "react";
 
-type Variant = "up" | "fade" | "blur" | "clip";
+type Variant = "up" | "fade" | "blur" | "clip" | "soft";
 
 function useInView<T extends Element>(threshold = 0.15) {
   const ref = useRef<T | null>(null);

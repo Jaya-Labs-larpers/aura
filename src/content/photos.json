@@ -23,6 +23,22 @@
       3200
     ]
   },
+  "events/guest-toast.jpg": {
+    "src": "/images/photos/events/guest-toast",
+    "width": 554,
+    "height": 443,
+    "widths": [
+      554
+    ]
+  },
+  "menu/chef-carving.jpg": {
+    "src": "/images/photos/menu/chef-carving",
+    "width": 385,
+    "height": 308,
+    "widths": [
+      385
+    ]
+  },
   "menu/main-course/seafood-tower.jpg": {
     "src": "/images/photos/menu/main-course/seafood-tower",
     "width": 4542,
@@ -45,6 +61,37 @@
       1920,
       2560,
       3200
+    ]
+  },
+  "menu/signature-cocktail/mango-colada.jpg": {
+    "src": "/images/photos/menu/signature-cocktail/mango-colada",
+    "width": 853,
+    "height": 1280,
+    "widths": [
+      640,
+      853
+    ]
+  },
+  "menu/signature/charcoal-grilled-khmer-wagyu-rib-eye-200g.jpg": {
+    "src": "/images/photos/menu/signature/charcoal-grilled-khmer-wagyu-rib-eye-200g",
+    "width": 4554,
+    "height": 6831,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "site/event-catering.jpg": {
+    "src": "/images/photos/site/event-catering",
+    "width": 1282,
+    "height": 864,
+    "widths": [
+      640,
+      1280,
+      1282
     ]
   },
   "site/hero-slide-1.jpg": {
@@ -77,6 +124,32 @@
       1920,
       2560,
       3200
+    ]
+  },
+  "site/rooftop-bar-day.jpg": {
+    "src": "/images/photos/site/rooftop-bar-day",
+    "width": 1000,
+    "height": 800,
+    "widths": [
+      640,
+      1000
+    ]
+  },
+  "site/rooftop-bar-night.jpg": {
+    "src": "/images/photos/site/rooftop-bar-night",
+    "width": 572,
+    "height": 458,
+    "widths": [
+      572
+    ]
+  },
+  "site/rooftop-stairway-view.jpg": {
+    "src": "/images/photos/site/rooftop-stairway-view",
+    "width": 1000,
+    "height": 800,
+    "widths": [
+      640,
+      1000
     ]
   },
   "site/tripadvisor-travelers-choice.png": {

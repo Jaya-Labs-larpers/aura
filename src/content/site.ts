@@ -30,10 +30,17 @@ export const NAV: Link[] = [
   { href: "/contact", label: "Contact" },
 ];
 
-export const RESERVE: Link = { href: "/reservation", label: "Book a table" };
+export const RESERVE: Link = { href: "/reservation", label: "Reservations" };
 
 export const CONTACT = {
   addressLines: ["14 St 308, Tonle Bassac", "Chamkar Mon, Phnom Penh 120101"],
+  // The same address split into fields, for search engines (schema.org PostalAddress).
+  postal: {
+    streetAddress: "14 St 308, Tonle Bassac, Chamkar Mon",
+    addressLocality: "Phnom Penh",
+    postalCode: "120101",
+    addressCountry: "KH",
+  },
   phone: "+855 92 663 389",
   phoneAlt: "+855 98 663 389",
   phoneHref: "tel:+85592663389",

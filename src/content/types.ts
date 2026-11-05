@@ -8,6 +8,8 @@ export interface Slot {
   photo?: string;
   /** CSS `object-position`, for a published photo whose default crop cuts off the subject. */
   position?: string;
+  /** Reverses the hero's Ken Burns zoom (zoom out instead of in), for a slide the zoom-in crops. */
+  zoomOut?: boolean;
 }
 
 export interface Link {
@@ -21,6 +23,13 @@ export interface Feature {
   body: string[];
   slot: Slot;
   cta?: Link;
+}
+
+export interface Taste {
+  eyebrow: string;
+  title: string;
+  lead: string;
+  slot: Slot;
 }
 
 export interface Card {

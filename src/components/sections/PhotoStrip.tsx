@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import type { Slot } from "@/content/types";
 import { Photo } from "@/components/ui/Photo";
-import { Reveal } from "@/components/ui/Reveal";
 import { prefersReducedMotion } from "@/lib/scroll";
 
 interface PhotoStripProps {
@@ -16,7 +15,7 @@ interface PhotoStripProps {
  * Endless horizontal strip that drifts on its own, pauses on hover and can be
  * dragged or flicked (mouse and touch). The list is rendered twice so it loops.
  */
-export function PhotoStrip({ slots, speed = 0.45 }: PhotoStripProps) {
+export function PhotoStrip({ slots, speed = 0.22 }: PhotoStripProps) {
   const viewport = useRef<HTMLDivElement>(null);
   const track = useRef<HTMLDivElement>(null);
 
@@ -97,7 +96,7 @@ export function PhotoStrip({ slots, speed = 0.45 }: PhotoStripProps) {
   }, [speed]);
 
   return (
-    <Reveal as="section" variant="fade" className="overflow-hidden py-4 text-cream">
+    <section className="overflow-hidden py-4 text-cream">
       <div
         ref={viewport}
         className="cursor-grab touch-pan-y select-none data-dragging:cursor-grabbing"
@@ -118,6 +117,6 @@ export function PhotoStrip({ slots, speed = 0.45 }: PhotoStripProps) {
           ))}
         </div>
       </div>
-    </Reveal>
+    </section>
   );
 }

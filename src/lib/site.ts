@@ -20,7 +20,7 @@ export const SOCIAL_LINKS = [
 ] as const;
 
 export const CONTACT = {
-  address: "14 St 308, Tonle Bassac, Chamkar Mon, Phnom Penh 120101",
+  address: "14 St 308, Tonle Bassac, Chamkar Mon, Phnom Penh",
   phone: "+855(0)92 663 389 / (0)98 663 389",
   email: "sales@auracambodia.asia",
   hoursDays: "Monday – Sunday",

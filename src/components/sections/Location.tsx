@@ -2,8 +2,8 @@
 
 import { useCallback, useRef } from "react";
 import type { Link, Slot } from "@/content/types";
-import { CONTACT } from "@/content/site";
-import { Eyebrow } from "@/components/ui/Buttons";
+import { CONTACT, HOURS } from "@/content/site";
+import { Eyebrow, Pill } from "@/components/ui/Buttons";
 import { CORNER, Placeholder, SlotCaption } from "@/components/ui/Placeholder";
 import { Photo, hasPhoto } from "@/components/ui/Photo";
 import { Reveal, RevealText } from "@/components/ui/Reveal";
@@ -14,14 +14,15 @@ interface LocationProps {
   title: string;
   slot: Slot;
   cta: Omit<Link, "href">;
+  gettingUp: string;
 }
 
 /**
  * Full-bleed aerial photo behind a rim-shaped lens: scrolling zooms the photo
- * in, as if looking down through the plate rim onto the rooftop. Address and
- * a directions link sit bottom left.
+ * in, as if looking down through the plate rim onto the rooftop. An info row
+ * (address, hours, getting up) and a directions pill sit bottom left.
  */
-export function Location({ eyebrow, title, slot, cta }: LocationProps) {
+export function Location({ eyebrow, title, slot, cta, gettingUp }: LocationProps) {
   const section = useRef<HTMLElement>(null);
   const media = useRef<HTMLDivElement>(null);
   const ring = useRef<HTMLDivElement>(null);
@@ -34,7 +35,7 @@ export function Location({ eyebrow, title, slot, cta }: LocationProps) {
   useScrollProgress(section, onFrame);
 
   return (
-    <section ref={section} className="sticky top-0 z-0 h-[115vh] overflow-hidden bg-jungle text-cream">
+    <section ref={section} className="sticky top-0 z-0 h-dvh overflow-hidden bg-jungle text-cream">
       <div ref={media} className="absolute inset-0 scale-[1.1] will-change-transform">
         {hasPhoto(slot) ? (
           <Photo slot={slot} sizes="100vw" bare className="h-full w-full" />
@@ -57,22 +58,35 @@ export function Location({ eyebrow, title, slot, cta }: LocationProps) {
           <Eyebrow className="text-cream/70">{eyebrow}</Eyebrow>
         </Reveal>
         <RevealText text={title} className="mt-3 max-w-xl font-display text-4xl leading-[1.1] md:text-5xl" />
-        <Reveal delay={150} className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm opacity-85">
-          <address className="not-italic">
-            {CONTACT.addressLines.map((line) => (
-              <span key={line} className="block">
-                {line}
-              </span>
-            ))}
-          </address>
-          <a
-            href={CONTACT.googleMaps}
-            target="_blank"
-            rel="noreferrer"
-            className="text-cream underline underline-offset-4"
-          >
+        <Reveal delay={150}>
+          <dl className="mt-6 grid gap-3.5 text-sm opacity-85 md:mt-7 md:grid-cols-3 md:gap-6">
+            <div className="border-t border-cream/20 pt-2.5">
+              <dt className="text-[10px] font-medium tracking-[0.28em] text-cream/60 uppercase">Address</dt>
+              <dd>
+                {CONTACT.addressLines.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
+              </dd>
+            </div>
+            <div className="border-t border-cream/20 pt-2.5">
+              <dt className="text-[10px] font-medium tracking-[0.28em] text-cream/60 uppercase">Hours</dt>
+              <dd>
+                <span className="block">{HOURS[0].label}</span>
+                <span className="block">{HOURS[0].value}</span>
+              </dd>
+            </div>
+            <div className="border-t border-cream/20 pt-2.5">
+              <dt className="text-[10px] font-medium tracking-[0.28em] text-cream/60 uppercase">Getting up</dt>
+              <dd>{gettingUp}</dd>
+            </div>
+          </dl>
+        </Reveal>
+        <Reveal delay={300}>
+          <Pill tone="outline" href={CONTACT.googleMaps} className="mt-6 md:mt-7">
             {cta.label}
-          </a>
+          </Pill>
         </Reveal>
       </div>
     </section>

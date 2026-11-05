@@ -61,7 +61,7 @@ export function HeroFilm({ title, text, slides, ctas }: HeroFilmProps) {
             className={cn(
               "absolute inset-0 transition-opacity duration-[2000ms] ease-in-out motion-reduce:animate-none",
               i === active ? "opacity-100" : "opacity-0",
-              (i === active || i === prev) && "animate-kenburns",
+              (i === active || i === prev) && (slot.zoomOut ? "animate-kenburns-out" : "animate-kenburns"),
             )}
           >
             <Photo slot={slot} sizes="100vw" bare className="h-full w-full" />
@@ -80,11 +80,11 @@ export function HeroFilm({ title, text, slides, ctas }: HeroFilmProps) {
           aria-hidden
           className="pointer-events-none absolute inset-0 -z-10 bg-radial-[ellipse_75%_32%_at_50%_50%] from-jungle/55 to-transparent md:bg-radial-[ellipse_42%_36%_at_50%_50%]"
         />
-        <h1 className="max-w-3xl font-display text-5xl leading-[1.05] text-shadow-lg text-shadow-jungle/50 md:text-7xl">
+        <h1 className="max-w-3xl font-display text-5xl leading-[1.05] text-shadow-md text-shadow-jungle/30 md:text-7xl">
           {title}
         </h1>
         {text && (
-          <p className="mt-4 max-w-md text-lg text-cream/80 text-shadow-md text-shadow-jungle/60 md:text-xl">{text}</p>
+          <p className="mt-4 max-w-md text-lg text-cream/80 text-shadow-sm text-shadow-jungle/35 md:text-xl">{text}</p>
         )}
         {ctas.length > 0 && (
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

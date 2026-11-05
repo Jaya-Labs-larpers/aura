@@ -1,4 +1,4 @@
-import type { Card, Feature, Link, Slot } from "./types";
+import type { Card, Feature, Link, Slot, Taste } from "./types";
 
 export const HOME = {
   meta: {
@@ -17,12 +17,11 @@ export const HOME = {
     slides: [
       { label: "AURA's rooftop restaurant and bar lit up at night, Bassac Lane", photo: "site/hero-slide-2.jpg" },
       { label: "Aerial view of AURA's rooftop restaurant and bar at night, Bassac Lane", photo: "site/hero-slide-3.jpg" },
-      { label: "AURA's rooftop bar among the plants by day", photo: "site/rooftop-bar-day.jpg" },
-      { label: "AURA's rooftop garden from above by day, Bassac Lane", photo: "venue-highlights/04.jpg" },
+      { label: "AURA's rooftop bar among the plants by day", photo: "site/rooftop-bar-day.jpg", zoomOut: true },
     ] satisfies Slot[],
     ctas: [
       { label: "View Menus", href: "/menu" },
-      { label: "Reservation", href: "/reservation" },
+      { label: "Book a Table", href: "/reservation" },
     ] satisfies Link[],
   },
 
@@ -61,11 +60,11 @@ export const HOME = {
     { label: "View down AURA's rooftop stairway over Phnom Penh", photo: "site/rooftop-stairway-view.jpg" },
     { label: "AURA's kitchen team in their aprons at the open kitchen", photo: "site/heart-of-the-house.jpg" },
     { label: "AURA's bar lit up after dark", photo: "site/rooftop-bar-night.jpg" },
-    { label: "AURA's service team bringing drinks to a guest's table", photo: "events/38-meeting-and-event.jpg", position: "center 40%" },
     { label: "Guests toasting at a private event at AURA", photo: "events/guest-toast.jpg" },
-    { label: "AURA chef carving a roast chicken at the table", photo: "site/front-of-house.jpg", position: "center 75%" },
+    { label: "Close-up of AURA's chef carving a roast chicken", photo: "site/front-of-house.jpg" },
   ] satisfies Slot[],
 
+  offersHeading: "Celebrate at AURA",
   // Placeholder copy and photos — AURA hasn't confirmed real offer content yet
   // (see docs/home-redesign-handover.md §8). Swap all four in once they do.
   offers: [
@@ -99,6 +98,17 @@ export const HOME = {
     },
   ] satisfies Feature[],
 
+  taste: {
+    eyebrow: "Taste",
+    title: "Mekong Modern, fired over charcoal.",
+    lead: "Our Wagyu is raised on pasture in Kampong Chhnang, grazed slowly for over two years until the marbling runs deep. We grill it over local charcoal, crust crackling, then finish it with a Kampot green peppercorn sauce. Smoke, spice and a Khmer soul in every bite.",
+    slot: {
+      label: "Charcoal-grilled Khmer Wagyu rib-eye, close-up on the grill char",
+      photo: "menu/main-course/charcoal-grilled-local-khmer-wagyu-rib-eye-tek-bror-hok.jpg",
+      position: "50% 55%",
+    },
+  } satisfies Taste,
+
   story: {
     eyebrow: "Why AURA",
     lead: "Rooftop garden dining above Bassac Lane.",
@@ -114,5 +124,15 @@ export const HOME = {
     title: "Above the lane, among the plants.",
     slot: { label: "AURA rooftop at night from above, Bassac Lane", photo: "venue/05-venue-image.jpg" } satisfies Slot,
     cta: { label: "Get directions" } satisfies Omit<Link, "href">,
+    // TODO before push: hours conflict — HOURS[0] in site.ts says "11:30 AM – 01:00 AM"
+    // but src/app/(classic)/reservation/page.tsx:52 says "11:30 AM – 10:00 PM". AURA to
+    // confirm the real closing time; this section uses HOURS[0] until then.
+    // TODO before push: AURA to confirm which floor, lift or stairs, and where to
+    // enter. Placeholder below is not real.
+    gettingUp: "Ground floor, street entrance on St 308.",
+  },
+
+  reserve: {
+    title: "Reserve your table",
   },
 };

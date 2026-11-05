@@ -52,7 +52,7 @@ export default function ContactPage() {
                 <h3 className="font-bold text-gray-900 text-sm mb-1">Address</h3>
                 <p className="text-gray-700 text-xs leading-relaxed">14 St 308, Tonle Bassac</p>
                 <p className="text-gray-700 text-xs leading-relaxed">Chamkar Mon</p>
-                <p className="text-gray-700 text-xs leading-relaxed">Phnom Penh 120101, Cambodia</p>
+                <p className="text-gray-700 text-xs leading-relaxed">Phnom Penh, Cambodia</p>
               </div>
             </div>
 

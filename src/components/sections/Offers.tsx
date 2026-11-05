@@ -6,7 +6,7 @@ import { Eyebrow, Pill } from "@/components/ui/Buttons";
 import { LeafMark } from "@/components/ui/LeafMotif";
 import { CORNER, SlotCaption } from "@/components/ui/Placeholder";
 import { Photo, hasPhoto } from "@/components/ui/Photo";
-import { Reveal } from "@/components/ui/Reveal";
+import { Reveal, RevealText } from "@/components/ui/Reveal";
 import { cn } from "@/lib/cn";
 import { prefersReducedMotion } from "@/lib/scroll";
 
@@ -19,7 +19,7 @@ const AUTOPLAY_MS = 7000;
  * own carousel (aspect-ratio 1920/900 desktop, 3/2 tablet, full-screen 2/3
  * portrait on mobile) instead of forcing one screen on every breakpoint.
  */
-export function Offers({ offers }: { offers: Feature[] }) {
+export function Offers({ heading, offers }: { heading?: string; offers: Feature[] }) {
   const [active, setActive] = useState(0);
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -44,7 +44,15 @@ export function Offers({ offers }: { offers: Feature[] }) {
   const offer = offers[active];
 
   return (
-    <section className="relative flex min-h-dvh max-w-full flex-col justify-end overflow-hidden bg-jungle text-cream aspect-[2/3] md:aspect-[3/2] md:min-h-0 lg:aspect-[1920/900]">
+    <>
+      {heading && (
+        <RevealText
+          as="h2"
+          text={heading}
+          className="px-3 pt-10 pb-10 text-center font-display text-4xl leading-[1.1] text-cream md:px-6 md:pt-14 md:pb-14 md:text-5xl"
+        />
+      )}
+      <section className="relative flex min-h-dvh max-w-full flex-col justify-end overflow-hidden bg-jungle text-cream aspect-[2/3] md:aspect-[3/2] md:min-h-0 lg:aspect-[1920/900]">
       {offers.map((o, i) => (
         <div
           key={o.title}
@@ -102,5 +110,6 @@ export function Offers({ offers }: { offers: Feature[] }) {
         </div>
       )}
     </section>
+    </>
   );
 }

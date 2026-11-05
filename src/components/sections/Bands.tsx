@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
 import type { Link, Slot } from "@/content/types";
-import { RESERVE } from "@/content/site";
+import { RESERVE, SOCIALS } from "@/content/site";
 import { Pill, TextLink } from "@/components/ui/Buttons";
+import { SocialIcon } from "@/components/ui/Icons";
 import { Photo } from "@/components/ui/Photo";
 import { Reveal, RevealText } from "@/components/ui/Reveal";
 import { cn } from "@/lib/cn";
@@ -66,6 +67,32 @@ export function CtaBand({
         </Reveal>
       </div>
     </Section>
+  );
+}
+
+/** Compact reservation card on the green ground: the last ask before the footer. */
+export function ReserveCard({ title }: { title: string }) {
+  const wa = SOCIALS.find((s) => s.icon === "whatsapp")!;
+  const tg = SOCIALS.find((s) => s.icon === "telegram")!;
+  return (
+    <section id="reserve" className="scroll-mt-20 px-6 py-16 text-center text-cream md:px-12 md:py-24">
+      <div className="mx-auto flex max-w-4xl flex-col items-center">
+        <RevealText text={title} className="font-display text-4xl leading-[1.1] md:text-5xl" />
+        <Reveal delay={300} className="mt-7 grid w-full max-w-sm grid-cols-2 gap-2.5 md:w-auto md:max-w-none md:flex md:flex-nowrap">
+          <Pill href={RESERVE.href} className="col-span-2 md:col-span-1">
+            {RESERVE.label}
+          </Pill>
+          <Pill tone="outline" href={wa.href} className="gap-2">
+            <SocialIcon name="whatsapp" />
+            {wa.label}
+          </Pill>
+          <Pill tone="outline" href={tg.href} className="gap-2">
+            <SocialIcon name="telegram" />
+            {tg.label}
+          </Pill>
+        </Reveal>
+      </div>
+    </section>
   );
 }
 

@@ -33,7 +33,7 @@ export const NAV: Link[] = [
 export const RESERVE: Link = { href: "/reservation", label: "Reservations" };
 
 export const CONTACT = {
-  addressLines: ["14 St 308, Tonle Bassac", "Chamkar Mon, Phnom Penh 120101"],
+  addressLines: ["14 St 308, Tonle Bassac", "Chamkar Mon, Phnom Penh"],
   // The same address split into fields, for search engines (schema.org PostalAddress).
   postal: {
     streetAddress: "14 St 308, Tonle Bassac, Chamkar Mon",

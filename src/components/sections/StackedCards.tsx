@@ -43,7 +43,7 @@ export function StackedCards({ heading, cards }: { heading?: string; cards: Card
   }, []);
 
   return (
-    <section className="relative px-3 pt-24 pb-3 text-cream md:px-6 md:pt-36 md:pb-6">
+    <section className="relative px-3 pt-4 pb-14 text-cream md:px-6 md:pb-18">
       {heading && (
         <RevealText
           as="h2"

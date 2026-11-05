@@ -53,6 +53,18 @@
       385
     ]
   },
+  "menu/main-course/charcoal-grilled-local-khmer-wagyu-rib-eye-tek-bror-hok.jpg": {
+    "src": "/images/photos/menu/main-course/charcoal-grilled-local-khmer-wagyu-rib-eye-tek-bror-hok",
+    "width": 5273,
+    "height": 3955,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
   "menu/main-course/seafood-tower.jpg": {
     "src": "/images/photos/menu/main-course/seafood-tower",
     "width": 4542,
@@ -125,14 +137,12 @@
   },
   "site/front-of-house.jpg": {
     "src": "/images/photos/site/front-of-house",
-    "width": 3200,
-    "height": 2132,
+    "width": 1900,
+    "height": 1520,
     "widths": [
       640,
       1280,
-      1920,
-      2560,
-      3200
+      1900
     ]
   },
   "site/heart-of-the-house.jpg": {

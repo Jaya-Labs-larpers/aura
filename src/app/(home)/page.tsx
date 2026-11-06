@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Footer } from "@/components/layout/Footer";
 import { ReserveCard } from "@/components/sections/Bands";
 import { HeroFilm } from "@/components/sections/HeroFilm";
 import { Identity } from "@/components/sections/Identity";
@@ -41,7 +42,12 @@ export default function HomePage() {
       {/* Unset background: shows the body's patterned green ground, same gap used between every other section (56px/72px). */}
       <div className="h-14 md:h-18" aria-hidden="true" />
       <Location {...HOME.location} />
-      <ReserveCard {...HOME.reserve} />
+      {/* Reservation CTA + footer scroll up over the sticky Location photo; on desktop
+          they combine into one full-screen close, on mobile the footer alone fills it. */}
+      <div className="flex flex-col md:min-h-dvh">
+        <ReserveCard {...HOME.reserve} />
+        <Footer />
+      </div>
     </>
   );
 }

@@ -18,6 +18,7 @@ export const HOME = {
       { label: "AURA's rooftop restaurant and bar lit up at night, Bassac Lane", photo: "site/hero-slide-2.jpg" },
       { label: "Aerial view of AURA's rooftop restaurant and bar at night, Bassac Lane", photo: "site/hero-slide-3.jpg" },
       { label: "AURA's rooftop bar among the plants by day", photo: "site/rooftop-bar-day.jpg", zoomOut: true },
+      { label: "View down AURA's rooftop staircase over Phnom Penh at dusk", photo: "site/hero-slide-4.jpg", position: "50% 0%" },
     ] satisfies Slot[],
     ctas: [
       { label: "View Menus", href: "/menu" },
@@ -40,17 +41,17 @@ export const HOME = {
   cards: [
     {
       title: ["Lunch in the", "lounge"],
-      slot: { label: "AURA's open-air terrace by day", photo: "venue-highlights/02.jpg" },
+      slot: { label: "AURA's open-air terrace by day", photo: "site/lunch-lounge-table-setting.webp" },
       cta: { label: "Reservation", href: "/reservation" },
     },
     {
       title: ["Dinner from", "the grill"],
-      slot: { label: "Charcoal-grilled Khmer Wagyu rib-eye", photo: "menu/signature/charcoal-grilled-khmer-wagyu-rib-eye-200g.jpg" },
+      slot: { label: "Sliced charcoal-grilled Khmer Wagyu tomahawk, fresh off the grill", photo: "menu/signature/charcoal-grilled-khmer-wagyu-tomahawk-table.jpg" },
       cta: { label: "View Menus", href: "/menu" },
     },
     {
       title: ["Late drinks", "at the bar"],
-      slot: { label: "AURA's bar lit up at night", photo: "venue-highlights/03.jpg" },
+      slot: { label: "AURA's bar lit up at night", photo: "venue-highlights/03.jpg", position: "50% 62%" },
       cta: { label: "View Menus", href: "/menu" },
     },
   ] satisfies Card[],
@@ -69,17 +70,10 @@ export const HOME = {
   // (see docs/home-redesign-handover.md §8). Swap all four in once they do.
   offers: [
     {
-      eyebrow: "Happy Hour",
-      title: "Return for happy hour on the lane.",
-      body: ["Seasonal pours and chef's specials, Bassac Lane style. Check back for what's on."],
-      slot: { label: "Mango colada, AURA signature cocktail", photo: "menu/signature-cocktail/mango-colada.jpg" },
-      cta: { label: "View Menus", href: "/menu" },
-    },
-    {
       eyebrow: "Private Events",
       title: "Host your next event above the lane.",
       body: ["Buffet spreads, open-air seating and the charcoal grill, yours for the night."],
-      slot: { label: "AURA's terrace set for a private event by night", photo: "site/event-catering.jpg" },
+      slot: { label: "Guests celebrating at a private party at AURA", photo: "site/private-event-celebration.jpg" },
       cta: { label: "Enquire", href: "/events" },
     },
     {
@@ -100,13 +94,20 @@ export const HOME = {
 
   taste: {
     eyebrow: "Taste",
-    title: "Mekong Modern, fired over charcoal.",
-    lead: "Our Wagyu is raised on pasture in Kampong Chhnang, grazed slowly for over two years until the marbling runs deep. We grill it over local charcoal, crust crackling, then finish it with a Kampot green peppercorn sauce. Smoke, spice and a Khmer soul in every bite.",
-    slot: {
-      label: "Charcoal-grilled Khmer Wagyu rib-eye, close-up on the grill char",
-      photo: "menu/main-course/charcoal-grilled-local-khmer-wagyu-rib-eye-tek-bror-hok.jpg",
-      position: "50% 55%",
-    },
+    title: "Mekong Modern, fired and stirred.",
+    lead: "Khmer Wagyu, raised slow in Kampong Chhnang and grazed two years until the marbling runs deep, crusted over charcoal and finished with Kampot green peppercorn. Mekong Modern specialties from the kitchen, artisanal cocktails from the bar. Smoke, spice and a Khmer soul in every glass and every bite.",
+    slots: [
+      {
+        label: "Charcoal-grilled Khmer Wagyu rib-eye, close-up on the grill char",
+        photo: "menu/main-course/charcoal-grilled-local-khmer-wagyu-rib-eye-tek-bror-hok.jpg",
+        position: "50% 55%",
+      },
+      {
+        label: "Waiter presenting a tray of signature cocktails on the rooftop",
+        photo: "site/cocktail-tray-service.jpg",
+        position: "50% 25%",
+      },
+    ],
   } satisfies Taste,
 
   story: {
@@ -133,6 +134,6 @@ export const HOME = {
   },
 
   reserve: {
-    title: "Reserve your table",
+    title: "Book Your Experience",
   },
 };

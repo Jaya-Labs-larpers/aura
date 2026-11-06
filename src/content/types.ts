@@ -29,7 +29,8 @@ export interface Taste {
   eyebrow: string;
   title: string;
   lead: string;
-  slot: Slot;
+  /** Crossfades through the slots in order, same autoplay move as the Offers carousel. */
+  slots: Slot[];
 }
 
 export interface Card {

@@ -18,7 +18,7 @@ export function SubmitButton({ loading, idle, busy }: { loading: boolean; idle: 
     <button
       type="submit"
       disabled={loading}
-      className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-cream px-8 text-[13px] font-medium text-jungle transition-colors hover:bg-white disabled:cursor-wait disabled:opacity-70"
+      className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-cream bg-cream px-8 text-[13px] font-medium text-jungle transition-colors duration-500 ease-out-expo hover:border-forest hover:bg-forest hover:text-cream disabled:cursor-wait disabled:opacity-70"
     >
       {loading && <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />}
       {loading ? busy : idle}

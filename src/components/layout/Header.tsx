@@ -94,7 +94,7 @@ export function Header() {
           <div className="relative z-10 flex items-center gap-3">
             <Link
               href={RESERVE.href}
-              className="hidden h-10 items-center rounded-full bg-cream px-5 text-[13px] font-medium text-jungle transition-colors hover:bg-white sm:inline-flex"
+              className="hidden h-10 items-center rounded-full border border-cream bg-cream px-5 text-[13px] font-medium text-jungle transition-colors duration-500 ease-out-expo hover:border-forest hover:bg-forest hover:text-cream sm:inline-flex"
             >
               {RESERVE.label}
             </Link>

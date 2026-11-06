@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Kantumruy_Pro, Miranda_Sans, Playfair_Display } from "next/font/google";
-import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { HOME } from "@/content/home";
@@ -34,7 +33,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SmoothScroll />
         <Header />
         <main>{children}</main>
-        <Footer />
       </body>
     </html>
   );

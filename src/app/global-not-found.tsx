@@ -20,7 +20,7 @@ export default function GlobalNotFound() {
         <p className="mt-5 text-[15px] opacity-75">This page doesn&apos;t exist.</p>
         <Link
           href="/"
-          className="mt-10 inline-flex h-11 items-center justify-center rounded-full bg-cream px-6 text-[13px] font-medium tracking-wide text-jungle transition-colors duration-300 hover:bg-white"
+          className="mt-10 inline-flex h-11 items-center justify-center rounded-full border border-cream bg-cream px-6 text-[13px] font-medium tracking-wide text-jungle transition-colors duration-500 ease-out-expo hover:border-forest hover:bg-forest hover:text-cream"
         >
           Back home
         </Link>

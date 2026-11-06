@@ -123,6 +123,28 @@
       3200
     ]
   },
+  "menu/signature/charcoal-grilled-khmer-wagyu-tomahawk-table.jpg": {
+    "src": "/images/photos/menu/signature/charcoal-grilled-khmer-wagyu-tomahawk-table",
+    "width": 3700,
+    "height": 3700,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "site/cocktail-tray-service.jpg": {
+    "src": "/images/photos/site/cocktail-tray-service",
+    "width": 1365,
+    "height": 2048,
+    "widths": [
+      640,
+      1280,
+      1365
+    ]
+  },
   "site/event-catering.jpg": {
     "src": "/images/photos/site/event-catering",
     "width": 2564,
@@ -188,6 +210,41 @@
       1920,
       2560,
       3200
+    ]
+  },
+  "site/hero-slide-4.jpg": {
+    "src": "/images/photos/site/hero-slide-4",
+    "width": 6667,
+    "height": 5949,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "site/lunch-lounge-table-setting.webp": {
+    "src": "/images/photos/site/lunch-lounge-table-setting",
+    "width": 4672,
+    "height": 6224,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "site/private-event-celebration.jpg": {
+    "src": "/images/photos/site/private-event-celebration",
+    "width": 2048,
+    "height": 1365,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2048
     ]
   },
   "site/rooftop-bar-day.jpg": {
@@ -280,14 +337,12 @@
   },
   "venue-highlights/03.jpg": {
     "src": "/images/photos/venue-highlights/03",
-    "width": 6720,
-    "height": 4480,
+    "width": 1365,
+    "height": 2048,
     "widths": [
       640,
       1280,
-      1920,
-      2560,
-      3200
+      1365
     ]
   },
   "venue-highlights/04.jpg": {

@@ -14,7 +14,7 @@ import { Reveal } from "@/components/ui/Reveal";
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="relative z-10 overflow-hidden bg-glaze text-ink">
+    <footer className="relative z-10 flex min-h-dvh flex-col justify-center overflow-hidden bg-glaze text-ink md:min-h-0 md:flex-1">
       <LeafTone clear="radial-gradient(ellipse 52% 62% at 50% 46%, transparent 35%, #000 92%)" />
       <PlateLeaf
         sizes="42vmin"

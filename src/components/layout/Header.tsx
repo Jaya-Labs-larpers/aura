@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLenis } from "lenis/react";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { useReservation } from "@/components/features/reservation/ReservationProvider";
 import { NAV, RESERVE, SITE, SOCIALS } from "@/content/site";
 import { CloseIcon, SocialIcon } from "@/components/ui/Icons";
 import { cn } from "@/lib/cn";
@@ -17,6 +18,7 @@ import { subscribeScroll } from "@/lib/scroll";
 export function Header() {
   const pathname = usePathname();
   const lenis = useLenis();
+  const { show } = useReservation();
   const headerRef = useRef<HTMLElement>(null);
   const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
@@ -92,12 +94,13 @@ export function Header() {
           </nav>
 
           <div className="relative z-10 flex items-center gap-3">
-            <Link
-              href={RESERVE.href}
+            <button
+              type="button"
+              onClick={show}
               className="hidden h-10 items-center rounded-full border border-cream bg-cream px-5 text-[13px] font-medium text-jungle transition-colors duration-500 ease-out-expo hover:border-forest hover:bg-forest hover:text-cream sm:inline-flex"
             >
               {RESERVE.label}
-            </Link>
+            </button>
             <button
               type="button"
               onClick={toggle}
@@ -119,13 +122,22 @@ export function Header() {
         </div>
       </header>
 
-      <MobileMenu open={open} />
+      <MobileMenu
+        open={open}
+        onReserve={() => {
+          setOpen(false);
+          show();
+        }}
+      />
     </>
   );
 }
 
-function MobileMenu({ open }: { open: boolean }) {
-  const links = [...NAV, RESERVE];
+function MobileMenu({ open, onReserve }: { open: boolean; onReserve: () => void }) {
+  const itemClass = cn(
+    "block font-display text-4xl leading-tight transition-transform duration-700 ease-out-expo [transition-delay:calc(var(--i)*50ms+150ms)]",
+    open ? "translate-y-0" : "translate-y-full",
+  );
   return (
     <div
       id="mobile-menu"
@@ -138,20 +150,18 @@ function MobileMenu({ open }: { open: boolean }) {
     >
       <nav aria-label="Mobile" className="flex-1">
         <ul className="space-y-1">
-          {links.map((item, i) => (
+          {NAV.map((item, i) => (
             <li key={item.href} className="overflow-hidden">
-              <Link
-                href={item.href}
-                style={{ "--i": i } as CSSProperties}
-                className={cn(
-                  "block font-display text-4xl leading-tight transition-transform duration-700 ease-out-expo [transition-delay:calc(var(--i)*50ms+150ms)]",
-                  open ? "translate-y-0" : "translate-y-full",
-                )}
-              >
+              <Link href={item.href} style={{ "--i": i } as CSSProperties} className={itemClass}>
                 {item.label}
               </Link>
             </li>
           ))}
+          <li className="overflow-hidden">
+            <button type="button" onClick={onReserve} style={{ "--i": NAV.length } as CSSProperties} className={itemClass}>
+              {RESERVE.label}
+            </button>
+          </li>
         </ul>
       </nav>
       <ul className={cn("flex gap-5 transition-opacity duration-700 delay-500", open ? "opacity-80" : "opacity-0")}>

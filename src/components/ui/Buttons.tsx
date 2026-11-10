@@ -2,13 +2,17 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
-type Tone = "solid" | "outline" | "dark";
+type Tone = "solid" | "outline" | "dark" | "white";
 
 const TONES: Record<Tone, string> = {
   solid: "border border-cream bg-cream text-jungle hover:border-forest hover:bg-forest hover:text-cream",
   outline: "border border-cream text-cream hover:border-bloom hover:bg-bloom hover:text-cream",
   dark: "bg-forest text-cream hover:bg-bloom",
+  white: "border border-cream bg-cream text-jungle hover:border-bloom hover:bg-bloom hover:text-cream",
 };
+
+const PILL_BASE =
+  "inline-flex h-11 items-center justify-center rounded-full px-6 text-[13px] font-medium tracking-wide transition-colors duration-500 ease-out-expo";
 
 interface PillProps {
   href: string;
@@ -20,11 +24,7 @@ interface PillProps {
 /** Rounded call-to-action, the site's primary button. */
 export function Pill({ href, tone = "solid", className, children }: PillProps) {
   const external = /^(https?:|mailto:|tel:)/.test(href);
-  const classes = cn(
-    "inline-flex h-11 items-center justify-center rounded-full px-6 text-[13px] font-medium tracking-wide transition-colors duration-500 ease-out-expo",
-    TONES[tone],
-    className,
-  );
+  const classes = cn(PILL_BASE, TONES[tone], className);
   if (external) {
     return (
       <a href={href} className={classes} target={href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
@@ -36,6 +36,25 @@ export function Pill({ href, tone = "solid", className, children }: PillProps) {
     <Link href={href} className={classes}>
       {children}
     </Link>
+  );
+}
+
+/** Same look as `Pill`, for a CTA that opens UI (e.g. the reservation overlay) instead of navigating. */
+export function PillButton({
+  onClick,
+  tone = "solid",
+  className,
+  children,
+}: {
+  onClick: () => void;
+  tone?: Tone;
+  className?: string;
+  children: ReactNode;
+}) {
+  return (
+    <button type="button" onClick={onClick} className={cn(PILL_BASE, TONES[tone], className)}>
+      {children}
+    </button>
   );
 }
 

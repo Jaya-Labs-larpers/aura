@@ -13,12 +13,28 @@ export function Field({ label, className, children }: { label: string; className
   );
 }
 
-export function SubmitButton({ loading, idle, busy }: { loading: boolean; idle: string; busy: string }) {
+export function SubmitButton({
+  loading,
+  idle,
+  busy,
+  variant = "dark",
+}: {
+  loading: boolean;
+  idle: string;
+  busy: string;
+  /** "dark" for a cream button on a green card (default); "light" for an ink button on the glaze ground. */
+  variant?: "dark" | "light";
+}) {
   return (
     <button
       type="submit"
       disabled={loading}
-      className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-cream bg-cream px-8 text-[13px] font-medium text-jungle transition-colors duration-500 ease-out-expo hover:border-forest hover:bg-forest hover:text-cream disabled:cursor-wait disabled:opacity-70"
+      className={cn(
+        "inline-flex h-12 items-center justify-center gap-2 rounded-full border px-8 text-[13px] font-medium transition-colors duration-500 ease-out-expo disabled:cursor-wait disabled:opacity-70",
+        variant === "light"
+          ? "border-ink bg-ink text-glaze hover:border-ink/70 hover:bg-transparent hover:text-ink"
+          : "border-cream bg-cream text-jungle hover:border-forest hover:bg-forest hover:text-cream",
+      )}
     >
       {loading && <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />}
       {loading ? busy : idle}
@@ -26,13 +42,28 @@ export function SubmitButton({ loading, idle, busy }: { loading: boolean; idle: 
   );
 }
 
-export function Notice({ tone = "ok", children }: { tone?: "ok" | "warn"; children: ReactNode }) {
+export function Notice({
+  tone = "ok",
+  variant = "dark",
+  children,
+}: {
+  tone?: "ok" | "warn";
+  /** "dark" for the green card (default); "light" for the glaze ground. */
+  variant?: "dark" | "light";
+  children: ReactNode;
+}) {
   return (
     <p
       role="status"
       className={cn(
         "border-l-2 py-2 pl-4 text-sm",
-        tone === "ok" ? "border-emerald-300 text-emerald-100" : "border-bloom text-cream/80",
+        variant === "light"
+          ? tone === "ok"
+            ? "border-rim text-ink/80"
+            : "border-bloom text-ink/80"
+          : tone === "ok"
+            ? "border-emerald-300 text-emerald-100"
+            : "border-bloom text-cream/80",
       )}
     >
       {children}

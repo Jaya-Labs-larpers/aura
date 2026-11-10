@@ -2,9 +2,11 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Link, Slot } from "@/content/types";
-import { Pill } from "@/components/ui/Buttons";
+import { Pill, PillButton } from "@/components/ui/Buttons";
+import { useReservation } from "@/components/features/reservation/ReservationProvider";
 import { CORNER, SlotCaption } from "@/components/ui/Placeholder";
 import { Photo, hasPhoto } from "@/components/ui/Photo";
+import { RESERVE } from "@/content/site";
 import { cn } from "@/lib/cn";
 import { clamp, prefersReducedMotion, useScrollProgress } from "@/lib/scroll";
 
@@ -18,7 +20,7 @@ interface HeroFilmProps {
 }
 
 /** How long each slide shows; the `kenburns` zoom in globals.css spans this plus the 2s fade. */
-const SLIDE_MS = 12000;
+const SLIDE_MS = 8000;
 
 /**
  * Full-bleed opening shot: the still photos cross-fade in turn, each with one
@@ -27,6 +29,7 @@ const SLIDE_MS = 12000;
  * layer while the media moves at half speed.
  */
 export function HeroFilm({ title, text, slides, ctas }: HeroFilmProps) {
+  const { show } = useReservation();
   const section = useRef<HTMLElement>(null);
   const media = useRef<HTMLDivElement>(null);
   const content = useRef<HTMLDivElement>(null);
@@ -86,13 +89,25 @@ export function HeroFilm({ title, text, slides, ctas }: HeroFilmProps) {
         {text && (
           <p className="mt-4 max-w-md text-lg text-cream/80 text-shadow-sm text-shadow-jungle/35 md:text-xl">{text}</p>
         )}
+        {/* Mobile: pinned near the bottom of the hero, like Amazónico's mobile layout. Desktop: back in flow under the text. */}
         {ctas.length > 0 && (
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            {ctas.map((cta, i) => (
-              <Pill key={cta.href} href={cta.href} tone={i === 0 ? "solid" : "outline"}>
-                {cta.label}
-              </Pill>
-            ))}
+          <div className="absolute inset-x-5 bottom-8 flex flex-wrap items-center justify-center gap-4 md:static md:inset-auto md:mt-8">
+            {ctas.map((cta, i) => {
+              const tone = i === 0 ? "outline" : "solid";
+              const className = i === 0 ? "hover:border-forest hover:bg-forest" : "hover:border-bloom hover:bg-bloom";
+              if (cta.href === RESERVE.href) {
+                return (
+                  <PillButton key={cta.href} onClick={show} tone={tone} className={className}>
+                    {cta.label}
+                  </PillButton>
+                );
+              }
+              return (
+                <Pill key={cta.href} href={cta.href} tone={tone} className={className}>
+                  {cta.label}
+                </Pill>
+              );
+            })}
           </div>
         )}
       </div>

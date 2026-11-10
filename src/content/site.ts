@@ -9,7 +9,7 @@ export const SITE = {
     "Elevated rooftop dining above Bassac Lane, showcasing artisanal mixology and charcoal-grilled Kampong Chhnang grass-fed Wagyu with exceptional service.",
   logo: "/images/brand/aura-logo.png",
   favicon: "/images/brand/aura-logo-favicon.jpg",
-  footerLine: "An unforgettable experience, second to none.",
+  footerLine: "Rooftop garden dining above Bassac Lane — charcoal-grilled Wagyu, artisanal cocktails, Phnom Penh at your feet.",
   // TODO before push: re-check the live score/review count on AURA's Google profile.
   // Figure below is Glenn's audit number, not independently verified this round.
   // The strip only renders once these are filled in.

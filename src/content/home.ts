@@ -1,4 +1,4 @@
-import type { Card, Feature, Link, Slot, Taste } from "./types";
+import type { Feature, Link, MediaCard, Slot } from "./types";
 
 export const HOME = {
   meta: {
@@ -10,7 +10,7 @@ export const HOME = {
 
   hero: {
     eyebrow: "Welcome to AURA",
-    title: "AURA Phnom Penh",
+    title: "Welcome to AURA",
     text: "Mekong Modern Rooftop Dining",
     chips: ["Lunch", "Dinner", "Late drinks"],
     // Cross-fades through the slides in order, one slow Ken Burns zoom on each.
@@ -18,7 +18,7 @@ export const HOME = {
       { label: "AURA's rooftop restaurant and bar lit up at night, Bassac Lane", photo: "site/hero-slide-2.jpg" },
       { label: "Aerial view of AURA's rooftop restaurant and bar at night, Bassac Lane", photo: "site/hero-slide-3.jpg" },
       { label: "AURA's rooftop bar among the plants by day", photo: "site/rooftop-bar-day.jpg", zoomOut: true },
-      { label: "View down AURA's rooftop staircase over Phnom Penh at dusk", photo: "site/hero-slide-4.jpg", position: "50% 0%" },
+      { label: "View down AURA's rooftop staircase over Phnom Penh at dusk", photo: "site/hero-slide-4.jpg", position: "50% 60%" },
     ] satisfies Slot[],
     ctas: [
       { label: "View Menus", href: "/menu" },
@@ -34,27 +34,8 @@ export const HOME = {
       // Also the meta description (search snippet).
       "Perfect for tasteful explorers to discover quality Cambodian culinary heritage with a modern twist and a contemporary rooftop atmosphere in Phnom Penh.",
     ],
-    cta: { label: "Our story", href: "/about" } satisfies Link,
+    cta: { label: "Our Story", href: "/about" } satisfies Link,
   },
-
-  cardsHeading: "From lunch to late",
-  cards: [
-    {
-      title: ["Lunch in the", "lounge"],
-      slot: { label: "AURA's open-air terrace by day", photo: "site/lunch-lounge-table-setting.webp" },
-      cta: { label: "Reservation", href: "/reservation" },
-    },
-    {
-      title: ["Dinner from", "the grill"],
-      slot: { label: "Sliced charcoal-grilled Khmer Wagyu tomahawk, fresh off the grill", photo: "menu/signature/charcoal-grilled-khmer-wagyu-tomahawk-table.jpg" },
-      cta: { label: "View Menus", href: "/menu" },
-    },
-    {
-      title: ["Late drinks", "at the bar"],
-      slot: { label: "AURA's bar lit up at night", photo: "venue-highlights/03.jpg", position: "50% 62%" },
-      cta: { label: "View Menus", href: "/menu" },
-    },
-  ] satisfies Card[],
 
   // Outdoor and indoor shots in turn; the two staff shots kept apart.
   strip: [
@@ -73,42 +54,89 @@ export const HOME = {
       eyebrow: "Private Events",
       title: "Host your next event above the lane.",
       body: ["Buffet spreads, open-air seating and the charcoal grill, yours for the night."],
-      slot: { label: "Guests celebrating at a private party at AURA", photo: "site/private-event-celebration.jpg" },
+      slot: {
+        label: "Guests posing for photos at a private rooftop event at AURA",
+        photo: "events/private-event-rooftop-party.jpg",
+      },
       cta: { label: "Enquire", href: "/events" },
+      cta2: { label: "About Private Events", href: "/events" },
+    },
+    {
+      eyebrow: "VIP Groups",
+      title: "Gather your group on the rooftop.",
+      body: ["Reserved seating, shareable plates and the charcoal grill, set up for your whole group."],
+      slot: {
+        label: "Guests celebrating at a private party at AURA",
+        photo: "site/private-event-celebration.jpg",
+        mobilePosition: "right",
+      },
+      cta: { label: "Reserve a Group", href: "/events" },
+      cta2: { label: "About VIP Groups", href: "/events" },
     },
     {
       eyebrow: "New Year's Eve",
       title: "Ring in the new year on the rooftop.",
       body: ["Festive sharing plates and cocktails, among the plants high above Bassac Lane."],
       slot: { label: "Guests toasting at a festive celebration at AURA", photo: "events/14-meeting-and-event.jpg" },
-      cta: { label: "Reserve your table", href: "/reservation" },
+      cta: { label: "Book Now", href: "/reservation" },
+      cta2: { label: "About NYE", href: "/events" },
     },
     {
       eyebrow: "Birthday Nights",
       title: "Celebrate your birthday on the rooftop.",
       body: ["Balloon arches, a candle-lit plate and a toast around the whole table."],
       slot: { label: "Staff presenting a birthday celebration at AURA", photo: "events/32-meeting-and-event.jpg" },
-      cta: { label: "Reserve your table", href: "/reservation" },
+      cta: { label: "Plan Your Birthday", href: "/reservation" },
+      cta2: { label: "About Birthday Celebration", href: "/events" },
     },
   ] satisfies Feature[],
 
   taste: {
-    eyebrow: "Taste",
-    title: "Mekong Modern, fired and stirred.",
-    lead: "Khmer Wagyu, raised slow in Kampong Chhnang and grazed two years until the marbling runs deep, crusted over charcoal and finished with Kampot green peppercorn. Mekong Modern specialties from the kitchen, artisanal cocktails from the bar. Smoke, spice and a Khmer soul in every glass and every bite.",
+    title: "Taste",
+    body: [
+      "Not only a love letter to Kampong Chhnang Wagyu, but a city of flavour where the Mekong trades stories with the Mediterranean, over charcoal and craft.",
+      "Explore our kitchen; fire-grilled Wagyu, hand-shaken cocktails, and a Mekong Modern menu built to share.",
+    ],
+    cta: { label: "Discover", href: "/menu" },
     slots: [
       {
-        label: "Charcoal-grilled Khmer Wagyu rib-eye, close-up on the grill char",
-        photo: "menu/main-course/charcoal-grilled-local-khmer-wagyu-rib-eye-tek-bror-hok.jpg",
+        label: "Sliced charcoal-grilled Khmer Wagyu tomahawk, fresh off the grill",
+        photo: "menu/signature/charcoal-grilled-khmer-wagyu-tomahawk-table.jpg",
         position: "50% 55%",
+        title: "Khmer-bred Wagyu, Farm to Flame",
+        body: ["Discover Cambodia's first home-bred Wagyu, raised on a specialty farm in Kampong Chhnang province. Patiently aged and seared over local charcoal for buttery, richly marbled steak cuts."],
+        cta: { label: "Explore our Steak Menu", href: "/menu" },
       },
       {
-        label: "Waiter presenting a tray of signature cocktails on the rooftop",
-        photo: "site/cocktail-tray-service.jpg",
-        position: "50% 25%",
+        label: "Bartender pouring bitters over a line of signature cocktails in coupe glasses",
+        photo: "site/cocktail-pour-coupes.png",
+        position: "50% 85%",
+        title: "Craft Cocktails with Khmer Soul",
+        body: ["Taste our signatures - Khmer heritage with cosmopolitan twist. Poured from local award-winning distilleries with native botanicals like lemongrass and kampot pepper, echoing the spirit of modern Phnom Penh."],
+        cta: { label: "Discover our signature Cocktails", href: "/menu" },
+      },
+      {
+        label: "Grilled tiger prawns platter with garlic butter, plated rooftop at AURA",
+        photo: "menu/signature/grilled-tiger-prawns-platter.jpg",
+        position: "58% 42%",
+        title: "A Mekong Modern Culinary Experience",
+        body: ["Savour Khmer Royal cuisine classics with a modern hand — from fish amok to beef lok lak — paired with a curated selection Pan-Asian specialties. Rooted in Cambodia, open to the world."],
+        cta: { label: "See Our Local Specialties", href: "/menu" },
       },
     ],
-  } satisfies Taste,
+  } satisfies MediaCard,
+
+  lunch: {
+    title: "Lunch",
+    body: [
+      "Not only a midday pause, but a table built for business — quick enough for a meeting, complete enough to close on.",
+      "Explore the set menu; set courses, swift service, and tables made for meeting up.",
+    ],
+    cta: { label: "See Menus", href: "/menu" },
+    slots: [
+      { label: "AURA's open-air terrace set for a daytime lunch", photo: "site/lunch-lounge-table-setting.webp" },
+    ],
+  } satisfies MediaCard,
 
   story: {
     eyebrow: "Why AURA",
@@ -123,7 +151,11 @@ export const HOME = {
   location: {
     eyebrow: "Bassac Lane",
     title: "Above the lane, among the plants.",
-    slot: { label: "AURA rooftop at night from above, Bassac Lane", photo: "venue/05-venue-image.jpg" } satisfies Slot,
+    slot: {
+      label: "AURA storefront on Bassac Lane, street view with signage",
+      photo: "site/exterior-storefront-street.jpg",
+      position: "62% 50%",
+    } satisfies Slot,
     cta: { label: "Get directions" } satisfies Omit<Link, "href">,
     // TODO before push: hours conflict — HOURS[0] in site.ts says "11:30 AM – 01:00 AM"
     // but src/app/(classic)/reservation/page.tsx:52 says "11:30 AM – 10:00 PM". AURA to
@@ -134,6 +166,6 @@ export const HOME = {
   },
 
   reserve: {
-    title: "Book Your Experience",
+    title: "Plan Your AURA Experience",
   },
 };

@@ -1,13 +1,12 @@
 import Link from "next/link";
-import { CONTACT, HOURS, NAV, RESERVE, SITE, SOCIALS } from "@/content/site";
-import { Pill } from "@/components/ui/Buttons";
+import { CONTACT, HOURS, NAV, SITE, SOCIALS } from "@/content/site";
 import { SocialIcon } from "@/components/ui/Icons";
 import { LeafTone, PlateLeaf } from "@/components/ui/LeafMotif";
 import { Reveal } from "@/components/ui/Reveal";
 
 /**
  * Footer sits on the same glaze ground as "Why AURA" (Story), with tonal
- * leaves at the edges and a leaf watermark centered behind the four columns.
+ * leaves at the edges and a leaf watermark centered behind the columns.
  * Sits above Location (sticky) in z-order so it slides up over that photo as
  * the page reaches bottom.
  */
@@ -23,10 +22,7 @@ export function Footer() {
       <div className="relative mx-auto max-w-[1600px] px-5 pt-20 pb-10 md:px-8 md:pt-24">
         <div className="grid justify-items-center gap-14 text-center md:grid-cols-[1.1fr_1fr_1fr_1.1fr] md:justify-items-start md:gap-10 md:text-left">
           <Reveal>
-            <p className="max-w-[26ch] font-display text-lg text-rim italic">{SITE.footerLine}</p>
-            <Pill href={RESERVE.href} tone="dark" className="mt-7">
-              {RESERVE.label}
-            </Pill>
+            <p className="max-w-[32ch] text-sm text-ink/70">{SITE.footerLine}</p>
           </Reveal>
 
           <Reveal delay={80} className="text-sm">
@@ -84,12 +80,12 @@ export function Footer() {
           </Reveal>
         </div>
 
-        <div className="mt-16 flex flex-col gap-4 border-t border-ink/15 pt-6 text-xs opacity-60 md:flex-row md:items-center md:justify-between">
+        <div className="mt-16 flex flex-col items-center gap-4 border-t border-ink/15 pt-6 text-center text-xs opacity-60 md:flex-row md:items-center md:justify-between md:text-left">
           <p>
-            © {year} {SITE.name}, {SITE.location}
+            © {year} {SITE.name} {SITE.location}
           </p>
           <nav aria-label="Footer">
-            <ul className="flex flex-wrap gap-x-5 gap-y-2">
+            <ul className="flex flex-wrap justify-center gap-x-5 gap-y-2 md:justify-start">
               {NAV.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="hover:underline">

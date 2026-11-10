@@ -57,45 +57,6 @@ export const MENU_PAGE = {
   } satisfies PageHero,
 };
 
-export const EVENTS = {
-  hero: {
-    eyebrow: "Events",
-    title: "Celebrate at AURA",
-    text: "From intimate gatherings to exclusive celebrations, tailored to your moment.",
-    slot: { label: "Events hero", photo: "venue/16-venue-image.jpg" },
-  } satisfies PageHero,
-  features: [
-    {
-      eyebrow: "Up to 120 guests",
-      title: "Private Dining",
-      body: [
-        "For a birthday, anniversary, business lunch or cocktail event, AURA's private dining spaces offer a comfortable, well-appointed setting.",
-        "Our team arranges menu selections, beverage pairings, seating, lighting and decoration to suit your occasion. AURA is also available for exclusive use for weddings and corporate events.",
-      ],
-      slot: { label: "Private dining", photo: "site/private-dining.jpg" },
-      cta: { label: "Enquire", href: "/contact" },
-    },
-    {
-      eyebrow: "At your venue",
-      title: "Event Catering",
-      body: [
-        "AURA offers off-site catering at your home or a venue of your choice.",
-        "Our kitchen and service team bring the same standard of food and service found at the restaurant, for a well-organised and enjoyable event.",
-      ],
-      slot: { label: "Event catering", photo: "site/event-catering.jpg" },
-      cta: { label: "Enquire", href: "/contact" },
-    },
-  ] satisfies Feature[],
-  strip: [
-    { label: "Buffet service", photo: "events/01-meeting-and-event.jpg" },
-    { label: "Flambé station", photo: "events/33-meeting-and-event.jpg" },
-    { label: "Chef carving", photo: "events/34-meeting-and-event.jpg" },
-    { label: "Celebration toast", photo: "events/39-meeting-and-event.jpg" },
-    { label: "Balloon arch table", photo: "venue/24-venue-image.jpg" },
-    { label: "Candlelit long table", photo: "venue/22-venue-image.jpg" },
-  ] satisfies Slot[],
-};
-
 export const GALLERY_PAGE = {
   hero: {
     eyebrow: "Gallery",

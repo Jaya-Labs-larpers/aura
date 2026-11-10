@@ -4,10 +4,9 @@ import { ReserveCard } from "@/components/sections/Bands";
 import { HeroFilm } from "@/components/sections/HeroFilm";
 import { Identity } from "@/components/sections/Identity";
 import { Location } from "@/components/sections/Location";
+import { MediaCard } from "@/components/sections/MediaCard";
 import { Offers } from "@/components/sections/Offers";
 import { PhotoStrip } from "@/components/sections/PhotoStrip";
-import { StackedCards } from "@/components/sections/StackedCards";
-import { Taste } from "@/components/sections/Taste";
 import { HOME } from "@/content/home";
 import { CONTACT, SITE } from "@/content/site";
 
@@ -36,8 +35,8 @@ export default function HomePage() {
       <HeroFilm {...HOME.hero} />
       <Identity {...HOME.identity} />
       <PhotoStrip slots={HOME.strip} />
-      <Taste {...HOME.taste} />
-      <StackedCards heading={HOME.cardsHeading} cards={HOME.cards} />
+      <MediaCard id="taste" {...HOME.taste} />
+      <MediaCard id="lunch" {...HOME.lunch} />
       <Offers heading={HOME.offersHeading} offers={HOME.offers} />
       {/* Unset background: shows the body's patterned green ground, same gap used between every other section (56px/72px). */}
       <div className="h-14 md:h-18" aria-hidden="true" />

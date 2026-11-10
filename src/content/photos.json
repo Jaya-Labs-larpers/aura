@@ -45,6 +45,17 @@
       1662
     ]
   },
+  "events/private-event-rooftop-party.jpg": {
+    "src": "/images/photos/events/private-event-rooftop-party",
+    "width": 2160,
+    "height": 1440,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2160
+    ]
+  },
   "menu/chef-carving.jpg": {
     "src": "/images/photos/menu/chef-carving",
     "width": 385,
@@ -135,14 +146,27 @@
       3200
     ]
   },
-  "site/cocktail-tray-service.jpg": {
-    "src": "/images/photos/site/cocktail-tray-service",
-    "width": 1365,
-    "height": 2048,
+  "menu/signature/grilled-tiger-prawns-platter.jpg": {
+    "src": "/images/photos/menu/signature/grilled-tiger-prawns-platter",
+    "width": 5333,
+    "height": 4000,
     "widths": [
       640,
       1280,
-      1365
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "site/cocktail-pour-coupes.png": {
+    "src": "/images/photos/site/cocktail-pour-coupes",
+    "width": 2160,
+    "height": 1440,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2160
     ]
   },
   "site/event-catering.jpg": {
@@ -155,6 +179,16 @@
       1920,
       2560,
       2564
+    ]
+  },
+  "site/exterior-storefront-street.jpg": {
+    "src": "/images/photos/site/exterior-storefront-street",
+    "width": 1393,
+    "height": 929,
+    "widths": [
+      640,
+      1280,
+      1393
     ]
   },
   "site/front-of-house.jpg": {
@@ -266,6 +300,29 @@
       640,
       1280,
       1716
+    ]
+  },
+  "site/rooftop-bar-spiral-staircase-night.jpg": {
+    "src": "/images/photos/site/rooftop-bar-spiral-staircase-night",
+    "width": 6720,
+    "height": 4480,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "site/rooftop-night-aura-signage.png": {
+    "src": "/images/photos/site/rooftop-night-aura-signage",
+    "width": 2160,
+    "height": 1440,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2160
     ]
   },
   "site/rooftop-stairway-view.jpg": {

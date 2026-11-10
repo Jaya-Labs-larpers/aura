@@ -18,19 +18,16 @@ interface LocationProps {
 }
 
 /**
- * Full-bleed aerial photo behind a rim-shaped lens: scrolling zooms the photo
- * in, as if looking down through the plate rim onto the rooftop. An info row
+ * Full-bleed aerial photo that zooms in on scroll. An info row
  * (address, hours, getting up) and a directions pill sit bottom left.
  */
 export function Location({ eyebrow, title, slot, cta, gettingUp }: LocationProps) {
   const section = useRef<HTMLElement>(null);
   const media = useRef<HTMLDivElement>(null);
-  const ring = useRef<HTMLDivElement>(null);
 
   const onFrame = useCallback((progress: number) => {
     const scale = 1 + progress * 0.22;
     if (media.current) media.current.style.transform = `scale(${scale})`;
-    if (ring.current) ring.current.style.transform = `translate(-50%, -50%) scale(${1.3 - progress * 0.6})`;
   }, []);
   useScrollProgress(section, onFrame);
 
@@ -46,18 +43,14 @@ export function Location({ eyebrow, title, slot, cta, gettingUp }: LocationProps
       {!hasPhoto(slot) && <SlotCaption slot={slot} className={CORNER} />}
       <div className="absolute inset-0 bg-radial from-jungle/15 via-jungle/55 to-jungle/90" />
 
-      <div
-        ref={ring}
-        aria-hidden="true"
-        className="pointer-events-none absolute top-1/2 left-1/2 h-[70vmin] w-[70vmin] rounded-full border-2 border-rim/70 will-change-transform"
-        style={{ transform: "translate(-50%, -50%)" }}
-      />
-
       <div className="relative flex h-full flex-col justify-end px-6 pb-16 md:px-12 md:pb-20">
         <Reveal variant="fade">
           <Eyebrow className="text-cream/70">{eyebrow}</Eyebrow>
         </Reveal>
-        <RevealText text={title} className="mt-3 max-w-xl font-display text-4xl leading-[1.1] md:text-5xl" />
+        <RevealText
+          text={title}
+          className="mt-3 max-w-xl font-display text-4xl leading-[1.1] md:max-w-[min(36rem,calc(100vw/3-3rem))] md:text-5xl"
+        />
         <Reveal delay={150}>
           <dl className="mt-6 grid gap-3.5 text-sm opacity-85 md:mt-7 md:grid-cols-3 md:gap-6">
             <div className="border-t border-cream/20 pt-2.5">

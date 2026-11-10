@@ -55,7 +55,7 @@ export function Offers({ heading, offers }: { heading?: string; offers: Feature[
       <section className="relative flex min-h-dvh max-w-full flex-col justify-end overflow-hidden bg-jungle text-cream aspect-[2/3] md:aspect-[3/2] md:min-h-0 lg:aspect-[1920/900]">
       {offers.map((o, i) => (
         <div
-          key={o.title}
+          key={`${o.title}-${i}`}
           aria-hidden={i !== active}
           className={cn(
             "absolute inset-0 transition-opacity duration-[1200ms] ease-in-out",
@@ -74,18 +74,31 @@ export function Offers({ heading, offers }: { heading?: string; offers: Feature[
           <Eyebrow className="text-cream/75">{offer.eyebrow}</Eyebrow>
         </Reveal>
         <Reveal variant="soft" delay={60}>
-          <h2 className="mt-4 max-w-xl font-display text-4xl leading-[1.1] md:text-5xl">{offer.title}</h2>
+          <h2 className="mt-4 max-w-xl font-display text-4xl leading-[1.1] md:max-w-[min(36rem,calc(100vw/3-3rem))] md:text-5xl">
+            {offer.title}
+          </h2>
         </Reveal>
         {offer.body?.map((line, i) => (
           <Reveal key={line} variant="soft" delay={120 + i * 60} className="mt-4 max-w-sm text-[15px] leading-relaxed opacity-85">
             <p>{line}</p>
           </Reveal>
         ))}
-        {offer.cta && (
-          <Reveal variant="soft" delay={180} className="mt-7">
-            <Pill href={offer.cta.href} tone="outline">
-              {offer.cta.label}
-            </Pill>
+        {(offer.cta || offer.cta2) && (
+          <Reveal
+            variant="soft"
+            delay={180}
+            className="absolute inset-x-5 bottom-8 flex flex-wrap items-center justify-center gap-3 md:static md:inset-auto md:mt-7 md:justify-start"
+          >
+            {offer.cta2 && (
+              <Pill href={offer.cta2.href} tone="white">
+                {offer.cta2.label}
+              </Pill>
+            )}
+            {offer.cta && (
+              <Pill href={offer.cta.href} tone="outline" className="hover:border-forest hover:bg-forest">
+                {offer.cta.label}
+              </Pill>
+            )}
           </Reveal>
         )}
       </div>
@@ -95,7 +108,7 @@ export function Offers({ heading, offers }: { heading?: string; offers: Feature[
           <div className="flex gap-1.5">
             {offers.map((o, i) => (
               <button
-                key={o.title}
+                key={`${o.title}-${i}`}
                 type="button"
                 aria-label={`Show ${o.title}`}
                 aria-current={i === active}

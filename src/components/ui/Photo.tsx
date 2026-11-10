@@ -12,6 +12,13 @@ interface PublishedPhoto {
 
 const published: Record<string, PublishedPhoto | undefined> = PHOTOS;
 
+const MOBILE_POSITION_CLASS = {
+  left: "max-md:object-left",
+  right: "max-md:object-right",
+  top: "max-md:object-top",
+  bottom: "max-md:object-bottom",
+} as const;
+
 /** Whether the slot's photo has been published by `npm run photos`. */
 export function hasPhoto(slot: Slot) {
   return Boolean(slot.photo && published[slot.photo]);
@@ -50,7 +57,11 @@ export function Photo({ slot, sizes, className, fit = "cover", bare }: PhotoProp
       decoding="async"
       draggable={false}
       style={slot.position ? { objectPosition: slot.position } : undefined}
-      className={cn(fit === "cover" ? "object-cover" : "object-contain", className)}
+      className={cn(
+        fit === "cover" ? "object-cover" : "object-contain",
+        slot.mobilePosition && MOBILE_POSITION_CLASS[slot.mobilePosition],
+        className,
+      )}
     />
   );
 }

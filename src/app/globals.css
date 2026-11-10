@@ -4,6 +4,7 @@
 @import "tailwindcss" source(none);
 @source "./(home)";
 @source "./global-not-found.tsx";
+@source "../components/features";
 @source "../components/layout";
 @source "../components/sections";
 @source "../components/ui";
@@ -120,6 +121,16 @@
   :focus-visible {
     outline: 2px solid var(--color-bloom);
     outline-offset: 3px;
+  }
+  /* Reservation form's date field keeps its own calendar icon on the left;
+     hide the native indicator but leave it covering the input so a click
+     anywhere still opens the picker. */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
   }
 }
 

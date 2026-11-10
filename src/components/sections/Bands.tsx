@@ -1,7 +1,10 @@
+"use client";
+
 import type { ReactNode } from "react";
+import { useReservation } from "@/components/features/reservation/ReservationProvider";
 import type { Link, Slot } from "@/content/types";
 import { RESERVE, SOCIALS } from "@/content/site";
-import { Pill, TextLink } from "@/components/ui/Buttons";
+import { Pill, PillButton, TextLink } from "@/components/ui/Buttons";
 import { SocialIcon } from "@/components/ui/Icons";
 import { Photo } from "@/components/ui/Photo";
 import { Reveal, RevealText } from "@/components/ui/Reveal";
@@ -72,6 +75,7 @@ export function CtaBand({
 
 /** Compact reservation card on the green ground: the last ask before the footer. */
 export function ReserveCard({ title }: { title: string }) {
+  const { show } = useReservation();
   const wa = SOCIALS.find((s) => s.icon === "whatsapp")!;
   const tg = SOCIALS.find((s) => s.icon === "telegram")!;
   return (
@@ -79,9 +83,9 @@ export function ReserveCard({ title }: { title: string }) {
       <div className="mx-auto flex max-w-4xl flex-col items-center">
         <RevealText text={title} className="font-display text-4xl leading-[1.1] md:text-5xl" />
         <Reveal delay={300} className="mt-7 grid w-full max-w-sm grid-cols-2 gap-2.5 md:w-auto md:max-w-none md:flex md:flex-nowrap">
-          <Pill href={RESERVE.href} className="col-span-2 md:col-span-1">
+          <PillButton onClick={show} className="col-span-2 md:col-span-1">
             Book a table
-          </Pill>
+          </PillButton>
           <Pill tone="outline" href={wa.href} className="gap-2">
             <SocialIcon name="whatsapp" />
             {wa.label}

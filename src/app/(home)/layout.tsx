@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Kantumruy_Pro, Miranda_Sans, Playfair_Display } from "next/font/google";
+import { ReservationInert } from "@/components/features/reservation/ReservationInert";
+import { ReservationOverlay } from "@/components/features/reservation/ReservationOverlay";
+import { ReservationProvider } from "@/components/features/reservation/ReservationProvider";
 import { Header } from "@/components/layout/Header";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { HOME } from "@/content/home";
@@ -30,9 +33,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <noscript>
           <style>{`[data-reveal],[data-reveal]>*{opacity:1!important;transform:none!important;clip-path:none!important;filter:none!important}.word>span{transform:none!important}`}</style>
         </noscript>
-        <SmoothScroll />
-        <Header />
-        <main>{children}</main>
+        <ReservationProvider>
+          <SmoothScroll />
+          <ReservationInert>
+            <Header />
+            <main>{children}</main>
+          </ReservationInert>
+          <ReservationOverlay />
+        </ReservationProvider>
       </body>
     </html>
   );

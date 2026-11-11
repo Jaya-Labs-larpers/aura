@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import type { MenuData } from "@/types/site";
@@ -11,6 +11,14 @@ const INACTIVE_TAB = "text-gray-400 hover:text-[#F2FFF7] pb-3";
 
 export function MenuTabs({ data }: { data: MenuData }) {
   const [activeTab, setActiveTab] = useState(data.tabs[0]?.key ?? "");
+
+  // Deep links from other pages (/menu#menu-signature) open that tab.
+  useEffect(() => {
+    const key = window.location.hash.replace("#menu-", "");
+    if (!key || !data.tabs.some((tab) => tab.key === key)) return;
+    const id = requestAnimationFrame(() => setActiveTab(key));
+    return () => cancelAnimationFrame(id);
+  }, [data]);
 
   return (
     <div className="pb-24 bg-[#002117]">

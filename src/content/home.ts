@@ -52,7 +52,7 @@ export const HOME = {
   offers: [
     {
       eyebrow: "Private Events",
-      title: "Host your next event above the lane.",
+      title: "Host your next event on the rooftop.",
       body: ["Buffet spreads, open-air seating and the charcoal grill, yours for the night."],
       slot: {
         label: "Guests posing for photos at a private rooftop event at AURA",
@@ -105,7 +105,7 @@ export const HOME = {
         position: "50% 55%",
         title: "Khmer-bred Wagyu, Farm to Flame",
         body: ["Discover Cambodia's first home-bred Wagyu, raised on a specialty farm in Kampong Chhnang province. Patiently aged and seared over local charcoal for buttery, richly marbled steak cuts."],
-        cta: { label: "Explore our Steak Menu", href: "/menu" },
+        cta: { label: "Explore our Steak Menu", href: "/menu#menu-signature" },
       },
       {
         label: "Bartender pouring bitters over a line of signature cocktails in coupe glasses",
@@ -113,15 +113,15 @@ export const HOME = {
         position: "50% 85%",
         title: "Craft Cocktails with Khmer Soul",
         body: ["Taste our signatures - Khmer heritage with cosmopolitan twist. Poured from local award-winning distilleries with native botanicals like lemongrass and kampot pepper, echoing the spirit of modern Phnom Penh."],
-        cta: { label: "Discover our signature Cocktails", href: "/menu" },
+        cta: { label: "Discover our signature Cocktails", href: "/menu#menu-signature-cocktail" },
       },
       {
         label: "Grilled tiger prawns platter with garlic butter, plated rooftop at AURA",
         photo: "menu/signature/grilled-tiger-prawns-platter.jpg",
-        position: "58% 42%",
+        position: "58% 50%",
         title: "A Mekong Modern Culinary Experience",
         body: ["Savour Khmer Royal cuisine classics with a modern hand — from fish amok to beef lok lak — paired with a curated selection Pan-Asian specialties. Rooted in Cambodia, open to the world."],
-        cta: { label: "See Our Local Specialties", href: "/menu" },
+        cta: { label: "See Our Local Specialties", href: "/menu#menu-main-course" },
       },
     ],
   } satisfies MediaCard,
@@ -130,9 +130,10 @@ export const HOME = {
     title: "Lunch",
     body: [
       "Not only a midday pause, but a table built for business — quick enough for a meeting, complete enough to close on.",
-      "Explore the set menu; set courses, swift service, and tables made for meeting up.",
+      "Choose à la carte or our curated lunch sets with seasonal specialties, served swiftly at tables made for meeting up.",
     ],
-    cta: { label: "See Menus", href: "/menu" },
+    // TODO: point at the lunch section once AURA sends the lunch menu (none in menu.json yet).
+    cta: { label: "See Our Lunch Menu", href: "/menu" },
     slots: [
       { label: "AURA's open-air terrace set for a daytime lunch", photo: "site/lunch-lounge-table-setting.webp" },
     ],
@@ -150,7 +151,7 @@ export const HOME = {
 
   location: {
     eyebrow: "Bassac Lane",
-    title: "Above the lane, among the plants.",
+    title: "Above Bassac Lane, among the plants.",
     slot: {
       label: "AURA storefront on Bassac Lane, street view with signage",
       photo: "site/exterior-storefront-street.jpg",

@@ -76,7 +76,9 @@
     -moz-osx-font-smoothing: grayscale;
   }
   body {
-    overflow-x: hidden;
+    /* overflow-x stays on html only: the same clip on body too turns it into a second
+       scroll container, which hijacks position:sticky's containing block and freezes
+       every sticky element (the sticky html clip below already stops x-scroll). */
     font-family: var(--font-sans);
   }
   /* The green ground, AURA's take on Amazónico's patterned grounds. Two fixed

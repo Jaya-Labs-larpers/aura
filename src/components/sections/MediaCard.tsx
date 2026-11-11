@@ -64,7 +64,7 @@ export function MediaCard({ id, title, body, cta, slots }: MediaCardProps) {
         <div className="absolute inset-0 bg-linear-to-t from-jungle/90 via-jungle/35 to-transparent" />
 
         <div key={active} className="relative flex h-full flex-col items-center justify-end px-6 text-center">
-          <div className="max-w-[680px] pb-16 md:pb-24">
+          <div className="max-w-[680px] pb-16 md:pb-24 lg:max-w-[800px]">
             <Reveal variant="soft" delay={0}>
               <h2 className="text-balance font-display text-3xl leading-[1.05] md:text-5xl lg:text-6xl">{activeTitle}</h2>
             </Reveal>
@@ -75,7 +75,7 @@ export function MediaCard({ id, title, body, cta, slots }: MediaCardProps) {
                 delay={60 + i * 60}
                 className={cn("text-sm", i === 0 ? "mt-[15px] opacity-85 md:text-base" : "mt-3 opacity-70 md:text-[15px]")}
               >
-                <p>{paragraph}</p>
+                <p className="text-pretty">{paragraph}</p>
               </Reveal>
             ))}
             <Reveal variant="soft" delay={180} className="mt-7">

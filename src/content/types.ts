@@ -66,18 +66,28 @@ export interface PageHero {
 export interface MenuItem {
   name: string;
   price: string;
-  description: string;
+  description?: string;
+  /** Sits above the item as a small subheading when it differs from the previous item's, e.g. "Beef" within Mains. */
+  group?: string;
+  /** Small marks after the name: chef's recommendation, Khmer speciality, vegetarian. */
+  tags?: ("chef" | "khmer" | "v")[];
 }
 
 export interface MenuCategory {
   key: string;
   title: string;
+  /** Line under the category title, e.g. the steak sides' "Additional side $5". */
+  note?: string;
   items: MenuItem[];
+  /** Fine print at the end of the category, e.g. the steak breed note. */
+  footnote?: string;
 }
 
 export interface MenuData {
   tabs: { key: string; label: string }[];
   categories: MenuCategory[];
+  /** Shown once after the last category: the allergen/dietary legend and tax note. */
+  legend?: string;
 }
 
 export type GalleryCategory = "venue" | "menu" | "events";

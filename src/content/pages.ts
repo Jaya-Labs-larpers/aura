@@ -7,45 +7,47 @@ export const ABOUT = {
     text: "A rooftop garden restaurant and lounge in the heart of Bassac Lane.",
     slot: { label: "About hero", photo: "site/where-it-all-began.jpg" },
   } satisfies PageHero,
-  mission: {
-    eyebrow: "Our Mission",
-    title: "An unforgettable experience, second to none",
-    text: "Connecting families and friends so you can celebrate and enjoy life's moments.",
+  // Copy and section order from the AURA Wagyu story one-pager (AURA_Menu_Combined_v14.pdf, page 1).
+  // Its four photos are all marked "placeholder image" in the source, so no `photo` is set here yet.
+  beef: {
+    eyebrow: "Our Beef",
+    title: "Discover Khmer Wagyu, from pasture to plate",
+    text: "All our beef is raised on a single specialist farm in the lowlands of Kampong Chhnang, the first producer of Cambodia-bred Wagyu. Patiently aged, precision-cut and prepared with pride, every steak is a masterclass in local Khmer heritage.",
   },
-  features: [
+  beefFeatures: [
     {
-      eyebrow: "Our History",
-      title: "Where it all began",
+      eyebrow: "I · The Origin",
+      title: "Quality begins on the pasture",
       body: [
-        "AURA Phnom Penh first opened its doors in December 2023.",
-        "Located in the vibrant Bassac Lane neighbourhood, the multi-level rooftop venue established itself as a premier restaurant and lounge known for its refined atmosphere, international charcoal-grilled cuisine and curated signature cocktails.",
+        "The cattle roam open pasture for two years, grazing on grass enriched with corn, cassava and rice bran. A year or more of grain finishing follows, with molasses in the daily feed, until the marbling is fine, even and wonderfully full of flavour.",
       ],
-      slot: { label: "History", photo: "site/where-it-all-began.jpg" },
+      slot: { label: "Our own herd on the Kampong Chhnang pasture" },
     },
     {
-      eyebrow: "Our Standards",
-      title: "Our Philosophy",
+      eyebrow: "II · The Evolution",
+      title: "Carefully aged and expertly cut",
       body: [
-        "Exceptional cuisine begins with exceptional ingredients. Our relationships with local farms, artisan producers and sustainable fisheries ensure every plate showcases the finest seasonal offerings.",
-        "Our culinary team approaches each dish as a canvas, balancing flavours, textures and visual appeal to engage all the senses.",
+        "After harvest, each carcass rests for at least 14 days while time deepens its flavour and tenderness. Every steak is then cut by hand and trimmed to the right weight and thickness for its character, before it meets our glowing charcoal grill.",
       ],
-      slot: { label: "Philosophy", photo: "site/our-philosophy.jpg" },
+      slot: { label: "Our butcher at work, or the herd in the stables" },
+    },
+    {
+      eyebrow: "III · The Craft",
+      title: "Seared over Cambodian charcoal",
+      body: [
+        "Every steak meets the intense heat of locally sourced charcoal, which builds a deep, caramelised crust and a gentle smokiness. We keep it simple, so the true character of the beef shines through clearly on every plate we serve at AURA.",
+      ],
+      slot: { label: "A Khmer Wagyu cut over our charcoal grill" },
+    },
+    {
+      eyebrow: "IV · The Destination",
+      title: "A place at the table",
+      body: [
+        "Every cut on our menu has its own texture and depth of flavour, from lean and delicate to bold and generous. Tell us how you like your steak, and our team will gladly suggest the right cut for you to enjoy with us here at AURA tonight.",
+      ],
+      slot: { label: "A finished AURA steak, served at the table" },
     },
   ] satisfies Feature[],
-  values: [
-    {
-      title: "Sustainable Sourcing",
-      text: "We partner with local farms and sustainable suppliers, so our ingredients are fresh, ethical and environmentally responsible.",
-    },
-    {
-      title: "Expert Team",
-      text: "Our culinary and service teams bring decades of combined experience from some of the world's most prestigious kitchens.",
-    },
-    {
-      title: "Open Late",
-      text: "Lunch, dinner and late-night lounge service, every day of the week until 1 AM.",
-    },
-  ],
 };
 
 export const MENU_PAGE = {

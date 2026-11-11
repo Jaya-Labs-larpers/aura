@@ -1,441 +1,137 @@
 {
   "tabs": [
-    {
-      "key": "signature",
-      "label": "Signature"
-    },
-    {
-      "key": "appetizers",
-      "label": "Appetizers"
-    },
-    {
-      "key": "soup",
-      "label": "Soup"
-    },
-    {
-      "key": "main-course",
-      "label": "Main Course"
-    },
-    {
-      "key": "sharing-platters",
-      "label": "Sharing Platters"
-    },
-    {
-      "key": "dessert",
-      "label": "Dessert"
-    },
-    {
-      "key": "soft-drink-juice",
-      "label": "Soft Drink & Juice"
-    },
-    {
-      "key": "signature-cocktail",
-      "label": "Signature Cocktail"
-    },
-    {
-      "key": "non-alcohol-cocktail",
-      "label": "Non Alcohol Cocktail"
-    },
-    {
-      "key": "beer",
-      "label": "Beer"
-    }
+    { "key": "petites", "label": "Petites & Specialities" },
+    { "key": "steaks", "label": "Steaks" },
+    { "key": "sides-sauces", "label": "Sides & Sauces" },
+    { "key": "starters", "label": "Starters" },
+    { "key": "vegetables", "label": "Vegetables" },
+    { "key": "sides", "label": "Rice & Sides" },
+    { "key": "mains", "label": "Mains" },
+    { "key": "platters", "label": "Sharing Platters" },
+    { "key": "desserts", "label": "Desserts" }
   ],
   "categories": [
     {
-      "key": "signature",
-      "title": "Signature",
+      "key": "petites",
+      "title": "Petites & Specialities",
       "items": [
-        {
-          "name": "Aura Combo",
-          "price": "$39.00",
-          "description": "Chef's selection of five sashimi, three nigiri, spicy prawn maki, and tuna tataki."
-        },
-        {
-          "name": "Pork Knuckle & BBQ Ribs",
-          "price": "$48.00",
-          "description": "German pork knuckle and Texas BBQ pork rib, dipping with 4 kinds of chef created sauce."
-        },
-        {
-          "name": "Charcoal-Grilled Khmer Wagyu Rib-Eye (200g)",
-          "price": "$22.00",
-          "description": "Premium Kampong Chhnang grass-fed Khmer Wagyu rib-eye, masterfully charcoal-grilled and paired with grilled prawn skewers, roasted baby potatoes, fresh market vegetables, and your choice of signature sauce."
-        },
-        {
-          "name": "Charcoal-Grilled Khmer Wagyu Tomahawk (1kg)",
-          "price": "$96.00",
-          "description": "Showstopping 1kg Kampong Chhnang grass-fed Khmer Wagyu Tomahawk steak, expertly charcoal-grilled and served with grilled prawn skewers, seared scallops, roasted baby potatoes, and Kampot green peppercorn sauce."
-        }
+        { "name": "Ribeye bites", "price": "$16", "description": "Charcoal-grilled Black Angus, chimichurri" },
+        { "name": "Roasted bone marrow", "price": "$10", "description": "Herb crumb, sea salt (G)" },
+        { "name": "Kampot pepper beef fried rice", "price": "$14", "description": "Wok-fried with charred beef, topped with a fried egg (E)", "tags": ["chef"] },
+        { "name": "The AURA burger", "price": "$18", "description": "Wagyu steak, prahok mayo, hand-cut fries (G) (E) (F)", "tags": ["chef"] },
+        { "name": "Beef Sliders", "price": "$15", "description": "Served with hand-cut fries (G)" },
+        { "name": "Surf and turf", "price": "$35", "description": "Wagyu tenderloin 250 g, grilled Takeo river lobster (S) (D)" }
       ]
     },
     {
-      "key": "appetizers",
-      "title": "Appetizers",
+      "key": "steaks",
+      "title": "Steaks",
+      "note": "Served with two sides and two sauces of your choice, plus a complimentary mini bread basket.",
+      "footnote": "Shown in the breed we recommend; every cut is also available in Black Angus or Wagyu · best enjoyed medium-rare.",
       "items": [
-        {
-          "name": "Fresh Oysters",
-          "price": "$36.00",
-          "description": "Served with shallot red wine vinegar Koh Kong dip, crispy shallot, lemon tabasco, and sea grape."
-        },
-        {
-          "name": "Aura Healthy Salad",
-          "price": "$8.50",
-          "description": "Mixed greens, smoked salmon, avocado, asparagus, cherry tomato, bell pepper, quail egg, cashew nuts, and aged balsamic dressing."
-        },
-        {
-          "name": "Chicken Popcorn",
-          "price": "$7.00",
-          "description": "Tender chicken marinated with secret spices and fried to a crispy texture, served with Tabasco garlic mayo."
-        },
-        {
-          "name": "Vegetable Spring Roll",
-          "price": "$8.00",
-          "description": "Vegetable spring roll with crispy carrot and sweet chili sauce."
-        },
-        {
-          "name": "Trio Carpaccio",
-          "price": "$16.00",
-          "description": "The combination of tuna, salmon, and prime beef sprinkled with special dressing, capers, Parmesan cheese, extra virgin olive oil, and shrimp roe."
-        },
-        {
-          "name": "Cheese and Charcuterie Platter",
-          "price": "$16.00",
-          "description": "Assorted cheese and sliced ham paired with grapes, nuts, crackers, and bread."
-        },
-        {
-          "name": "Mixed Salad",
-          "price": "$8.00",
-          "description": "Mixed lettuce, asparagus, cherry tomato, radish, bell pepper, olive, cashew nuts, and aged balsamic dressing."
-        },
-        {
-          "name": "Salmon Ebi",
-          "price": "$14.00",
-          "description": "Deep-fried shrimp, salmon, avocado, cucumber, and chili bean sauce."
-        },
-        {
-          "name": "Beef Carpaccio",
-          "price": "$12.50",
-          "description": "Beef tenderloin with truffle oil, parmesan cheese, salmon salsa, shrimp roe, lemon wedge, corn kernel, capers, rocket salad, and sour Kikkoman."
-        },
-        {
-          "name": "Lomo Tataki",
-          "price": "$15.00",
-          "description": "Beef tenderloin with jalapeño tapenade, sour carrot purée, sour Kikkoman, wasabi mayo, and balsamic reduction."
-        },
-        {
-          "name": "Salmon In Spicy Kikkoman",
-          "price": "$10.00",
-          "description": "Fresh salmon with rocket salad, carrot, turnip, sesame seeds, and spicy Kikkoman sauce."
-        },
-        {
-          "name": "Avocados Prawn Cocktail",
-          "price": "$12.00",
-          "description": "Prawns, avocado, mixed greens, and cocktail sauce."
-        },
-        {
-          "name": "Grilled Chicken Caesar Salad",
-          "price": "$8.50",
-          "description": "Romaine lettuce, grilled chicken, garlic croutons, crispy bacon, parmesan cheese, anchovies, and creamy Caesar dressing."
-        },
-        {
-          "name": "Grilled Chicken Lollipops",
-          "price": "$11.50",
-          "description": "Chicken drumsticks wrapped with bacon, BBQ rub, and honey sauce. Served with mashed potatoes, sesame seeds, kro saing teab, and lemon wedge."
-        },
-        {
-          "name": "Spicy Prawn Garlic Chili",
-          "price": "$13.00",
-          "description": "Fried prawns with garlic and chili sauce served with kror saing teab."
-        },
-        {
-          "name": "Oven Baked Oysters & Mussels",
-          "price": "$16.50",
-          "description": "Creamy baked oysters and mussels with cheese and chopped crispy bacon."
-        },
-        {
-          "name": "Fruitti Di Calamari",
-          "price": "$8.00",
-          "description": "Breaded squid rings with onion, zucchini, and Aura tabasco mayo."
-        },
-        {
-          "name": "Honey Mustard Chicken Wings",
-          "price": "$6.50",
-          "description": "Chicken wings coated in honey mustard sauce and sesame seeds."
-        },
-        {
-          "name": "XL Smoked Duck & Shrimp Spring Rolls",
-          "price": "$14.00",
-          "description": "Smoked duck, shrimp, yam bean, taro, carrot, sweet potato, and sweet chili sauce wrapped in Aura rice pancake."
-        }
+        { "name": "Bavette, butcher's cut", "price": "$25", "description": "Black Angus · 250 g · Loose-grained and deeply beefy, with a satisfying chew, sliced across the grain" },
+        { "name": "Striploin", "price": "$35", "description": "Wagyu · 250 g · Firm, savoury loin with a rendered fat cap and a clean, lasting finish" },
+        { "name": "Ribeye", "price": "$28 / $44", "description": "Black Angus · 300 g / 500 g · Richly marbled rib with a buttery centre and deep, juicy flavour" },
+        { "name": "Tenderloin", "price": "$28 / $40", "description": "Wagyu · 170 g / 250 g · The most tender cut: lean, fine-grained and delicately flavoured", "tags": ["chef"] },
+        { "name": "T-bone", "price": "$43", "description": "Black Angus · 500 g · Striploin and tenderloin either side of the bone, two textures in one steak" },
+        { "name": "Kampong Chhnang tomahawk", "price": "$99 / $119", "description": "Black Angus · 1.1 kg / 1.5 kg · A long-bone ribeye for two to four, grilled whole and carved tableside · allow 40 minutes", "tags": ["chef"] }
       ]
     },
     {
-      "key": "soup",
-      "title": "Soup",
+      "key": "sides-sauces",
+      "title": "Sides & Sauces",
+      "note": "Additional side $5 · additional sauce $2",
       "items": [
-        {
-          "name": "Wild Mushroom Cream Soup",
-          "price": "$7.00",
-          "description": "Cepe and button mushrooms, chicken broth, cooking cream, truffle oil, scallops, and apple."
-        },
-        {
-          "name": "Beetroot Soup Borscht",
-          "price": "$7.00",
-          "description": "A classic of Eastern Europe. The deep ruby color of this borscht is both healthy and nutritious."
-        },
-        {
-          "name": "Aura Green Spinach Soup",
-          "price": "$7.00",
-          "description": "Aura's signature spinach broth, slowly simmered and enriched with shredded egg, served with sweet Kampot flower crab meat and a garnish of prawn roe."
-        }
+        { "name": "Hand-cut fries", "price": "$5", "description": "Sea salt, rosemary", "group": "Sides" },
+        { "name": "Sweet potato fries", "price": "$5", "description": "Kampot pepper salt", "group": "Sides", "tags": ["chef"] },
+        { "name": "Mashed potatoes", "price": "$5", "description": "Roasted garlic, butter, cream (D)", "group": "Sides" },
+        { "name": "Seasonal vegetables", "price": "$5", "description": "Grilled or steamed, herb oil", "group": "Sides" },
+        { "name": "Asparagus", "price": "$5", "description": "Grilled or steamed, lemon butter (D)", "group": "Sides" },
+        { "name": "Wild sautéed mushrooms", "price": "$5", "description": "Garlic, thyme, brown butter (D)", "group": "Sides" },
+        { "name": "Khmer Black Pepper Sauce", "price": "$2", "description": "(D)", "group": "Sauces", "tags": ["chef"] },
+        { "name": "Kampot Green Pepper Sauce", "price": "$2", "group": "Sauces", "tags": ["chef"] },
+        { "name": "Wild mushroom", "price": "$2", "description": "(D)", "group": "Sauces" },
+        { "name": "Red wine jus", "price": "$2", "group": "Sauces" },
+        { "name": "Béarnaise", "price": "$2", "description": "(D) (E)", "group": "Sauces" }
       ]
     },
     {
-      "key": "main-course",
-      "title": "Main Course",
+      "key": "starters",
+      "title": "Starters",
       "items": [
-        {
-          "name": "Authentic Beef Saraman",
-          "price": "$12.00",
-          "description": "Slow-braised beef shank in red curry paste, coconut and tamarind jus, topped with peanuts, garlic bread, crispy sticky rice, and kror saing teab."
-        },
-        {
-          "name": "Fish Amok",
-          "price": "$10.00",
-          "description": "Traditional fish amok with coconut milk, kaffir lime leaves, chili finger, served with garlic bread, crispy sticky rice, and kror saing teab."
-        },
-        {
-          "name": "Assorted Meat Skewers",
-          "price": "$8.00",
-          "description": "Chicken skewer, beef skewer, and mushroom skewers with banana blossom and beef. Served with kror saing teab, peanuts, salt, pepper, lime sauce, and tofu essence."
-        },
-        {
-          "name": "Mchou Krouerng Khmer Wagyu Beef Striploin",
-          "price": "$19.00",
-          "description": "Premium Kampong Chhnang grass-fed Khmer Wagyu striploin, masterfully charcoal-grilled and served over a rich, aromatic Mchou Krouerng sauce with carrot, zucchini, and fresh local herbs."
-        },
-        {
-          "name": "Cobe Fish Fillet 180g",
-          "price": "$16.00",
-          "description": "Seafood chowder, mashed potato, baby carrot, asparagus, oyster bacon roll, lemon wedge, and olive oil."
-        },
-        {
-          "name": "Seafood Tower",
-          "price": "$39.00",
-          "description": "Poached prawn, squid, mussels, scallops, hamachi, salmon, tuna, and nisin yellow roe. Served with condiments and sauce."
-        },
-        {
-          "name": "Seared Salmon Steak",
-          "price": "$18.00",
-          "description": "Seared salmon escallops with sautéed vegetables, baby potatoes, oyster bacon roll, lemon wedge, and porcini mushroom sauce."
-        },
-        {
-          "name": "Charcoal-Grilled Local Khmer Wagyu Striploin (250g)",
-          "price": "$38.00",
-          "description": "Premium Kampong Chhnang grass-fed Khmer Wagyu striploin, masterfully charcoal-grilled and served with seared scallops, grilled prawn skewers, roasted baby potatoes, farm-fresh vegetables, and your choice of signature sauce."
-        },
-        {
-          "name": "Charcoal-Grilled Local Khmer Wagyu Rib-Eye Tek Bror Hok",
-          "price": "$28.00",
-          "description": "Premium Kampong Chhnang grass-fed Khmer Wagyu rib-eye, masterfully charcoal-grilled and served with a traditional Tek Bror Hok dipping sauce, fresh raw vegetables, and crisp banana blossom."
-        },
-        {
-          "name": "Lamb Rack (Carre Dagneau) 300g",
-          "price": "$32.00",
-          "description": "Lamb rack with baby potatoes, baby carrot, asparagus, broccoli, and choice of sauce."
-        },
-        {
-          "name": "Spaghetti Tomato Sauce",
-          "price": "$8.00",
-          "description": "Spaghetti with tomato sauce, basil, parsley, parmesan cheese, and garlic bread."
-        },
-        {
-          "name": "Spaghetti Seafood Tomato Sauce",
-          "price": "$8.00",
-          "description": "Al dente spaghetti with mixed seafood in a rich, savory tomato sauce."
-        },
-        {
-          "name": "Spaghetti Carbonara",
-          "price": "$8.00",
-          "description": "Classic spaghetti in a rich, creamy carbonara sauce with crispy bacon and Parmesan cheese."
-        },
-        {
-          "name": "Spaghetti Bolognese",
-          "price": "$8.00",
-          "description": "Al dente pasta in a rich, slow-simmered beef and tomato herb sauce."
-        },
-        {
-          "name": "Wagyu Beef Burger Slider",
-          "price": "$18.00",
-          "description": "Wagyu beef striploin slider with cheese, coleslaw, rocket salad, French fries, and tomato ketchup."
-        }
+        { "name": "Vegetable Spring Roll", "price": "$6", "group": "Small Plates", "tags": ["khmer", "v"] },
+        { "name": "Honey Mustard Chicken Wings", "price": "$7", "group": "Small Plates", "tags": ["chef"] },
+        { "name": "Frutti di Calamari", "price": "$8", "group": "Small Plates" },
+        { "name": "Khmer Beef Carpaccio", "price": "$13", "group": "Raw & Seared", "tags": ["khmer"] },
+        { "name": "Khmer Salmon Salsa", "price": "$10", "group": "Raw & Seared" },
+        { "name": "Lomo Tataki", "price": "$15", "group": "Raw & Seared", "tags": ["chef"] },
+        { "name": "Steak Salad", "price": "$11", "group": "Salads" },
+        { "name": "House Salad", "price": "$9", "group": "Salads" },
+        { "name": "Wild Mushroom Cream Soup", "price": "$8", "group": "Soups" },
+        { "name": "Samlor Machu Kroeung Beef", "price": "$8", "group": "Soups", "tags": ["khmer"] },
+        { "name": "Samlor Korko with Pork Ribs", "price": "$8", "group": "Soups", "tags": ["khmer"] },
+        { "name": "Samlor Prahal with Smoked Fish", "price": "$8", "group": "Soups", "tags": ["khmer"] }
       ]
     },
     {
-      "key": "sharing-platters",
+      "key": "vegetables",
+      "title": "Vegetables",
+      "items": [
+        { "name": "Vegetable Amok Curry", "price": "$6", "tags": ["khmer", "chef", "v"] },
+        { "name": "Tofu Saraman", "price": "$6", "tags": ["khmer"] },
+        { "name": "Baby Kale in Oyster Sauce", "price": "$6", "tags": ["khmer"] },
+        { "name": "Spinach with Garlic", "price": "$6", "tags": ["khmer"] },
+        { "name": "Broccoli & Cauliflower Baked Cheese", "price": "$6", "tags": ["v"] }
+      ]
+    },
+    {
+      "key": "sides",
+      "title": "Rice & Sides",
+      "items": [
+        { "name": "Khmer Black Sticky Rice", "price": "$5", "tags": ["khmer", "chef"] },
+        { "name": "French Fries", "price": "$5" },
+        { "name": "Oven-Baked Herb-Infused Potatoes", "price": "$5" },
+        { "name": "Artisanal Bread Basket", "price": "$5" }
+      ]
+    },
+    {
+      "key": "mains",
+      "title": "Mains",
+      "items": [
+        { "name": "Beef Lok Lak", "price": "$12", "group": "Beef", "tags": ["khmer"] },
+        { "name": "Beef Saraman", "price": "$12", "group": "Beef", "tags": ["khmer"] },
+        { "name": "Mchou Kroeung Wagyu Striploin", "price": "$25", "group": "Beef", "tags": ["khmer", "chef"] },
+        { "name": "Prohok Ktis Pork", "price": "$9", "group": "Pork", "tags": ["khmer"] },
+        { "name": "Khmer Red Curry with Chicken", "price": "$12", "group": "Chicken", "tags": ["khmer"] },
+        { "name": "Roasted Siem Reap Free-Range Chicken", "price": "$28", "description": "Whole", "group": "Chicken", "tags": ["khmer", "chef"] },
+        { "name": "Fish Amok", "price": "$11", "group": "Fish", "tags": ["khmer"] },
+        { "name": "Seared Salmon Steak", "price": "$18", "group": "Fish" },
+        { "name": "Grilled Takeo River Lobster with Prohok Sauce", "price": "$25", "group": "Seafood", "tags": ["khmer", "chef"] },
+        { "name": "Koh Kong Prawns with Garlic and Chilli", "price": "$12", "group": "Seafood" },
+        { "name": "Spaghetti Bolognese", "price": "$8", "group": "Pasta" },
+        { "name": "Spaghetti Pomodoro", "price": "$8", "group": "Pasta", "tags": ["v"] }
+      ]
+    },
+    {
+      "key": "platters",
       "title": "Sharing Platters",
       "items": [
-        {
-          "name": "Oven-baked Rosemary Chicken Half",
-          "price": "$18.00",
-          "description": "Oven-baked chicken with rosemary, potatoes, vegetables, prawn and avocado cocktail salad, and choice of sauces."
-        },
-        {
-          "name": "Duck a L'orange (4 people)",
-          "price": "$35.00",
-          "description": "Roasted Beijing duck with honey, roasted potatoes, vegetables, orange sauce, and prawn avocado cocktail salad."
-        },
-        {
-          "name": "Khmer Platters (4 People)",
-          "price": "$34.00",
-          "description": "Beef saraman, fish hor mok, assorted skewers, Khmer beef salad, crispy coconut sticky rice, hard rolls, garlic bread, krorsaing teab, and tofu sauce."
-        },
-        {
-          "name": "Aura Chef's Platters (4 People)",
-          "price": "$49.00",
-          "description": "BBQ pork rib, US beef rib, Australian beef rib-eye, honey mustard chicken wings, Koh Kong prawn skewer, green salad, Aura potatoes, sautéed vegetables, grilled corn, and selection of sauces."
-        }
+        { "name": "Crispy Roasted Piglet Chrouk Kondol", "price": "$50 / $250", "description": "500 g platter / whole piglet", "tags": ["khmer", "chef"] },
+        { "name": "Chef's Special Steak Platter with French Fries", "price": "$150" }
       ]
     },
     {
-      "key": "dessert",
-      "title": "Dessert",
+      "key": "desserts",
+      "title": "Desserts",
       "items": [
-        {
-          "name": "Fresh Fruits Platter",
-          "price": "$7.00",
-          "description": "Seasonal Fresh Fruit with lime and fresh mint."
-        },
-        {
-          "name": "Chocolate Brownie",
-          "price": "$7.00",
-          "description": "Chocolate brownies with icing sugar, fruits, and your choice of strawberry or mango sauce."
-        },
-        {
-          "name": "Chocolate Fondant",
-          "price": "$7.00",
-          "description": "Oven-baked chocolate cake with tropical fresh fruit and icing sugar."
-        },
-        {
-          "name": "Kompot Pepper Cream Brulee",
-          "price": "$7.00",
-          "description": "Topped with caramelized brown sugar, seasonal fresh fruit, and fresh mint."
-        },
-        {
-          "name": "Mango Cheese Cake",
-          "price": "$7.00",
-          "description": "Mango cheesecake topped with fresh mango chunks, fruits, and fresh mint."
-        },
-        {
-          "name": "Coconut Ice Cream",
-          "price": "$5.00",
-          "description": "This is the best EVER coconut ice cream, creamy coconut milk and sweetened naturally, it is rich and absolutely delicious."
-        },
-        {
-          "name": "Kompot Pepper Ice Cream",
-          "price": "$5.00",
-          "description": "This Kompot Pepper Ice Cream balances velvety sweetness with a subtle, peppery kick that pairs especially well with fruit desserts."
-        }
-      ]
-    },
-    {
-      "key": "soft-drink-juice",
-      "title": "Soft Drink & Juice",
-      "items": [
-        {
-          "name": "Coconut Juice",
-          "price": "$0.00",
-          "description": ""
-        },
-        {
-          "name": "Orange Juice",
-          "price": "$0.00",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "key": "signature-cocktail",
-      "title": "Signature Cocktail",
-      "items": [
-        {
-          "name": "Aura Delight",
-          "price": "$8.00",
-          "description": ""
-        },
-        {
-          "name": "Aura Sling",
-          "price": "$8.00",
-          "description": ""
-        },
-        {
-          "name": "Kiss Goodbyeaura",
-          "price": "$8.00",
-          "description": ""
-        },
-        {
-          "name": "Screwy Lady Specialaura",
-          "price": "$8.00",
-          "description": ""
-        },
-        {
-          "name": "Aura Paradise",
-          "price": "$8.00",
-          "description": ""
-        },
-        {
-          "name": "Mango Colada",
-          "price": "$8.00",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "key": "non-alcohol-cocktail",
-      "title": "Non Alcohol Cocktail",
-      "items": [
-        {
-          "name": "Aura Paradiseaura",
-          "price": "$7.00",
-          "description": ""
-        },
-        {
-          "name": "Mango Coladaaura",
-          "price": "$7.00",
-          "description": ""
-        },
-        {
-          "name": "Mock Tial",
-          "price": "$7.00",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "key": "beer",
-      "title": "Beer",
-      "items": [
-        {
-          "name": "Angkor Beer",
-          "price": "$0.00",
-          "description": ""
-        },
-        {
-          "name": "Heineken Beer",
-          "price": "$0.00",
-          "description": ""
-        },
-        {
-          "name": "Kingdom IPA",
-          "price": "$0.00",
-          "description": ""
-        },
-        {
-          "name": "Tiger Beer",
-          "price": "$0.00",
-          "description": ""
-        }
+        { "name": "Seasonal Fresh Fruit Platter", "price": "$6", "tags": ["khmer"] },
+        { "name": "Homemade Ice Cream (2 Scoops)", "price": "$6", "tags": ["khmer"] },
+        { "name": "Kampot Peppercorn Crème Brûlée", "price": "$6", "tags": ["khmer", "chef"] },
+        { "name": "Sticky Rice with Pumpkin Custard", "price": "$6", "tags": ["khmer"] },
+        { "name": "Mango Cheesecake", "price": "$6" },
+        { "name": "Chocolate Brownie", "price": "$6" }
       ]
     }
-  ]
+  ],
+  "legend": "♡ Chef's recommendation · ♦ Khmer speciality · (V) vegetarian · (G) gluten · (D) dairy · (E) egg · (F) fish · (S) shellfish — Prices in USD, subject to 7% service charge and 10% government tax. Please tell us about any allergies or dietary needs."
 }

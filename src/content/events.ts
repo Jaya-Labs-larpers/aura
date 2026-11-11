@@ -82,7 +82,7 @@ export const EVENTS = {
     // Copy and photos carried over from the home page's "Celebrate at AURA" offers
     // (see content/home.ts `offers`).
     body: [
-      "Private Events: host your next event above the lane — buffet spreads, open-air seating and the charcoal grill, yours for the night.",
+      "Private Events: host your next event on the rooftop — buffet spreads, open-air seating and the charcoal grill, yours for the night.",
       "VIP Groups: gather your group on the rooftop, with reserved seating, shareable plates and the charcoal grill set up for your whole group.",
       "New Year's Eve: ring in the new year on the rooftop with festive sharing plates and cocktails, among the plants high above Bassac Lane.",
       "Birthday Nights: celebrate your birthday on the rooftop, with balloon arches, a candle-lit plate and a toast around the whole table.",
@@ -119,14 +119,19 @@ export const EVENTS = {
   enquiry: {
     eyebrow: "Event Enquiries",
     title: "Plan your event",
-    text: "For event enquiries, please fill in the form below. Our team will reply by email.",
-    types: ["Lunch", "Dinner", "Cocktail Reception", "Others"],
+    text: "For event enquiries, please fill in the form below. We'll get back to you very soon.",
+    types: ["Corporate Event", "Birthday / Celebration", "VIP Group Gathering", "Wedding / Engagement", "Cocktail Reception", "Others"],
+    otherOption: "Others",
+    otherLabel: "Tell us more",
+    otherPlaceholder: "What kind of event is it?",
+    contactMethods: ["WhatsApp", "Telegram", "Email"],
     spaces: [...spaces, buyout].map(({ value, title }) => ({ value, label: title })),
     defaultGuests: 10,
+    timeSlots: { from: "11:00", to: "23:00", stepMinutes: 15 },
     message:
       "Add more information about your event here: agenda, food and beverage preferences and any special requests, so we can understand what your event needs.",
     submit: "Submit",
     sending: "Sending…",
-    done: "Thank you — your enquiry has been received. Our team will reply by email.",
+    done: "Thank you — your enquiry has been received. We'll get back to you very soon.",
   },
 };

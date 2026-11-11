@@ -72,17 +72,20 @@ export function ReservationOverlay() {
             />
           </div>
 
-          <div className="relative flex min-h-0 flex-col justify-center overflow-hidden px-4 pt-2 pb-3 sm:px-6 sm:py-5 md:px-10 lg:px-16">
-            <p className="text-[11px] font-medium tracking-[0.28em] uppercase opacity-70">{RESERVATION.eyebrow}</p>
-            <h2 className="mt-1 font-display text-lg leading-tight uppercase sm:text-2xl lg:text-4xl">
-              {RESERVATION.title}
-            </h2>
-            <p className="mt-1 max-w-md truncate text-[12px] opacity-80 sm:overflow-visible sm:text-[15px] sm:whitespace-normal">
-              {RESERVATION.text}
-            </p>
+          {/* Scrolls natively (Lenis is stopped while open) when the form outgrows a short viewport. */}
+          <div className="relative flex min-h-0 flex-col overflow-y-auto px-4 pt-2 pb-3 sm:px-6 sm:py-5 md:px-10 lg:px-16 [scrollbar-width:thin] [scrollbar-color:rgba(255,255,255,0.25)_transparent]">
+            <div className="my-auto">
+              <p className="text-[11px] font-medium tracking-[0.28em] uppercase opacity-70">{RESERVATION.eyebrow}</p>
+              <h2 className="mt-1 font-display text-lg leading-tight uppercase sm:text-2xl lg:text-4xl">
+                {RESERVATION.title}
+              </h2>
+              <p className="mt-1 max-w-lg truncate text-[12px] opacity-80 sm:overflow-visible sm:text-[15px] sm:whitespace-normal">
+                {RESERVATION.text}
+              </p>
 
-            <div className="mt-2 sm:mt-5">
-              <BookingForm />
+              <div className="mt-2 sm:mt-5">
+                <BookingForm />
+              </div>
             </div>
           </div>
         </div>

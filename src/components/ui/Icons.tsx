@@ -66,3 +66,65 @@ export function CloseIcon({ className = "h-5 w-5" }: IconProps) {
     </svg>
   );
 }
+
+// Space/feature tag icons (EventTags): capacity, climate, entertainment and setting flags on the Events page.
+
+export function UsersIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <circle cx="9" cy="8.2" r="3.2" />
+      <path d="M3.5 19.5v-1.3a4 4 0 0 1 4-4h3a4 4 0 0 1 4 4v1.3" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M15.8 5.3a3.2 3.2 0 0 1 0 5.9M18.7 19.5v-1.3a4 4 0 0 0-2.7-3.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function SnowflakeIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} strokeLinecap="round" aria-hidden="true">
+      <path d="M12 3v18M4.9 7.5l14.2 9M19.1 7.5 4.9 16.5" />
+      <path d="M12 6.2 9.9 4.5M12 6.2l2.1-1.7M12 17.8l-2.1 1.7M12 17.8l2.1 1.7" />
+      <path d="M7.4 9.1 5.2 7.9M7.4 9.1l-1.2 2.2M16.6 9.1l2.2-1.2M16.6 9.1l1.2 2.2M7.4 14.9l-2.2 1.2M7.4 14.9l-1.2-2.2M16.6 14.9l2.2 1.2M16.6 14.9l-1.2 2.2" />
+    </svg>
+  );
+}
+
+export function MicIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <rect x="9" y="2.5" width="6" height="10.5" rx="3" />
+      <path d="M6.5 11.5a5.5 5.5 0 0 0 11 0M12 17v3.5M9 20.5h6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function UmbrellaIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <path d="M3.3 13A8.7 8.7 0 0 1 20.7 13Z" strokeLinejoin="round" />
+      <path d="M12 13v6.8a2 2 0 0 1-3.6 1.2M12 2.5v2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function LockIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <rect x="5" y="11" width="14" height="9" rx="2.2" />
+      <path d="M8 11V7.5a4 4 0 0 1 8 0V11" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function SunIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} strokeLinecap="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="4.3" />
+      <path d="M12 2.8v2.3M12 18.9v2.3M4.4 12H2M22 12h-2.4M6 6l1.6 1.6M16.4 16.4 18 18M18 6l-1.6 1.6M7.6 16.4 6 18" />
+    </svg>
+  );
+}

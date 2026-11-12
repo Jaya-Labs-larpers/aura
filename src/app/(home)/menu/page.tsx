@@ -1,25 +1,13 @@
 import type { Metadata } from "next";
-import { MenuBrowser } from "@/components/features/menu/MenuBrowser";
-import { Footer } from "@/components/layout/Footer";
-import { ReserveCard } from "@/components/sections/Bands";
-import { PageHero } from "@/components/sections/PageHero";
+import { Photo } from "@/components/ui/Photo";
 import { MENU_PAGE } from "@/content/pages";
-import MENU from "@/content/menu.json";
-import type { MenuData } from "@/content/types";
 
 export const metadata: Metadata = {
   title: MENU_PAGE.hero.title,
   description: MENU_PAGE.hero.text,
 };
 
-/** Page hero, the full menu, then a reserve band. */
+/** Menu hub: no category selected yet, so the right pane just shows a photo — pick one from the left. */
 export default function MenuPage() {
-  return (
-    <>
-      <PageHero {...MENU_PAGE.hero} />
-      <MenuBrowser data={MENU as MenuData} />
-      <ReserveCard title="Reserve your table" />
-      <Footer />
-    </>
-  );
+  return <Photo slot={{ label: "Menu overview", photo: "menu/hub/" }} sizes="(min-width: 768px) 60vw, 100vw" className="h-full min-h-[70vh] w-full" />;
 }

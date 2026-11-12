@@ -204,7 +204,7 @@ export const DatePicker = forwardRef<DatePickerHandle, DatePickerProps>(function
         aria-expanded={open}
         className={cn(className, "flex items-center justify-between text-left", !value && "text-current/40")}
       >
-        <span>{value ? formatDisplay(value) : placeholder}</span>
+        <span className="truncate">{value ? formatDisplay(value) : placeholder}</span>
         <CalendarIcon className="pointer-events-none h-3 w-3 shrink-0 opacity-60" />
       </button>
       <input type="hidden" name={name} value={value} required />

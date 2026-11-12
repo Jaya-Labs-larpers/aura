@@ -135,7 +135,13 @@ export const HOME = {
     // TODO: point at the lunch section once AURA sends the lunch menu (none in menu.json yet).
     cta: { label: "See Our Lunch Menu", href: "/menu" },
     slots: [
-      { label: "AURA's open-air terrace set for a daytime lunch", photo: "site/lunch-lounge-table-setting.webp" },
+      {
+        label: "AURA's open-air terrace set for a daytime lunch",
+        photo: "site/lunch-lounge-table-setting.webp",
+        title: "Business Lunch",
+        body: ["Perfect for business lunch on the rooftop — modern Mekong food, served with care and detail, swift enough for a quick catch-up."],
+        cta: { label: "See Our Lunch Menu", href: "/menu" },
+      },
     ],
   } satisfies MediaCard,
 
@@ -151,7 +157,7 @@ export const HOME = {
 
   location: {
     eyebrow: "Bassac Lane",
-    title: "Above Bassac Lane, among the plants.",
+    title: "",
     slot: {
       label: "AURA storefront on Bassac Lane, street view with signage",
       photo: "site/exterior-storefront-street.jpg",

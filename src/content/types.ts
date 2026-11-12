@@ -44,6 +44,12 @@ export interface MediaCard {
   slots: MediaCardSlot[];
 }
 
+/** One item in an `EventGrid` section (occasions, included extras). */
+export interface EventGridItem {
+  title: string;
+  text: string;
+}
+
 /** A bookable space on the Events page. Copy follows AURA's corporate events deck. */
 export interface EventSpace {
   /** Option value in the enquiry form's space list. */
@@ -76,7 +82,9 @@ export interface MenuItem {
 export interface MenuCategory {
   key: string;
   title: string;
-  /** Line under the category title, e.g. the steak sides' "Additional side $5". */
+  /** Which top-level menu this category belongs to, e.g. "steak" or "main". */
+  menu: string;
+  /** Line under the category title, e.g. the steak sides' "Additional side 5". */
   note?: string;
   items: MenuItem[];
   /** Fine print at the end of the category, e.g. the steak breed note. */
@@ -84,10 +92,14 @@ export interface MenuCategory {
 }
 
 export interface MenuData {
-  tabs: { key: string; label: string }[];
+  /** The top-level menu switcher, e.g. Steak Menu / Main Menu. */
+  menus: { key: string; label: string }[];
   categories: MenuCategory[];
-  /** Shown once after the last category: the allergen/dietary legend and tax note. */
-  legend?: string;
+  /** Shown once after the last category: the symbol/allergen key and the pricing & dietary note. */
+  legend?: {
+    tags: { mark: string; label: string }[];
+    note: string;
+  };
 }
 
 export type GalleryCategory = "venue" | "menu" | "events";

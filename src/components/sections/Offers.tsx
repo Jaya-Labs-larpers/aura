@@ -87,7 +87,7 @@ export function Offers({ heading, offers }: { heading?: string; offers: Feature[
           <Reveal
             variant="soft"
             delay={180}
-            className="relative mt-6 flex flex-wrap items-center justify-center gap-3 md:mt-7 md:justify-start"
+            className="relative mt-6 flex flex-nowrap items-center justify-start gap-3 md:mt-7"
           >
             {offer.cta2 && (
               <Pill href={offer.cta2.href} tone="white">

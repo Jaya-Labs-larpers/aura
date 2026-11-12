@@ -79,7 +79,10 @@ export function ReserveCard({ title }: { title: string }) {
   const wa = SOCIALS.find((s) => s.icon === "whatsapp")!;
   const tg = SOCIALS.find((s) => s.icon === "telegram")!;
   return (
-    <section id="reserve" className="scroll-mt-20 shrink-0 px-6 py-16 text-center text-cream md:px-12 md:py-24">
+    <section
+      id="reserve"
+      className="relative z-10 scroll-mt-20 shrink-0 bg-forest px-6 py-16 text-center text-cream md:px-12 md:py-24"
+    >
       <div className="mx-auto flex max-w-4xl flex-col items-center">
         <RevealText text={title} className="font-display text-4xl leading-[1.1] md:text-5xl" />
         <Reveal delay={300} className="mt-7 grid w-full max-w-sm grid-cols-2 gap-2.5 md:w-auto md:max-w-none md:flex md:flex-nowrap">

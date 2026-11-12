@@ -18,12 +18,14 @@ export function SubmitButton({
   idle,
   busy,
   variant = "dark",
+  className,
 }: {
   loading: boolean;
   idle: string;
   busy: string;
   /** "dark" for a cream button on a green card (default); "light" for an ink button on the glaze ground. */
   variant?: "dark" | "light";
+  className?: string;
 }) {
   return (
     <button
@@ -34,6 +36,7 @@ export function SubmitButton({
         variant === "light"
           ? "border-ink bg-ink text-glaze hover:border-ink/70 hover:bg-transparent hover:text-ink"
           : "border-cream bg-cream text-jungle hover:border-forest hover:bg-forest hover:text-cream",
+        className,
       )}
     >
       {loading && <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />}

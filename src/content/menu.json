@@ -1,137 +1,151 @@
 {
-  "tabs": [
-    { "key": "petites", "label": "Petites & Specialities" },
-    { "key": "steaks", "label": "Steaks" },
-    { "key": "sides-sauces", "label": "Sides & Sauces" },
-    { "key": "starters", "label": "Starters" },
-    { "key": "vegetables", "label": "Vegetables" },
-    { "key": "sides", "label": "Rice & Sides" },
-    { "key": "mains", "label": "Mains" },
-    { "key": "platters", "label": "Sharing Platters" },
-    { "key": "desserts", "label": "Desserts" }
+  "menus": [
+    { "key": "steak", "label": "Steak Menu" },
+    { "key": "main", "label": "Main Menu" }
   ],
   "categories": [
     {
       "key": "petites",
       "title": "Petites & Specialities",
+      "menu": "steak",
       "items": [
-        { "name": "Ribeye bites", "price": "$16", "description": "Charcoal-grilled Black Angus, chimichurri" },
-        { "name": "Roasted bone marrow", "price": "$10", "description": "Herb crumb, sea salt (G)" },
-        { "name": "Kampot pepper beef fried rice", "price": "$14", "description": "Wok-fried with charred beef, topped with a fried egg (E)", "tags": ["chef"] },
-        { "name": "The AURA burger", "price": "$18", "description": "Wagyu steak, prahok mayo, hand-cut fries (G) (E) (F)", "tags": ["chef"] },
-        { "name": "Beef Sliders", "price": "$15", "description": "Served with hand-cut fries (G)" },
-        { "name": "Surf and turf", "price": "$35", "description": "Wagyu tenderloin 250 g, grilled Takeo river lobster (S) (D)" }
+        { "name": "Ribeye bites", "price": "16", "description": "Charcoal-grilled Black Angus, chimichurri" },
+        { "name": "Roasted bone marrow", "price": "10", "description": "Herb crumb, sea salt (G)" },
+        { "name": "Kampot pepper beef fried rice", "price": "14", "description": "Wok-fried with charred beef, topped with a fried egg (E)", "tags": ["chef"] },
+        { "name": "The AURA burger", "price": "18", "description": "Wagyu steak, prahok mayo, hand-cut fries (G) (E) (F)", "tags": ["chef"] },
+        { "name": "Beef Sliders", "price": "15", "description": "Served with hand-cut fries (G)" },
+        { "name": "Surf and turf", "price": "35", "description": "Wagyu tenderloin 250 g, grilled Takeo river lobster (S) (D)" }
       ]
     },
     {
       "key": "steaks",
       "title": "Steaks",
+      "menu": "steak",
       "note": "Served with two sides and two sauces of your choice, plus a complimentary mini bread basket.",
       "footnote": "Shown in the breed we recommend; every cut is also available in Black Angus or Wagyu · best enjoyed medium-rare.",
       "items": [
-        { "name": "Bavette, butcher's cut", "price": "$25", "description": "Black Angus · 250 g · Loose-grained and deeply beefy, with a satisfying chew, sliced across the grain" },
-        { "name": "Striploin", "price": "$35", "description": "Wagyu · 250 g · Firm, savoury loin with a rendered fat cap and a clean, lasting finish" },
-        { "name": "Ribeye", "price": "$28 / $44", "description": "Black Angus · 300 g / 500 g · Richly marbled rib with a buttery centre and deep, juicy flavour" },
-        { "name": "Tenderloin", "price": "$28 / $40", "description": "Wagyu · 170 g / 250 g · The most tender cut: lean, fine-grained and delicately flavoured", "tags": ["chef"] },
-        { "name": "T-bone", "price": "$43", "description": "Black Angus · 500 g · Striploin and tenderloin either side of the bone, two textures in one steak" },
-        { "name": "Kampong Chhnang tomahawk", "price": "$99 / $119", "description": "Black Angus · 1.1 kg / 1.5 kg · A long-bone ribeye for two to four, grilled whole and carved tableside · allow 40 minutes", "tags": ["chef"] }
+        { "name": "Bavette, butcher's cut", "price": "25", "description": "Black Angus · 250 g · Loose-grained and deeply beefy, with a satisfying chew, sliced across the grain" },
+        { "name": "Striploin", "price": "35", "description": "Wagyu · 250 g · Firm, savoury loin with a rendered fat cap and a clean, lasting finish" },
+        { "name": "Ribeye", "price": "28 / 44", "description": "Black Angus · 300 g / 500 g · Richly marbled rib with a buttery centre and deep, juicy flavour" },
+        { "name": "Tenderloin", "price": "28 / 40", "description": "Wagyu · 170 g / 250 g · The most tender cut: lean, fine-grained and delicately flavoured", "tags": ["chef"] },
+        { "name": "T-bone", "price": "43", "description": "Black Angus · 500 g · Striploin and tenderloin either side of the bone, two textures in one steak" },
+        { "name": "Kampong Chhnang tomahawk", "price": "99 / 119", "description": "Black Angus · 1.1 kg / 1.5 kg · A long-bone ribeye for two to four, grilled whole and carved tableside · allow 40 minutes", "tags": ["chef"] }
       ]
     },
     {
       "key": "sides-sauces",
       "title": "Sides & Sauces",
-      "note": "Additional side $5 · additional sauce $2",
+      "menu": "steak",
+      "note": "Additional side 5 · additional sauce 2",
       "items": [
-        { "name": "Hand-cut fries", "price": "$5", "description": "Sea salt, rosemary", "group": "Sides" },
-        { "name": "Sweet potato fries", "price": "$5", "description": "Kampot pepper salt", "group": "Sides", "tags": ["chef"] },
-        { "name": "Mashed potatoes", "price": "$5", "description": "Roasted garlic, butter, cream (D)", "group": "Sides" },
-        { "name": "Seasonal vegetables", "price": "$5", "description": "Grilled or steamed, herb oil", "group": "Sides" },
-        { "name": "Asparagus", "price": "$5", "description": "Grilled or steamed, lemon butter (D)", "group": "Sides" },
-        { "name": "Wild sautéed mushrooms", "price": "$5", "description": "Garlic, thyme, brown butter (D)", "group": "Sides" },
-        { "name": "Khmer Black Pepper Sauce", "price": "$2", "description": "(D)", "group": "Sauces", "tags": ["chef"] },
-        { "name": "Kampot Green Pepper Sauce", "price": "$2", "group": "Sauces", "tags": ["chef"] },
-        { "name": "Wild mushroom", "price": "$2", "description": "(D)", "group": "Sauces" },
-        { "name": "Red wine jus", "price": "$2", "group": "Sauces" },
-        { "name": "Béarnaise", "price": "$2", "description": "(D) (E)", "group": "Sauces" }
+        { "name": "Hand-cut fries", "price": "5", "description": "Sea salt, rosemary", "group": "Sides" },
+        { "name": "Sweet potato fries", "price": "5", "description": "Kampot pepper salt", "group": "Sides", "tags": ["chef"] },
+        { "name": "Mashed potatoes", "price": "5", "description": "Roasted garlic, butter, cream (D)", "group": "Sides" },
+        { "name": "Seasonal vegetables", "price": "5", "description": "Grilled or steamed, herb oil", "group": "Sides" },
+        { "name": "Asparagus", "price": "5", "description": "Grilled or steamed, lemon butter (D)", "group": "Sides" },
+        { "name": "Wild sautéed mushrooms", "price": "5", "description": "Garlic, thyme, brown butter (D)", "group": "Sides" },
+        { "name": "Khmer Black Pepper Sauce", "price": "2", "description": "(D)", "group": "Sauces", "tags": ["chef"] },
+        { "name": "Kampot Green Pepper Sauce", "price": "2", "group": "Sauces", "tags": ["chef"] },
+        { "name": "Wild mushroom", "price": "2", "description": "(D)", "group": "Sauces" },
+        { "name": "Red wine jus", "price": "2", "group": "Sauces" },
+        { "name": "Béarnaise", "price": "2", "description": "(D) (E)", "group": "Sauces" }
       ]
     },
     {
       "key": "starters",
       "title": "Starters",
+      "menu": "main",
       "items": [
-        { "name": "Vegetable Spring Roll", "price": "$6", "group": "Small Plates", "tags": ["khmer", "v"] },
-        { "name": "Honey Mustard Chicken Wings", "price": "$7", "group": "Small Plates", "tags": ["chef"] },
-        { "name": "Frutti di Calamari", "price": "$8", "group": "Small Plates" },
-        { "name": "Khmer Beef Carpaccio", "price": "$13", "group": "Raw & Seared", "tags": ["khmer"] },
-        { "name": "Khmer Salmon Salsa", "price": "$10", "group": "Raw & Seared" },
-        { "name": "Lomo Tataki", "price": "$15", "group": "Raw & Seared", "tags": ["chef"] },
-        { "name": "Steak Salad", "price": "$11", "group": "Salads" },
-        { "name": "House Salad", "price": "$9", "group": "Salads" },
-        { "name": "Wild Mushroom Cream Soup", "price": "$8", "group": "Soups" },
-        { "name": "Samlor Machu Kroeung Beef", "price": "$8", "group": "Soups", "tags": ["khmer"] },
-        { "name": "Samlor Korko with Pork Ribs", "price": "$8", "group": "Soups", "tags": ["khmer"] },
-        { "name": "Samlor Prahal with Smoked Fish", "price": "$8", "group": "Soups", "tags": ["khmer"] }
+        { "name": "Vegetable Spring Roll", "price": "6", "group": "Small Plates", "tags": ["khmer", "v"] },
+        { "name": "Honey Mustard Chicken Wings", "price": "7", "group": "Small Plates", "tags": ["chef"] },
+        { "name": "Frutti di Calamari", "price": "8", "group": "Small Plates" },
+        { "name": "Khmer Beef Carpaccio", "price": "13", "group": "Raw & Seared", "tags": ["khmer"] },
+        { "name": "Khmer Salmon Salsa", "price": "10", "group": "Raw & Seared" },
+        { "name": "Lomo Tataki", "price": "15", "group": "Raw & Seared", "tags": ["chef"] },
+        { "name": "Steak Salad", "price": "11", "group": "Salads" },
+        { "name": "House Salad", "price": "9", "group": "Salads" },
+        { "name": "Wild Mushroom Cream Soup", "price": "8", "group": "Soups" },
+        { "name": "Samlor Machu Kroeung Beef", "price": "8", "group": "Soups", "tags": ["khmer"] },
+        { "name": "Samlor Korko with Pork Ribs", "price": "8", "group": "Soups", "tags": ["khmer"] },
+        { "name": "Samlor Prahal with Smoked Fish", "price": "8", "group": "Soups", "tags": ["khmer"] }
       ]
     },
     {
       "key": "vegetables",
       "title": "Vegetables",
+      "menu": "main",
       "items": [
-        { "name": "Vegetable Amok Curry", "price": "$6", "tags": ["khmer", "chef", "v"] },
-        { "name": "Tofu Saraman", "price": "$6", "tags": ["khmer"] },
-        { "name": "Baby Kale in Oyster Sauce", "price": "$6", "tags": ["khmer"] },
-        { "name": "Spinach with Garlic", "price": "$6", "tags": ["khmer"] },
-        { "name": "Broccoli & Cauliflower Baked Cheese", "price": "$6", "tags": ["v"] }
+        { "name": "Vegetable Amok Curry", "price": "6", "tags": ["khmer", "chef", "v"] },
+        { "name": "Tofu Saraman", "price": "6", "tags": ["khmer"] },
+        { "name": "Baby Kale in Oyster Sauce", "price": "6", "tags": ["khmer"] },
+        { "name": "Spinach with Garlic", "price": "6", "tags": ["khmer"] },
+        { "name": "Broccoli & Cauliflower Baked Cheese", "price": "6", "tags": ["v"] }
       ]
     },
     {
       "key": "sides",
       "title": "Rice & Sides",
+      "menu": "main",
       "items": [
-        { "name": "Khmer Black Sticky Rice", "price": "$5", "tags": ["khmer", "chef"] },
-        { "name": "French Fries", "price": "$5" },
-        { "name": "Oven-Baked Herb-Infused Potatoes", "price": "$5" },
-        { "name": "Artisanal Bread Basket", "price": "$5" }
+        { "name": "Khmer Black Sticky Rice", "price": "5", "tags": ["khmer", "chef"] },
+        { "name": "French Fries", "price": "5" },
+        { "name": "Oven-Baked Herb-Infused Potatoes", "price": "5" },
+        { "name": "Artisanal Bread Basket", "price": "5" }
       ]
     },
     {
       "key": "mains",
       "title": "Mains",
+      "menu": "main",
       "items": [
-        { "name": "Beef Lok Lak", "price": "$12", "group": "Beef", "tags": ["khmer"] },
-        { "name": "Beef Saraman", "price": "$12", "group": "Beef", "tags": ["khmer"] },
-        { "name": "Mchou Kroeung Wagyu Striploin", "price": "$25", "group": "Beef", "tags": ["khmer", "chef"] },
-        { "name": "Prohok Ktis Pork", "price": "$9", "group": "Pork", "tags": ["khmer"] },
-        { "name": "Khmer Red Curry with Chicken", "price": "$12", "group": "Chicken", "tags": ["khmer"] },
-        { "name": "Roasted Siem Reap Free-Range Chicken", "price": "$28", "description": "Whole", "group": "Chicken", "tags": ["khmer", "chef"] },
-        { "name": "Fish Amok", "price": "$11", "group": "Fish", "tags": ["khmer"] },
-        { "name": "Seared Salmon Steak", "price": "$18", "group": "Fish" },
-        { "name": "Grilled Takeo River Lobster with Prohok Sauce", "price": "$25", "group": "Seafood", "tags": ["khmer", "chef"] },
-        { "name": "Koh Kong Prawns with Garlic and Chilli", "price": "$12", "group": "Seafood" },
-        { "name": "Spaghetti Bolognese", "price": "$8", "group": "Pasta" },
-        { "name": "Spaghetti Pomodoro", "price": "$8", "group": "Pasta", "tags": ["v"] }
+        { "name": "Beef Lok Lak", "price": "12", "group": "Beef", "tags": ["khmer"] },
+        { "name": "Beef Saraman", "price": "12", "group": "Beef", "tags": ["khmer"] },
+        { "name": "Mchou Kroeung Wagyu Striploin", "price": "25", "group": "Beef", "tags": ["khmer", "chef"] },
+        { "name": "Prohok Ktis Pork", "price": "9", "group": "Pork", "tags": ["khmer"] },
+        { "name": "Khmer Red Curry with Chicken", "price": "12", "group": "Chicken", "tags": ["khmer"] },
+        { "name": "Roasted Siem Reap Free-Range Chicken", "price": "28", "description": "Whole", "group": "Chicken", "tags": ["khmer", "chef"] },
+        { "name": "Fish Amok", "price": "11", "group": "Fish", "tags": ["khmer"] },
+        { "name": "Seared Salmon Steak", "price": "18", "group": "Fish" },
+        { "name": "Grilled Takeo River Lobster with Prohok Sauce", "price": "25", "group": "Seafood", "tags": ["khmer", "chef"] },
+        { "name": "Koh Kong Prawns with Garlic and Chilli", "price": "12", "group": "Seafood" },
+        { "name": "Spaghetti Bolognese", "price": "8", "group": "Pasta" },
+        { "name": "Spaghetti Pomodoro", "price": "8", "group": "Pasta", "tags": ["v"] }
       ]
     },
     {
       "key": "platters",
       "title": "Sharing Platters",
+      "menu": "main",
       "items": [
-        { "name": "Crispy Roasted Piglet Chrouk Kondol", "price": "$50 / $250", "description": "500 g platter / whole piglet", "tags": ["khmer", "chef"] },
-        { "name": "Chef's Special Steak Platter with French Fries", "price": "$150" }
+        { "name": "Crispy Roasted Piglet Chrouk Kondol", "price": "50 / 250", "description": "500 g platter / whole piglet", "tags": ["khmer", "chef"] },
+        { "name": "Chef's Special Steak Platter with French Fries", "price": "150" }
       ]
     },
     {
       "key": "desserts",
       "title": "Desserts",
+      "menu": "main",
       "items": [
-        { "name": "Seasonal Fresh Fruit Platter", "price": "$6", "tags": ["khmer"] },
-        { "name": "Homemade Ice Cream (2 Scoops)", "price": "$6", "tags": ["khmer"] },
-        { "name": "Kampot Peppercorn Crème Brûlée", "price": "$6", "tags": ["khmer", "chef"] },
-        { "name": "Sticky Rice with Pumpkin Custard", "price": "$6", "tags": ["khmer"] },
-        { "name": "Mango Cheesecake", "price": "$6" },
-        { "name": "Chocolate Brownie", "price": "$6" }
+        { "name": "Seasonal Fresh Fruit Platter", "price": "6", "tags": ["khmer"] },
+        { "name": "Homemade Ice Cream (2 Scoops)", "price": "6", "tags": ["khmer"] },
+        { "name": "Kampot Peppercorn Crème Brûlée", "price": "6", "tags": ["khmer", "chef"] },
+        { "name": "Sticky Rice with Pumpkin Custard", "price": "6", "tags": ["khmer"] },
+        { "name": "Mango Cheesecake", "price": "6" },
+        { "name": "Chocolate Brownie", "price": "6" }
       ]
     }
   ],
-  "legend": "♡ Chef's recommendation · ♦ Khmer speciality · (V) vegetarian · (G) gluten · (D) dairy · (E) egg · (F) fish · (S) shellfish — Prices in USD, subject to 7% service charge and 10% government tax. Please tell us about any allergies or dietary needs."
+  "legend": {
+    "tags": [
+      { "mark": "♡", "label": "Chef's recommendation" },
+      { "mark": "♦", "label": "Khmer speciality" },
+      { "mark": "(V)", "label": "Vegetarian" },
+      { "mark": "(G)", "label": "Gluten" },
+      { "mark": "(D)", "label": "Dairy" },
+      { "mark": "(E)", "label": "Egg" },
+      { "mark": "(F)", "label": "Fish" },
+      { "mark": "(S)", "label": "Shellfish" }
+    ],
+    "note": "Prices are in USD and subject to 7% service charge and 10% government tax. Please tell us about any allergies or dietary needs."
+  }
 }

@@ -68,7 +68,6 @@
 
 @layer base {
   html {
-    background: var(--color-jungle);
     color: var(--color-cream);
     overflow-x: hidden;
     overscroll-behavior-y: none;

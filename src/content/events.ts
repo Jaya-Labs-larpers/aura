@@ -1,19 +1,22 @@
-import type { EventSpace, Slot } from "./types";
+import type { EventGridItem, EventSpace, Slot } from "./types";
 
-// Events page, modelled on Amazónico's private dining page: an intro split, one
-// full-height split per space (photo slider + text), event catering, then the
-// enquiry form. Space copy comes from AURA's corporate events deck (Spaces
-// section); the rest of the deck is sales material and stays off the site. Space
-// photos are placeholders for now.
+// Events page, modelled on Amazónico's private dining page: an intro split, a
+// spaces header, one full-height split per space (photo slider + text), two
+// grids (occasions, included extras), event catering, then the enquiry form.
+// Space, occasion and included copy comes from AURA's corporate events deck;
+// the rest of the deck is sales material and stays off the site. Space photos
+// are placeholders for now.
+const NBSP = " ";
+
 const spaces = [
   {
     value: "pavilion",
     title: "AURA Pavilion",
-    tags: ["Up to 25", "Air-conditioned", "In-room KTV", "TV"],
+    tags: [`Up${NBSP}to${NBSP}25`, "Air-conditioned", "KTV"],
     body: [
-      "Tucked away from the bustle, this is our principal indoor private space. It can be configured flexibly as a single long table or cabaret-style clusters. It's ideal for intimate business meetings & dinners, private birthday celebrations, client appreciation nights and team farewells.",
+      `Our principal indoor private room, tucked away from the bustle. Set it as one long table or in cabaret-style clusters, with a 75-inch screen for slides and karaoke for later in the night.`,
     ],
-    bestFor: "Business dinners, farewell parties, karaoke nights",
+    bestFor: "Business dinners, farewells, karaoke nights",
     slides: [
       { label: "The AURA Pavilion dressed for a private celebration, with rose petals and a balloon arch" },
       { label: "A private celebration under way in the AURA Pavilion" },
@@ -23,11 +26,11 @@ const spaces = [
   {
     value: "terrasse",
     title: "The Terrasse",
-    tags: ["Up to 20", "Covered", "Fan-cooled", "Semi-private"],
+    tags: [`Up${NBSP}to${NBSP}20`, "Covered", "Semi-private"],
     body: [
-      "Just off the main dining floor, long tables sit beneath an elegant Khmer-timber pergola. Close enough to feel the energy of the restaurant and private enough to hold your own conversation, it's made for client dinners and farewell parties that want atmosphere without the crowd.",
+      "Long tables under a Khmer-timber pergola, just off the main dining floor. Close enough to feel the restaurant's energy, private enough to hold your own conversation.",
     ],
-    bestFor: "Client dinners & team gatherings",
+    bestFor: "Client dinners, team gatherings",
     slides: [
       { label: "Long tables on the Terrasse, beside the glass walls of the AURA Pavilion" },
       { label: "A long candlelit table dressed for a client dinner on the Terrasse" },
@@ -37,9 +40,9 @@ const spaces = [
   {
     value: "main-deck",
     title: "The Main Deck",
-    tags: ["Up to 60", "Outdoor", "Fan-cooled", "Live band stage"],
+    tags: [`60${NBSP}seated`, `150${NBSP}standing`, "Outdoor"],
     body: [
-      "The heart of the AURA atmosphere, our central dining floor wraps around the bar and our live band stage. It's made for bigger occasions like year-end parties, launches and networking nights. Add the AURA Pavilion, the Terrasse, the bar and the Upper Rooftop wings and the whole venue is yours, seating up to 125.",
+      "The heart of AURA: our central dining floor, wrapped around the bar and the live band stage. It is built for bigger nights, with speeches, awards and music on one floor.",
     ],
     bestFor: "Year-end parties, launches, networking",
     slides: [
@@ -51,11 +54,11 @@ const spaces = [
   {
     value: "upper-rooftop",
     title: "Upper Rooftop",
-    tags: ["Up to 25 each", "Covered", "Fan-cooled", "Private"],
+    tags: [`Up${NBSP}to${NBSP}25 per${NBSP}wing`, "Covered"],
     body: [
-      "One floor up, two covered wings sit apart from the bustle of the main floor: private, sheltered and all yours. Take one for a quiet business dinner, or both for a team celebration or brand event. And if the weather turns, they make a sheltered rain plan for smaller open-air events.",
+      "One floor up, two covered wings sit apart from the main floor. Take one for a quiet business dinner, or both for a team party. If the weather turns, they become the rain plan.",
     ],
-    bestFor: "Business dinners & private team parties",
+    bestFor: "Business dinners, team parties",
     slides: [
       { label: "A covered wing of the Upper Rooftop set for dinner, seen from its open side" },
       { label: "A covered wing of the Upper Rooftop with marble tables under timber louvres" },
@@ -66,9 +69,40 @@ const spaces = [
 
 const buyout = {
   value: "whole-venue",
-  title: "Whole-venue buyout",
+  title: "The whole venue",
   tags: ["125 seated", "200 standing"],
-  text: "The whole rooftop venue. We curate the layout around you.",
+  text: "Every space on both levels, with the stage, the bar and the kitchen, reserved for your guests alone. Your logo at the door, and no other guests but yours.",
+};
+
+const occasions = {
+  eyebrow: "Occasions",
+  title: "Whatever the occasion",
+  items: [
+    { title: "Large corporate events", text: `Year-end and Christmas parties, festivals and company${NBSP}milestones.` },
+    { title: "Business & networking", text: "Client dinners, appreciation nights and industry mixers." },
+    { title: "Team celebrations", text: "Welcome and farewell parties, onboarding and recruitment days." },
+    { title: "Promotional events", text: `Product launches, brand activations and${NBSP}announcements.` },
+  ] satisfies EventGridItem[],
+};
+
+const included = {
+  eyebrow: "Event services",
+  title: "Included with every event",
+  text: "AURA is set up as a flexible venue. Want to go further? Just let us know.",
+  items: [
+    { title: "Wi-Fi", text: "Fast connection for all guests" },
+    { title: "Large-size TV screen", text: "75-inch screen, for slides & videos" },
+    { title: "Event planner", text: "Yours from start to finish" },
+    { title: "Sound system", text: `Speakers and a${NBSP}microphone` },
+    { title: "Karaoke (KTV)", text: `In the AURA${NBSP}Pavilion` },
+    { title: "Event photography", text: "Shots of the night to keep" },
+    { title: "Layout customisation", text: `Your layout, plus a check-in${NBSP}desk` },
+    { title: "Table styling", text: `Decorative dining${NBSP}setting` },
+    { title: "Menus & name cards", text: "Personalised for each guest" },
+    { title: "Logo signage", text: `Your logo at${NBSP}the${NBSP}entrance` },
+    { title: "Branded lighting", text: `The venue lit in${NBSP}your${NBSP}colours` },
+    { title: "Valet parking", text: `A hassle‑free${NBSP}arrival` },
+  ] satisfies EventGridItem[],
 };
 
 export const EVENTS = {
@@ -78,14 +112,10 @@ export const EVENTS = {
       "Private dining, celebrations and corporate events at AURA, a rooftop garden restaurant above Bassac Lane in Phnom Penh, for up to 125 seated or 200 standing guests.",
   },
   intro: {
-    title: "Events at AURA",
-    // Copy and photos carried over from the home page's "Celebrate at AURA" offers
-    // (see content/home.ts `offers`).
+    title: "Private events at AURA",
     body: [
-      "Private Events: host your next event on the rooftop — buffet spreads, open-air seating and the charcoal grill, yours for the night.",
-      "VIP Groups: gather your group on the rooftop, with reserved seating, shareable plates and the charcoal grill set up for your whole group.",
-      "New Year's Eve: ring in the new year on the rooftop with festive sharing plates and cocktails, among the plants high above Bassac Lane.",
-      "Birthday Nights: celebrate your birthday on the rooftop, with balloon arches, a candle-lit plate and a toast around the whole table.",
+      `Private dining, celebrations and company nights in our rooftop garden above Bassac${NBSP}Lane, from intimate dinners to 200${NBSP}standing guests across the whole${NBSP}venue.`,
+      `One event planner looks after you from first enquiry to last toast. Our General Manager, Chamroeun${NBSP}Pok, oversees every event.`,
     ],
     slides: [
       { label: "Guests posing for photos at a private rooftop event at AURA", photo: "events/private-event-rooftop-party.jpg" },
@@ -99,10 +129,12 @@ export const EVENTS = {
   spaces: {
     eyebrow: "Spaces",
     title: "Find your place at AURA",
-    text: "Every space has unique character.",
+    text: `Two levels, four spaces, from intimate dinners to 200${NBSP}standing${NBSP}guests.`,
     items: spaces,
     buyout,
   },
+  occasions,
+  included,
   // AURA's own copy; no photos supplied yet, so both slides are placeholders.
   catering: {
     title: "Event Catering",
@@ -115,23 +147,21 @@ export const EVENTS = {
       { label: "Event catering 2: canapés at a private venue" },
     ] satisfies Slot[],
   },
-  // Form fields follow CÉ LA VI Singapore's private events enquiry form.
+  // Form fields follow Zuma London's private events enquiry form.
   enquiry: {
     eyebrow: "Event Enquiries",
     title: "Plan your event",
-    text: "For event enquiries, please fill in the form below. We'll get back to you very soon.",
-    types: ["Corporate Event", "Birthday / Celebration", "VIP Group Gathering", "Wedding / Engagement", "Cocktail Reception", "Others"],
-    otherOption: "Others",
-    otherLabel: "Tell us more",
-    otherPlaceholder: "What kind of event is it?",
+    contact: {
+      lead: "Or speak to",
+      name: "Chamroeun Pok, General Manager",
+    },
+    typePlaceholder: "e.g. year-end party, client dinner, birthday",
     contactMethods: ["WhatsApp", "Telegram", "Email"],
-    spaces: [...spaces, buyout].map(({ value, title }) => ({ value, label: title })),
     defaultGuests: 10,
     timeSlots: { from: "11:00", to: "23:00", stepMinutes: 15 },
-    message:
-      "Add more information about your event here: agenda, food and beverage preferences and any special requests, so we can understand what your event needs.",
-    submit: "Submit",
+    message: "Agenda, food & drink, special requests.",
+    submit: "Enquire",
     sending: "Sending…",
-    done: "Thank you — your enquiry has been received. We'll get back to you very soon.",
+    done: "Thanks — we'll be in touch soon.",
   },
 };

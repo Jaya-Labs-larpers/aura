@@ -4,8 +4,7 @@ import type { EventGridItem, EventSpace, Slot } from "./types";
 // spaces header, one full-height split per space (photo slider + text), two
 // grids (occasions, included extras), event catering, then the enquiry form.
 // Space, occasion and included copy comes from AURA's corporate events deck;
-// the rest of the deck is sales material and stays off the site. Space photos
-// are placeholders for now.
+// the rest of the deck is sales material and stays off the site.
 const NBSP = " ";
 
 const spaces = [
@@ -18,9 +17,9 @@ const spaces = [
     ],
     bestFor: "Business dinners, farewells, karaoke nights",
     slides: [
-      { label: "The AURA Pavilion dressed for a private celebration, with rose petals and a balloon arch" },
-      { label: "A private celebration under way in the AURA Pavilion" },
-      { label: "An AURA chef carving at the table during a private celebration in the AURA Pavilion" },
+      { label: "The AURA Pavilion dressed for a private celebration, with rose petals and a balloon arch", photo: "spaces/pavilion-private-celebration.jpg" },
+      { label: "The AURA Pavilion", photo: "venue/19-venue-image.jpg" },
+      { label: "An AURA chef carving at the table during a private celebration in the AURA Pavilion", photo: "spaces/pavilion-chef-carving.jpg" },
     ],
   },
   {
@@ -32,9 +31,9 @@ const spaces = [
     ],
     bestFor: "Client dinners, team gatherings",
     slides: [
-      { label: "Long tables on the Terrasse, beside the glass walls of the AURA Pavilion" },
-      { label: "A long candlelit table dressed for a client dinner on the Terrasse" },
-      { label: "The Terrasse's long table set for a dinner, with candles and florals" },
+      { label: "Long tables on the Terrasse, beside the glass walls of the AURA Pavilion", photo: "spaces/terrasse-long-tables.jpg" },
+      { label: "A long candlelit table dressed for a client dinner on the Terrasse", photo: "venue/22-venue-image.jpg" },
+      { label: "The Terrasse's long table set for a dinner, with candles and florals", photo: "venue/25-venue-image.jpg" },
     ],
   },
   {
@@ -46,9 +45,8 @@ const spaces = [
     ],
     bestFor: "Year-end parties, launches, networking",
     slides: [
-      { label: "Guests gathered on the Main Deck during an evening event" },
-      { label: "The open-air main dining floor at AURA, beneath the AURA sign" },
-      { label: "Guests raising a toast with their host in the band corner during an evening event" },
+      { label: "The open-air main dining floor at AURA, beneath the AURA sign", photo: "spaces/main-deck-open-air-floor.jpg" },
+      { label: "Guests raising a toast with their host in the band corner during an evening event", photo: "spaces/main-deck-band-corner-toast.jpg" },
     ],
   },
   {
@@ -60,9 +58,9 @@ const spaces = [
     ],
     bestFor: "Business dinners, team parties",
     slides: [
-      { label: "A covered wing of the Upper Rooftop set for dinner, seen from its open side" },
-      { label: "A covered wing of the Upper Rooftop with marble tables under timber louvres" },
-      { label: "A wing of the Upper Rooftop set up with a balloon arch for a celebration" },
+      { label: "A covered wing of the Upper Rooftop set for dinner, seen from its open side", photo: "spaces/upper-rooftop-wing-dinner.jpg" },
+      { label: "A covered wing of the Upper Rooftop with marble tables under timber louvres", photo: "spaces/upper-rooftop-wing-louvres.jpg" },
+      { label: "A wing of the Upper Rooftop set up with a balloon arch for a celebration", photo: "venue/20-venue-image.jpg" },
     ],
   },
 ] satisfies EventSpace[];
@@ -91,16 +89,16 @@ const included = {
   text: "AURA is set up as a flexible venue. Want to go further? Just let us know.",
   items: [
     { title: "Wi-Fi", text: "Fast connection for all guests" },
-    { title: "Large-size TV screen", text: "75-inch screen, for slides & videos" },
+    { title: "TV screen", text: "75-inch screen, for slides & videos" },
     { title: "Event planner", text: "Yours from start to finish" },
     { title: "Sound system", text: `Speakers and a${NBSP}microphone` },
     { title: "Karaoke (KTV)", text: `In the AURA${NBSP}Pavilion` },
-    { title: "Event photography", text: "Shots of the night to keep" },
-    { title: "Layout customisation", text: `Your layout, plus a check-in${NBSP}desk` },
+    { title: "Event photos", text: "Shots of the night to keep" },
+    { title: "Custom layout", text: `Your layout, plus a check-in${NBSP}desk` },
     { title: "Table styling", text: `Decorative dining${NBSP}setting` },
-    { title: "Menus & name cards", text: "Personalised for each guest" },
+    { title: "Menus & cards", text: "Personalised for each guest" },
     { title: "Logo signage", text: `Your logo at${NBSP}the${NBSP}entrance` },
-    { title: "Branded lighting", text: `The venue lit in${NBSP}your${NBSP}colours` },
+    { title: "Brand lighting", text: `The venue lit in${NBSP}your${NBSP}colours` },
     { title: "Valet parking", text: `A hassle‑free${NBSP}arrival` },
   ] satisfies EventGridItem[],
 };

@@ -26,11 +26,11 @@ export function EventActions({ enquire, call }: { enquire: string; call?: string
   };
   return (
     <div className="mt-6 flex flex-nowrap gap-3 md:mt-[42px]">
-      <PillButton onClick={toForm} tone="outline">
+      <PillButton onClick={toForm} tone="outline" className="hover:border-forest hover:bg-forest">
         {enquire}
       </PillButton>
       {call && (
-        <Pill href={CONTACT.phoneHref} tone="solid">
+        <Pill href={CONTACT.phoneHref} tone="solid" className="hover:border-bloom hover:bg-bloom hover:text-cream">
           {call}
         </Pill>
       )}

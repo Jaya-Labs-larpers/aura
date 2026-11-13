@@ -112,12 +112,13 @@ export function EventEnquiry({
       className="relative flex min-h-dvh scroll-mt-20 flex-col justify-center overflow-hidden bg-glaze px-5 py-10 text-ink sm:py-12 md:px-6 md:py-14"
     >
       <LeafTone clear="radial-gradient(ellipse 60% 65% at 50% 48%, transparent 38%, #000 94%)" />
-      <PlateLeaf
-        sizes="42vmin"
-        className="pointer-events-none absolute top-1/2 left-1/2 h-[42vmin] w-[42vmin] -translate-x-1/2 -translate-y-1/2 opacity-45 mix-blend-multiply"
-      />
       <div className="relative mx-auto w-full max-w-[81rem]">
         <div className="relative">
+          {/* Clear band above the title and divider — the only space with no text or form fields to overlap. */}
+          <PlateLeaf
+            sizes="(min-width: 768px) 14vw, 90px"
+            className="pointer-events-none absolute -top-6 right-0 h-auto w-20 rotate-[8deg] opacity-40 mix-blend-multiply sm:-top-8 sm:w-28 md:-top-10 md:w-36"
+          />
           <div className="mx-auto flex max-w-xl flex-col items-center text-center">
             <Eyebrow>{eyebrow}</Eyebrow>
             <RevealText text={title} className="mt-2 font-display text-4xl leading-[1.1] md:text-5xl" />
@@ -224,7 +225,13 @@ export function EventEnquiry({
                 className="flex-1 resize-none rounded-md border border-ink/15 bg-ink/5 px-4 py-3 text-[15px] transition-colors placeholder:text-[13px] placeholder:text-current/40 placeholder:leading-[1.5] focus:border-ink/40 focus:outline-none [scrollbar-width:thin] [scrollbar-color:rgba(16,35,30,0.3)_transparent]"
               />
               <div className="mt-2">
-                <SubmitButton loading={loading} idle={submit} busy={sending} variant="light" className="w-full" />
+                <SubmitButton
+                  loading={loading}
+                  idle={submit}
+                  busy={sending}
+                  variant="light"
+                  className="w-full hover:border-pink-500 hover:bg-pink-500 hover:text-glaze"
+                />
               </div>
             </div>
           </form>

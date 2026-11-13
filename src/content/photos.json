@@ -56,12 +56,37 @@
       2160
     ]
   },
+  "menu/appetizers/beef-carpaccio.jpg": {
+    "src": "/images/photos/menu/appetizers/beef-carpaccio",
+    "width": 6000,
+    "height": 4000,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
   "menu/chef-carving.jpg": {
     "src": "/images/photos/menu/chef-carving",
-    "width": 385,
-    "height": 308,
+    "width": 1155,
+    "height": 924,
     "widths": [
-      385
+      640,
+      1155
+    ]
+  },
+  "menu/dessert/kompot-pepper-cream-brulee.jpg": {
+    "src": "/images/photos/menu/dessert/kompot-pepper-cream-brulee",
+    "width": 4541,
+    "height": 6050,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
     ]
   },
   "menu/main-course/charcoal-grilled-local-khmer-wagyu-rib-eye-tek-bror-hok.jpg": {
@@ -76,10 +101,34 @@
       3200
     ]
   },
+  "menu/main-course/fish-amok.jpg": {
+    "src": "/images/photos/menu/main-course/fish-amok",
+    "width": 4493,
+    "height": 6740,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
   "menu/main-course/seafood-tower.jpg": {
     "src": "/images/photos/menu/main-course/seafood-tower",
     "width": 4542,
     "height": 6051,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "menu/sharing-platters/aura-chef-s-platters-4-people.jpg": {
+    "src": "/images/photos/menu/sharing-platters/aura-chef-s-platters-4-people",
+    "width": 4672,
+    "height": 7008,
     "widths": [
       640,
       1280,
@@ -368,6 +417,84 @@
       3200
     ]
   },
+  "spaces/main-deck-band-corner-toast.jpg": {
+    "src": "/images/photos/spaces/main-deck-band-corner-toast",
+    "width": 2048,
+    "height": 1365,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2048
+    ]
+  },
+  "spaces/main-deck-open-air-floor.jpg": {
+    "src": "/images/photos/spaces/main-deck-open-air-floor",
+    "width": 3200,
+    "height": 2400,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "spaces/pavilion-chef-carving.jpg": {
+    "src": "/images/photos/spaces/pavilion-chef-carving",
+    "width": 2400,
+    "height": 1191,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2400
+    ]
+  },
+  "spaces/pavilion-private-celebration.jpg": {
+    "src": "/images/photos/spaces/pavilion-private-celebration",
+    "width": 2000,
+    "height": 1333,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2000
+    ]
+  },
+  "spaces/terrasse-long-tables.jpg": {
+    "src": "/images/photos/spaces/terrasse-long-tables",
+    "width": 2400,
+    "height": 1232,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2400
+    ]
+  },
+  "spaces/upper-rooftop-wing-dinner.jpg": {
+    "src": "/images/photos/spaces/upper-rooftop-wing-dinner",
+    "width": 2400,
+    "height": 1232,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2400
+    ]
+  },
+  "spaces/upper-rooftop-wing-louvres.jpg": {
+    "src": "/images/photos/spaces/upper-rooftop-wing-louvres",
+    "width": 2400,
+    "height": 1191,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2400
+    ]
+  },
   "venue-highlights/01.jpg": {
     "src": "/images/photos/venue-highlights/01",
     "width": 6720,
@@ -464,6 +591,54 @@
   },
   "venue/18-venue-image.jpg": {
     "src": "/images/photos/venue/18-venue-image",
+    "width": 6224,
+    "height": 4672,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "venue/19-venue-image.jpg": {
+    "src": "/images/photos/venue/19-venue-image",
+    "width": 6224,
+    "height": 4672,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "venue/20-venue-image.jpg": {
+    "src": "/images/photos/venue/20-venue-image",
+    "width": 6092,
+    "height": 4573,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "venue/22-venue-image.jpg": {
+    "src": "/images/photos/venue/22-venue-image",
+    "width": 6140,
+    "height": 4609,
+    "widths": [
+      640,
+      1280,
+      1920,
+      2560,
+      3200
+    ]
+  },
+  "venue/25-venue-image.jpg": {
+    "src": "/images/photos/venue/25-venue-image",
     "width": 6224,
     "height": 4672,
     "widths": [

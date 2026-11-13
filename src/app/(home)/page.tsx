@@ -7,6 +7,7 @@ import { Location } from "@/components/sections/Location";
 import { MediaCard } from "@/components/sections/MediaCard";
 import { Offers } from "@/components/sections/Offers";
 import { PhotoStrip } from "@/components/sections/PhotoStrip";
+import { TripadvisorBand } from "@/components/sections/Tripadvisor";
 import { HOME } from "@/content/home";
 import { CONTACT, SITE } from "@/content/site";
 
@@ -38,12 +39,16 @@ export default function HomePage() {
       <MediaCard id="taste" {...HOME.taste} />
       <MediaCard id="lunch" {...HOME.lunch} />
       <Offers heading={HOME.offersHeading} offers={HOME.offers} />
-      {/* Unset background: shows the body's patterned green ground, same gap used between every other section (56px/72px). */}
-      <div className="h-14 md:h-18" aria-hidden="true" />
+      {/* Unset background: shows the body's patterned green ground. */}
+      <div className="h-6 md:h-8" aria-hidden="true" />
+      <TripadvisorBand />
+      <div className="h-6 md:h-8" aria-hidden="true" />
       <Location {...HOME.location} />
       {/* Reservation CTA + footer scroll up over the sticky Location photo; on desktop
-          they combine into one full-screen close, on mobile the footer alone fills it. */}
-      <div className="flex flex-col md:min-h-dvh">
+          they combine into one full-screen close, on mobile the footer alone fills it.
+          md:min-h is 100dvh minus the solid header's height (py-3 + h-10 button = 4rem),
+          so the close stops flush under the header instead of sliding behind it. */}
+      <div className="flex flex-col md:min-h-[calc(100dvh-4rem)]">
         <ReserveCard {...HOME.reserve} />
         <Footer />
       </div>

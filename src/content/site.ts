@@ -19,6 +19,14 @@ export const SITE = {
     source: "Google",
     href: "https://maps.app.goo.gl/NYRN24Ri7BGRSwZ6A",
   },
+  // Verified against the live listing 2026-11-13. Re-check score/reviews/award before push.
+  tripadvisor: {
+    score: "4.9",
+    reviews: "228",
+    rank: "#19 of 1,700 Restaurants in Phnom Penh",
+    award: "Travelers' Choice 2026",
+    href: "https://www.tripadvisor.com/Restaurant_Review-g293940-d27106416-Reviews-AURA_Phnom_Penh-Phnom_Penh.html",
+  },
 } as const;
 
 export const NAV: Link[] = [

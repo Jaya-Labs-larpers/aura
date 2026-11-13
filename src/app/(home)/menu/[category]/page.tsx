@@ -30,7 +30,7 @@ export default async function CategoryMenuPage({ params }: PageProps<"/menu/[cat
   const index = DATA.categories.filter((c) => c.menu === category.menu).findIndex((c) => c.key === key);
 
   return (
-    <div>
+    <div className="md:px-12 md:pt-28 md:pb-24 lg:px-16">
       <p className="font-mono text-xs opacity-50">{String(index + 1).padStart(2, "0")}</p>
       <h1 className="mt-3 font-display text-4xl leading-[1.1] md:text-5xl">{category.title}</h1>
       {category.note && <p className="mt-4 text-sm italic opacity-60">{category.note}</p>}

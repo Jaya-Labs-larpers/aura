@@ -8,6 +8,7 @@
       "key": "petites",
       "title": "Petites & Specialities",
       "menu": "steak",
+      "photo": "menu/signature/aura-combo.jpg",
       "items": [
         { "name": "Ribeye bites", "price": "16", "description": "Charcoal-grilled Black Angus, chimichurri" },
         { "name": "Roasted bone marrow", "price": "10", "description": "Herb crumb, sea salt (G)" },
@@ -21,6 +22,7 @@
       "key": "steaks",
       "title": "Steaks",
       "menu": "steak",
+      "photo": "menu/signature/charcoal-grilled-khmer-wagyu-tomahawk-table.jpg",
       "note": "Served with two sides and two sauces of your choice, plus a complimentary mini bread basket.",
       "footnote": "Shown in the breed we recommend; every cut is also available in Black Angus or Wagyu · best enjoyed medium-rare.",
       "items": [
@@ -55,6 +57,7 @@
       "key": "starters",
       "title": "Starters",
       "menu": "main",
+      "photo": "menu/appetizers/beef-carpaccio.jpg",
       "items": [
         { "name": "Vegetable Spring Roll", "price": "6", "group": "Small Plates", "tags": ["khmer", "v"] },
         { "name": "Honey Mustard Chicken Wings", "price": "7", "group": "Small Plates", "tags": ["chef"] },
@@ -97,6 +100,7 @@
       "key": "mains",
       "title": "Mains",
       "menu": "main",
+      "photo": "menu/main-course/fish-amok.jpg",
       "items": [
         { "name": "Beef Lok Lak", "price": "12", "group": "Beef", "tags": ["khmer"] },
         { "name": "Beef Saraman", "price": "12", "group": "Beef", "tags": ["khmer"] },
@@ -116,6 +120,7 @@
       "key": "platters",
       "title": "Sharing Platters",
       "menu": "main",
+      "photo": "menu/sharing-platters/aura-chef-s-platters-4-people.jpg",
       "items": [
         { "name": "Crispy Roasted Piglet Chrouk Kondol", "price": "50 / 250", "description": "500 g platter / whole piglet", "tags": ["khmer", "chef"] },
         { "name": "Chef's Special Steak Platter with French Fries", "price": "150" }
@@ -125,6 +130,7 @@
       "key": "desserts",
       "title": "Desserts",
       "menu": "main",
+      "photo": "menu/dessert/kompot-pepper-cream-brulee.jpg",
       "items": [
         { "name": "Seasonal Fresh Fruit Platter", "price": "6", "tags": ["khmer"] },
         { "name": "Homemade Ice Cream (2 Scoops)", "price": "6", "tags": ["khmer"] },

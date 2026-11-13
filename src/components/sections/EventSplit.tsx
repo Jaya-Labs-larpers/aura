@@ -29,8 +29,8 @@ export function EventSplit({ title, tags, body, bestFor, slides, flip, actions }
       <div className={cn("relative aspect-[26/21] overflow-hidden md:aspect-auto", flip && "md:order-2")}>
         <SplitSlider slides={slides} />
       </div>
-      <div className="flex items-center px-5 py-[68px] md:justify-center md:px-[30px] md:py-[90px]">
-        <div className="w-full text-[15px] leading-[1.47] text-cream/60 md:max-w-[480px]">
+      <div className="flex items-center px-5 py-[68px] md:justify-center md:px-4 md:py-16 lg:px-[30px] lg:py-[90px]">
+        <div className="w-full text-[15px] leading-[1.47] text-cream/60 md:max-w-[340px] md:text-[14px] lg:max-w-[480px] lg:text-[15px]">
           <h2 className="font-display text-[clamp(24px,calc(19.4413px+0.594354vw),28px)] leading-[1.32] font-normal tracking-[0.01em] text-balance text-cream">
             {title}
           </h2>

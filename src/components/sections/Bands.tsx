@@ -81,9 +81,10 @@ export function ReserveCard({ title }: { title: string }) {
   return (
     <section
       id="reserve"
-      className="relative z-10 scroll-mt-20 shrink-0 bg-forest px-6 py-16 text-center text-cream md:px-12 md:py-24"
+      className="relative z-10 scroll-mt-20 shrink-0 overflow-hidden bg-forest px-6 py-16 text-center text-cream md:px-12 md:py-14"
     >
-      <div className="mx-auto flex max-w-4xl flex-col items-center">
+      <div className="leaf-card" />
+      <div className="relative mx-auto flex max-w-4xl flex-col items-center">
         <RevealText text={title} className="font-display text-4xl leading-[1.1] md:text-5xl" />
         <Reveal delay={300} className="mt-7 grid w-full max-w-sm grid-cols-2 gap-2.5 md:w-auto md:max-w-none md:flex md:flex-nowrap">
           <PillButton onClick={show} className="col-span-2 md:col-span-1">

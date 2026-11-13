@@ -35,24 +35,24 @@ interface EventTagsProps {
  */
 export function EventTags({ tags, className, tone = "bright" }: EventTagsProps) {
   return (
-    <div className={cn("mt-4 flex flex-wrap items-center gap-x-5 gap-y-3", className)}>
+    <div className={cn("mt-4 flex flex-wrap items-center gap-x-5 gap-y-3 md:gap-x-2 lg:gap-x-5", className)}>
       {tags.map((tag) => {
         const Icon = iconFor(tag);
         return (
-          <span key={tag} className="inline-flex items-center gap-2.5">
+          <span key={tag} className="inline-flex items-center gap-2.5 md:gap-1.5 lg:gap-2.5">
             {Icon && (
               <span
                 className={cn(
-                  "flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-jungle",
+                  "flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-jungle md:h-5 md:w-5 lg:h-7 lg:w-7",
                   tone === "muted" ? "bg-cream/75" : "bg-cream",
                 )}
               >
-                <Icon className="h-4 w-4" />
+                <Icon className="h-4 w-4 md:h-3 md:w-3 lg:h-4 lg:w-4" />
               </span>
             )}
             <span
               className={cn(
-                "text-[11px] font-medium tracking-[0.2em] text-balance uppercase",
+                "text-[11px] font-medium tracking-[0.2em] text-balance uppercase md:text-[9px] md:tracking-[0.1em] lg:text-[11px] lg:tracking-[0.2em]",
                 tone === "muted" ? "text-cream/70" : "text-cream",
               )}
             >

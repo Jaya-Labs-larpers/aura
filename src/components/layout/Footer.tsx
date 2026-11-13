@@ -19,8 +19,8 @@ export function Footer() {
         sizes="42vmin"
         className="absolute top-1/2 left-1/2 h-[42vmin] w-[42vmin] -translate-x-1/2 -translate-y-1/2 opacity-45 mix-blend-multiply"
       />
-      <div className="relative mx-auto max-w-[1600px] px-5 pt-20 pb-10 md:px-8 md:pt-24">
-        <div className="grid justify-items-center gap-14 text-center md:grid-cols-[1.1fr_1fr_1fr_1.1fr] md:justify-items-start md:gap-10 md:text-left">
+      <div className="relative mx-auto max-w-[1600px] px-5 pt-20 pb-10 md:px-8 md:pt-5 md:pb-2">
+        <div className="grid justify-items-center gap-14 text-center md:grid-cols-[1.1fr_1fr_1fr_1.1fr] md:justify-items-start md:gap-x-[2.375rem] md:gap-y-3 md:text-left">
           <Reveal>
             <p className="max-w-[32ch] text-sm text-ink/70">{SITE.footerLine}</p>
           </Reveal>
@@ -70,7 +70,7 @@ export function Footer() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={social.label}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/20 transition-colors hover:bg-ink hover:text-glaze"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/20 transition-colors hover:bg-ink hover:text-glaze md:h-9 md:w-9"
                   >
                     <SocialIcon name={social.icon} />
                   </a>
@@ -80,7 +80,7 @@ export function Footer() {
           </Reveal>
         </div>
 
-        <div className="mt-16 flex flex-col items-center gap-4 border-t border-ink/15 pt-6 text-center text-xs opacity-60 md:flex-row md:items-center md:justify-between md:text-left">
+        <div className="mt-16 flex flex-col items-center gap-4 border-t border-ink/15 pt-6 text-center text-xs opacity-60 md:mt-3 md:flex-row md:items-center md:justify-between md:pt-2 md:text-left">
           <p>
             © {year} {SITE.name} {SITE.location}
           </p>
@@ -102,5 +102,5 @@ export function Footer() {
 }
 
 function FooterHeading({ children }: { children: React.ReactNode }) {
-  return <h2 className="mb-4 text-[11px] font-semibold tracking-[0.28em] uppercase opacity-70">{children}</h2>;
+  return <h2 className="mb-4 text-[11px] font-semibold tracking-[0.28em] uppercase opacity-70 md:mb-2">{children}</h2>;
 }

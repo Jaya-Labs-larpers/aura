@@ -70,7 +70,7 @@ export const HOME = {
         photo: "site/private-event-celebration.jpg",
         mobilePosition: "right",
       },
-      cta: { label: "Reserve a Group", href: "/events" },
+      cta: { label: "Reserve Your Group", href: "/events" },
       cta2: { label: "About VIP Groups", href: "/events" },
     },
     {

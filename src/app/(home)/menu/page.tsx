@@ -9,5 +9,13 @@ export const metadata: Metadata = {
 
 /** Menu hub: no category selected yet, so the right pane just shows a photo — pick one from the left. */
 export default function MenuPage() {
-  return <Photo slot={{ label: "Menu overview", photo: "menu/hub/" }} sizes="(min-width: 768px) 60vw, 100vw" className="h-full min-h-[70vh] w-full" />;
+  return (
+    // Desktop: the right half starts at viewport y=0, so the photo fills it edge to edge behind the
+    // header. Mobile: the pane sits below the nav, so normal flow.
+    <Photo
+      slot={{ label: "Menu overview", photo: "menu/chef-carving.jpg" }}
+      sizes="(min-width: 768px) 50vw, 100vw"
+      className="h-[70vh] w-full md:h-dvh"
+    />
+  );
 }

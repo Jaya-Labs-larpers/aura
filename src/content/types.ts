@@ -86,6 +86,8 @@ export interface MenuCategory {
   menu: string;
   /** Line under the category title, e.g. the steak sides' "Additional side 5". */
   note?: string;
+  /** Hover-preview photo shown over the hub's right pane; omitted categories keep the hub photo on hover. */
+  photo?: string;
   items: MenuItem[];
   /** Fine print at the end of the category, e.g. the steak breed note. */
   footnote?: string;

@@ -29,20 +29,21 @@ export function EventSplit({ title, tags, body, bestFor, slides, flip, actions }
       <div className={cn("relative aspect-[26/21] overflow-hidden md:aspect-auto", flip && "md:order-2")}>
         <SplitSlider slides={slides} />
       </div>
-      <div className="flex items-center px-5 py-[68px] md:justify-center md:px-4 md:py-16 lg:px-[30px] lg:py-[90px]">
-        <div className="w-full text-[15px] leading-[1.47] text-cream/60 md:max-w-[340px] md:text-[14px] lg:max-w-[480px] lg:text-[15px]">
-          <h2 className="font-display text-[clamp(24px,calc(19.4413px+0.594354vw),28px)] leading-[1.32] font-normal tracking-[0.01em] text-balance text-cream">
+      <div className="flex items-center px-5 py-[68px] md:justify-center md:px-6 md:py-16 lg:px-[30px] lg:py-[90px]">
+        {/* One type scale on every breakpoint; only the column width changes. */}
+        <div className="w-full text-[15px] leading-[1.5] text-cream/60 md:max-w-[360px] lg:max-w-[500px]">
+          <h2 className="font-display text-[clamp(30px,calc(24px+0.8vw),38px)] leading-[1.2] font-normal tracking-[0.01em] text-balance text-cream">
             {title}
           </h2>
           {tags && <EventTags tags={tags} />}
           {body.map((paragraph) => (
-            <p key={paragraph} className="mt-[15px] text-pretty">
+            <p key={paragraph} className="mt-6 text-pretty">
               {paragraph}
             </p>
           ))}
           {bestFor && (
-            <p className="mt-[15px] text-pretty">
-              <span className="mr-2 text-[11px] font-medium tracking-[0.2em] text-cream uppercase">Best for</span>
+            <p className="mt-5 text-pretty">
+              <span className="mr-2.5 text-[12px] font-medium tracking-[0.18em] text-cream uppercase">Best for</span>
               {bestFor}
             </p>
           )}

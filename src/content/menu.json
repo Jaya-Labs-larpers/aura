@@ -1,7 +1,9 @@
 {
   "menus": [
-    { "key": "steak", "label": "Steak Menu" },
-    { "key": "main", "label": "Main Menu" }
+    { "key": "steak", "label": "Steaks", "photo": "menu/signature/charcoal-grilled-khmer-wagyu-tomahawk-table.jpg" },
+    { "key": "main", "label": "Main Menu", "photo": "menu/chef-carving.jpg", "default": true },
+    { "key": "business-lunch", "label": "Business Lunch" },
+    { "key": "bar", "label": "Bar Menu" }
   ],
   "categories": [
     {
@@ -139,6 +141,34 @@
         { "name": "Mango Cheesecake", "price": "6" },
         { "name": "Chocolate Brownie", "price": "6" }
       ]
+    },
+    {
+      "key": "set-a",
+      "title": "Set A",
+      "menu": "business-lunch",
+      "note": "Full set menu coming soon.",
+      "items": []
+    },
+    {
+      "key": "set-b",
+      "title": "Set B",
+      "menu": "business-lunch",
+      "note": "Full set menu coming soon.",
+      "items": []
+    },
+    {
+      "key": "set-c",
+      "title": "Set C",
+      "menu": "business-lunch",
+      "note": "Full set menu coming soon.",
+      "items": []
+    },
+    {
+      "key": "bar-menu",
+      "title": "Bar Menu",
+      "menu": "bar",
+      "note": "Full bar menu coming soon.",
+      "items": []
     }
   ],
   "legend": {

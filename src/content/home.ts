@@ -129,8 +129,8 @@ export const HOME = {
   lunch: {
     title: "Lunch",
     body: [
-      "Not only a midday pause, but a table built for business — quick enough for a meeting, complete enough to close on.",
-      "Choose à la carte or our curated lunch sets with seasonal specialties, served swiftly at tables made for meeting up.",
+      "Not only a midday pause, but a table built for business.",
+      "Local set, Western set, or à la carte — quick enough for a meeting, complete enough to close on.",
     ],
     // TODO: point at the lunch section once AURA sends the lunch menu (none in menu.json yet).
     cta: { label: "See Our Lunch Menu", href: "/menu" },
@@ -139,7 +139,7 @@ export const HOME = {
         label: "AURA's open-air terrace set for a daytime lunch",
         photo: "site/lunch-lounge-table-setting.webp",
         title: "Business Lunch",
-        body: ["Perfect for business lunch on the rooftop — modern Mekong food, served with care and detail, swift enough for a quick catch-up."],
+        body: ["Local set, Western set, or à la carte.", "Quick enough for a meeting, complete enough to close on."],
         cta: { label: "See Our Lunch Menu", href: "/menu" },
       },
     ],
@@ -161,7 +161,7 @@ export const HOME = {
     slot: {
       label: "AURA storefront on Bassac Lane, street view with signage",
       photo: "site/exterior-storefront-street.jpg",
-      position: "62% 50%",
+      position: "52% 48%",
     } satisfies Slot,
     cta: { label: "Get directions" } satisfies Omit<Link, "href">,
     // TODO before push: hours conflict — HOURS[0] in site.ts says "11:30 AM – 01:00 AM"

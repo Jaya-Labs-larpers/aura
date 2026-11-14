@@ -6,7 +6,8 @@ export const INPUT =
 
 export function Field({ label, className, children }: { label: string; className?: string; children: ReactNode }) {
   return (
-    <label className={cn("block", className)}>
+    <label className={cn("flex flex-col", className)}>
+      {/* flex-col (not block) so a <select>'s inline-level box doesn't pick up baseline descender space the button/input boxes don't — that mismatch is what throws the underlines out of line. */}
       <span className="text-[11px] font-medium tracking-[0.2em] uppercase opacity-60">{label}</span>
       {children}
     </label>

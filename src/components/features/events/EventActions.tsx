@@ -25,7 +25,7 @@ export function EventActions({ enquire, call }: { enquire: string; call?: string
       });
   };
   return (
-    <div className="mt-6 flex flex-nowrap gap-3 md:mt-[42px]">
+    <div className="mt-6 flex flex-nowrap gap-3 md:mt-7">
       <PillButton onClick={toForm} tone="outline" className="hover:border-forest hover:bg-forest">
         {enquire}
       </PillButton>

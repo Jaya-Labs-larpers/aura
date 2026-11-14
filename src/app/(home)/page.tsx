@@ -9,7 +9,7 @@ import { Offers } from "@/components/sections/Offers";
 import { PhotoStrip } from "@/components/sections/PhotoStrip";
 import { TripadvisorBand } from "@/components/sections/Tripadvisor";
 import { HOME } from "@/content/home";
-import { CONTACT, SITE } from "@/content/site";
+import { CONTACT, SITE, SOCIALS } from "@/content/site";
 
 export const metadata: Metadata = {
   title: { absolute: HOME.meta.title },
@@ -27,6 +27,7 @@ const jsonLd = {
   email: CONTACT.email,
   address: { "@type": "PostalAddress", ...CONTACT.postal },
   hasMap: CONTACT.googleMaps,
+  sameAs: SOCIALS.map((social) => social.href),
 };
 
 export default function HomePage() {

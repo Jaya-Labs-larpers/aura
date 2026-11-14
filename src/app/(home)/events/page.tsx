@@ -36,21 +36,26 @@ export default function EventsPage() {
 }
 
 /**
- * Below the hero, like Zuma's: a bold lead paragraph with the actions, a
- * lighter paragraph beside it. Padding is kept tight (not the usual
- * vw-scaling section padding) so the hero above keeps most of the first screen.
+ * Below the hero, laid out like Zuma's private dining intro: a bold lead
+ * paragraph (plus a lighter one on the spaces) on the left; on the right a
+ * short value-proposition paragraph with the Enquire / Call buttons under
+ * it. Padding is kept tight (not the usual vw-scaling section padding) so
+ * the hero above keeps most of the first screen.
  */
 function IntroCopy() {
-  const { body, enquire, call } = EVENTS.intro;
+  const { body, valueProp, enquire, call } = EVENTS.intro;
   return (
-    <section className="grid gap-6 px-5 py-6 text-cream md:grid-cols-2 md:gap-16 md:px-[30px] md:py-12">
+    <section className="grid gap-8 px-5 py-6 text-cream md:grid-cols-[3fr_2fr] md:gap-16 md:px-[30px] md:py-12">
       <div>
         <p className="text-balance font-display text-[clamp(17px,calc(14px+1.2vw),26px)] leading-[1.3] font-normal tracking-[0.01em]">
           {body[0]}
         </p>
+        {body[1] && <p className="mt-4 text-pretty text-[15px] leading-[1.47] text-cream/60">{body[1]}</p>}
+      </div>
+      <div className="md:pt-2">
+        <p className="text-pretty text-[15px] leading-[1.47] text-cream/60">{valueProp}</p>
         <EventActions enquire={enquire} call={call} />
       </div>
-      <p className="hidden text-[15px] leading-[1.47] text-cream/60 md:block md:pt-2">{body[1]}</p>
     </section>
   );
 }

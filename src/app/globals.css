@@ -264,7 +264,7 @@
 .leaf-card::after {
   inset: -25%;
   background: url("/images/brand/leaf-pattern.webp") 0 0 / 360px 360px repeat;
-  opacity: 0.04; /* body uses 0.0242 on jungle; the lighter forest fill needs a little more */
+  opacity: 0.09; /* body uses 0.0242 on jungle; the card is small enough that the tile needs to read at a glance */
   transform: rotate(-6deg);
 }
 

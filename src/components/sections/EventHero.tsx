@@ -27,7 +27,9 @@ export function EventHero({ title, slot, className }: EventHeroProps) {
         {/* Zuma's masthead is a dark shot; ours is a bright party photo, so the header gets a short scrim to stay legible. */}
         <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-jungle/60 to-transparent" />
       </div>
-      <div className="relative px-5 pb-[30px] md:px-[30px] md:pb-[38px]">
+      {/* Zuma measures 38px from the title's line box to the photo's bottom edge; our masked fade makes the
+          visible edge read higher, so the title sits a little further up than Zuma's number alone would. */}
+      <div className="relative px-5 pb-[38px] md:px-[30px] md:pb-[56px]">
         <RevealText
           as="h1"
           text={title}

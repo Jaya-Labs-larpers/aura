@@ -13,19 +13,21 @@ import { Reveal } from "@/components/ui/Reveal";
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="relative z-10 flex min-h-dvh flex-col justify-center overflow-hidden bg-glaze text-ink md:min-h-0 md:flex-1">
+    <footer className="relative z-10 flex min-h-dvh flex-col overflow-hidden bg-glaze text-ink md:min-h-0 md:flex-1">
       <LeafTone clear="radial-gradient(ellipse 52% 62% at 50% 46%, transparent 35%, #000 92%)" />
       <PlateLeaf
         sizes="42vmin"
         className="absolute top-1/2 left-1/2 h-[42vmin] w-[42vmin] -translate-x-1/2 -translate-y-1/2 opacity-45 mix-blend-multiply"
       />
-      <div className="relative mx-auto max-w-[1600px] px-5 pt-20 pb-10 md:px-8 md:pt-5 md:pb-2">
-        <div className="grid justify-items-center gap-14 text-center md:grid-cols-[1.1fr_1fr_1fr_1.1fr] md:justify-items-start md:gap-x-[2.375rem] md:gap-y-3 md:text-left">
+      <div className="relative mx-auto flex w-full max-w-[1600px] flex-1 flex-col px-5 pt-20 pb-10 md:px-8 md:pt-5 md:pb-2">
+        <div className="grid justify-items-center gap-14 text-center md:grid-cols-[1.3fr_1fr_0.9fr] md:justify-items-start md:gap-x-20 md:gap-y-3 md:text-left">
           <Reveal>
-            <p className="max-w-[32ch] text-sm text-ink/70">{SITE.footerLine}</p>
+            <FooterHeading>About</FooterHeading>
+            <p className="max-w-[34ch] text-[15px] font-medium text-ink">{SITE.tagline}</p>
+            <p className="mt-3 max-w-[38ch] text-[15px] leading-relaxed text-ink/70">{SITE.footerLine}</p>
           </Reveal>
 
-          <Reveal delay={80} className="text-sm">
+          <Reveal delay={80} className="text-[15px]">
             <FooterHeading>Visit</FooterHeading>
             <address className="not-italic">
               {CONTACT.addressLines.map((line) => (
@@ -37,21 +39,21 @@ export function Footer() {
             <a href={CONTACT.googleMaps} target="_blank" rel="noreferrer" className="mt-3 inline-block underline underline-offset-4">
               Directions
             </a>
+
+            <div className="mt-8">
+              <FooterHeading>Opening Hours</FooterHeading>
+              <dl className="space-y-2">
+                {HOURS.map((row) => (
+                  <div key={row.label}>
+                    <dt className="opacity-60">{row.label}</dt>
+                    <dd>{row.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
           </Reveal>
 
-          <Reveal delay={160} className="text-sm">
-            <FooterHeading>Hours</FooterHeading>
-            <dl className="space-y-2">
-              {HOURS.map((row) => (
-                <div key={row.label}>
-                  <dt className="opacity-60">{row.label}</dt>
-                  <dd>{row.value}</dd>
-                </div>
-              ))}
-            </dl>
-          </Reveal>
-
-          <Reveal delay={240} className="text-sm">
+          <Reveal delay={160} className="text-[15px]">
             <FooterHeading>Contact</FooterHeading>
             <p>
               <a href={`mailto:${CONTACT.email}`} className="break-all">
@@ -62,7 +64,8 @@ export function Footer() {
               <a href={CONTACT.phoneHref}>{CONTACT.phone}</a>
             </p>
             <p>{CONTACT.phoneAlt}</p>
-            <ul className="mt-5 flex flex-wrap justify-center gap-3 md:justify-start">
+            <p className="mt-6 text-[11px] font-semibold tracking-[0.28em] uppercase opacity-70">Follow</p>
+            <ul className="mt-3 flex flex-wrap justify-center gap-4 md:justify-start">
               {SOCIALS.map((social) => (
                 <li key={social.href}>
                   <a
@@ -70,9 +73,9 @@ export function Footer() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={social.label}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/20 transition-colors hover:bg-ink hover:text-glaze md:h-9 md:w-9"
+                    className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/20 transition-colors hover:bg-ink hover:text-glaze"
                   >
-                    <SocialIcon name={social.icon} />
+                    <SocialIcon name={social.icon} className="h-[18px] w-[18px]" />
                   </a>
                 </li>
               ))}
@@ -80,7 +83,7 @@ export function Footer() {
           </Reveal>
         </div>
 
-        <div className="mt-16 flex flex-col items-center gap-4 border-t border-ink/15 pt-6 text-center text-xs opacity-60 md:mt-3 md:flex-row md:items-center md:justify-between md:pt-2 md:text-left">
+        <div className="mt-auto flex flex-col items-center gap-4 border-t border-ink/15 pt-6 text-center text-xs opacity-60 md:mt-3 md:flex-row md:items-center md:justify-between md:pt-2 md:text-left">
           <p>
             © {year} {SITE.name} {SITE.location}
           </p>

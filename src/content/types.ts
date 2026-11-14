@@ -44,10 +44,26 @@ export interface MediaCard {
   slots: MediaCardSlot[];
 }
 
+/** Icon keys the `EventGrid` can draw in front of an item, after the corporate events deck's service icons. */
+export type EventGridIcon =
+  | "wifi"
+  | "screen"
+  | "planner"
+  | "sound"
+  | "karaoke"
+  | "camera"
+  | "layout"
+  | "styling"
+  | "menus"
+  | "signage"
+  | "lighting"
+  | "valet";
+
 /** One item in an `EventGrid` section (occasions, included extras). */
 export interface EventGridItem {
   title: string;
   text: string;
+  icon?: EventGridIcon;
 }
 
 /** A bookable space on the Events page. Copy follows AURA's corporate events deck. */
@@ -95,7 +111,14 @@ export interface MenuCategory {
 
 export interface MenuData {
   /** The top-level menu switcher, e.g. Steak Menu / Main Menu. */
-  menus: { key: string; label: string }[];
+  menus: {
+    key: string;
+    label: string;
+    /** This menu's hub photo, shown in the right pane until a category is picked. */
+    photo?: string;
+    /** Selected by default when the hub loads with no category active. Exactly one menu should set this. */
+    default?: boolean;
+  }[];
   categories: MenuCategory[];
   /** Shown once after the last category: the symbol/allergen key and the pricing & dietary note. */
   legend?: {

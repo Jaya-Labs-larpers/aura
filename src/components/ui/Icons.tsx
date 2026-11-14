@@ -67,6 +67,14 @@ export function ChevronIcon({ className = "h-4 w-4" }: IconProps) {
   );
 }
 
+export function CheckIcon({ className = "h-5 w-5" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <path d="M5 12.5 9.5 17 19 7" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export function CloseIcon({ className = "h-5 w-5" }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
@@ -104,8 +112,115 @@ export function SnowflakeIcon({ className = "h-4 w-4" }: IconProps) {
 export function MicIcon({ className = "h-4 w-4" }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
-      <rect x="9" y="2.5" width="6" height="10.5" rx="3" />
-      <path d="M6.5 11.5a5.5 5.5 0 0 0 11 0M12 17v3.5M9 20.5h6" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="8" cy="7" r="3.3" />
+      <path d="M8.46 10.08 18.76 20.18 19.24 19.82 10.54 8.52Z" strokeLinejoin="round" />
+      <path d="M6 6.2 10 7.8M6.6 8.4 9.6 9.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function ScreenIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <rect x="3" y="4.5" width="18" height="12" rx="1.8" />
+      <path d="M9 20.5h6M12 16.5v4" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function FanIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <circle cx="12" cy="12" r="1.6" />
+      <path d="M12 10.4c0-2.6-1.4-5.4-3.8-5.9-1.6-.3-2.3 1.3-1.4 2.6 1 1.6 3.2 2.9 5.2 3.3" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M13.6 12c2.6 0 5.4-1.4 5.9-3.8.3-1.6-1.3-2.3-2.6-1.4-1.6 1-2.9 3.2-3.3 5.2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M12 13.6c0 2.6 1.4 5.4 3.8 5.9 1.6.3 2.3-1.3 1.4-2.6-1-1.6-3.2-2.9-5.2-3.3" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+// Event Services grid icons, after the ones in AURA's corporate events deck
+// (Lucide-style thin strokes: wifi, clipboard, speaker, camera, flower, book,
+// signpost, bulb, car). Same 24px viewBox / 1.5 stroke as the tag icons.
+export function WifiIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <path d="M3 9.5a13 13 0 0 1 18 0M6.3 13a8.3 8.3 0 0 1 11.4 0M9.6 16.4a3.6 3.6 0 0 1 4.8 0" strokeLinecap="round" />
+      <circle cx="12" cy="19.5" r="0.9" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+export function ClipboardIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <rect x="5" y="4.5" width="14" height="17" rx="2" />
+      <path d="M9 4.5V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1M9 13.5l2 2 4-4.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function SpeakerIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <rect x="6" y="3" width="12" height="18" rx="2" />
+      <circle cx="12" cy="14" r="3" />
+      <circle cx="12" cy="7.5" r="0.9" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+export function CameraIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <path d="M4 8.5A1.5 1.5 0 0 1 5.5 7h2.3l1.4-2h5.6l1.4 2h2.3A1.5 1.5 0 0 1 20 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5Z" strokeLinejoin="round" />
+      <circle cx="12" cy="13" r="3.2" />
+    </svg>
+  );
+}
+
+export function FlowerIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <circle cx="12" cy="9" r="2" />
+      <path d="M12 7a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5ZM14 9a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0ZM10 9a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM12 11a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" />
+      <path d="M12 16v6M12 20c-1.5-2-3.5-2.5-5-2 .5 1.6 2.4 3 5 2M12 20c1.5-2 3.5-2.5 5-2-.5 1.6-2.4 3-5 2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function BookIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <path d="M12 6.5c-1.6-1.4-4.2-2-8-2v13.5c3.8 0 6.4.6 8 2 1.6-1.4 4.2-2 8-2V4.5c-3.8 0-6.4.6-8 2ZM12 6.5V20" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function SignpostIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <path d="M12 3v3M12 13v8M9 21h6" strokeLinecap="round" />
+      <path d="M6.2 6h11.3l2.5 3.5-2.5 3.5H6.2L3.7 9.5Z" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function BulbIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <path d="M9 17.5v-1.3c0-1-.6-1.8-1.4-2.5A5.8 5.8 0 0 1 6 9.3 6 6 0 0 1 18 9.3c0 1.7-.7 3.3-1.6 4.4-.8.7-1.4 1.5-1.4 2.5v1.3" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M9.5 20.5h5M10 17.5h4" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function CarIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <path d="M4 16v-3.4c0-.6.2-1.1.5-1.6l1.9-2.8A2 2 0 0 1 8 7.3h8a2 2 0 0 1 1.6.9l1.9 2.8c.3.5.5 1 .5 1.6V16H4ZM5 11h14M4 16h16" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="7.5" cy="16.5" r="1.8" />
+      <circle cx="16.5" cy="16.5" r="1.8" />
     </svg>
   );
 }

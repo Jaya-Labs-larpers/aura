@@ -1,20 +1,22 @@
-import type { ReactNode } from "react";
-import { LockIcon, MicIcon, SnowflakeIcon, SunIcon, UmbrellaIcon, UsersIcon } from "@/components/ui/Icons";
+import { type BadgeIcon, IconBadge } from "@/components/ui/IconBadge";
+import { FanIcon, LockIcon, MicIcon, ScreenIcon, SnowflakeIcon, SunIcon, UmbrellaIcon, UsersIcon } from "@/components/ui/Icons";
 import { cn } from "@/lib/cn";
-
-type TagIcon = (props: { className?: string }) => ReactNode;
 
 /**
  * Matches a capacity/feature tag to the icon used for it in AURA's
- * corporate events deck (capacity, air-conditioned, KTV, covered,
- * semi-private/private, outdoor). Unrecognised tags render as text only.
+ * corporate events deck (capacity, air-conditioned, KTV, presentation
+ * screen, covered, fan-cooled, semi-private/private, outdoor). Unrecognised
+ * tags render as text only.
  */
-function iconFor(tag: string): TagIcon | null {
+function iconFor(tag: string): BadgeIcon | null {
+  // Tags carry NBSPs so they never wrap; normalise them before matching.
   const t = tag.replace(/ /g, " ").toLowerCase();
   if (t.startsWith("up to") || t.includes("seated") || t.includes("standing")) return UsersIcon;
   if (t.includes("air-conditioned")) return SnowflakeIcon;
   if (t.includes("ktv")) return MicIcon;
+  if (t.includes("screen")) return ScreenIcon;
   if (t.includes("covered")) return UmbrellaIcon;
+  if (t.includes("fan")) return FanIcon;
   if (t.includes("private")) return LockIcon;
   if (t.includes("outdoor")) return SunIcon;
   return null;
@@ -29,30 +31,20 @@ interface EventTagsProps {
 
 /**
  * Capacity/feature line under a space title, each tag flagged with its icon
- * in a cream badge — the same move as AURA's corporate events deck, where
- * every tag icon sits in a filled circle, recoloured to the site's own
- * cream-on-jungle button (see `Pill`/`SubmitButton`) so it pops off the dark ground.
+ * in an `IconBadge`. Badge, type size and gaps are the same on every
+ * breakpoint; at `md` the narrow text column simply wraps to more rows.
  */
 export function EventTags({ tags, className, tone = "bright" }: EventTagsProps) {
   return (
-    <div className={cn("mt-4 flex flex-wrap items-center gap-x-5 gap-y-3 md:gap-x-2 lg:gap-x-5", className)}>
+    <div className={cn("mt-5 flex flex-wrap items-center gap-x-5 gap-y-3", className)}>
       {tags.map((tag) => {
         const Icon = iconFor(tag);
         return (
-          <span key={tag} className="inline-flex items-center gap-2.5 md:gap-1.5 lg:gap-2.5">
-            {Icon && (
-              <span
-                className={cn(
-                  "flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-jungle md:h-5 md:w-5 lg:h-7 lg:w-7",
-                  tone === "muted" ? "bg-cream/75" : "bg-cream",
-                )}
-              >
-                <Icon className="h-4 w-4 md:h-3 md:w-3 lg:h-4 lg:w-4" />
-              </span>
-            )}
+          <span key={tag} className="inline-flex items-center gap-2.5">
+            {Icon && <IconBadge icon={Icon} tone={tone} />}
             <span
               className={cn(
-                "text-[11px] font-medium tracking-[0.2em] text-balance uppercase md:text-[9px] md:tracking-[0.1em] lg:text-[11px] lg:tracking-[0.2em]",
+                "text-[12px] font-medium tracking-[0.18em] text-balance uppercase",
                 tone === "muted" ? "text-cream/70" : "text-cream",
               )}
             >
